@@ -1,0 +1,28 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "wacmo"
+version = "0.1.0"
+description = "WACMO website"
+readme = "README.md"
+requires-python = ">=3.12"
+license = "AGPL-3.0-only"
+dependencies = [
+    "Flask>=3.1,<4",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=8,<10",
+]
+
+[tool.setuptools.packages.find]
+include = ["wacmo*"]
+
+[tool.setuptools.package-data]
+wacmo = ["templates/*.html", "static/css/*.css"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
