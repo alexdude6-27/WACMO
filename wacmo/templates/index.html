@@ -3,81 +3,160 @@
 {% block title %}Home{% endblock %}
 
 {% block content %}
-<section class="hero">
-    <div class="container hero-inner">
-        <div class="hero-copy">
-            <p class="eyebrow">Mounted orienteering in Washington</p>
-            <h1>Adventure starts with a direction.</h1>
-            <p class="hero-description">
-                Discover upcoming rides, explore riding areas,
-                and revisit the moments that make WACMO special.
-            </p>
-            <div class="hero-actions">
-                <a class="button button-primary"
-                   href="{{ url_for('events') }}">
-                    Explore Events
-                </a>
-                <a class="button button-secondary"
-                   href="{{ url_for('galleries') }}">
-                    Photo Galleries
-                </a>
+<div class="heritage-home">
+
+    <div class="legacy-notice">
+        Historical homepage wording retained during
+        modernization. Dates, fees, and board information
+        have not yet been reconfirmed.
+    </div>
+
+    <section class="home-welcome">
+        <h1>WELCOME TO OUR 2026 SEASON!</h1>
+
+        <p class="home-announcement">
+            Our next ride is Oct 10th at
+            <strong>Scatter Creek</strong>
+        </p>
+
+        <p class="home-announcement">
+            Check out our 2026 Ride Schedule
+        </p>
+
+        <p class="home-announcement-small">
+            Click HERE to go to the national ride
+            results page.
+        </p>
+    </section>
+
+    <section class="home-information">
+        <p>
+            **Please note that our ride prices have slightly
+            increased. Members are now $20, Jr Members are
+            still $10, and day riders (non members) are $25
+            (this includes the $5 insurance fee).
+            Memberships are still $25 plus $5 for insurance
+            for the year.
+        </p>
+
+        <p>
+            Become a member or renew your membership
+            CLICK HERE
+        </p>
+
+        <p>
+            If you would like a mentor, please contact us
+            by Email or Facebook PM.
+        </p>
+
+        <p>
+            <strong>Want to Learn How to Read a Compass?</strong>
+            Check out this little presentation.
+            CLICK HERE
+        </p>
+    </section>
+
+    <section class="home-story">
+        <h2>The Ultimate Horseback Scavenger Hunt!</h2>
+
+        <p>
+            Come out and try "the thinking horse sport"....
+            Competitive Mounted Orienteering! Learn new
+            trails, explore new places and meet nice people
+            while having fun with your horse!
+        </p>
+
+        <p>
+            Competitive Mounted Orienteering is a nonprofit
+            organization intended to be a safe, inexpensive
+            and fun equine activity for all riders.
+            Conducted in such a manner as to both encourage
+            competition among those seeking a competitive
+            event and to encourage casual, family style
+            riding for those wishing a less challenging
+            event. Competitors may ride single or in teams.
+        </p>
+
+        <p>
+            C.M.O. has often been described as a
+            “mounted treasure hunt”. Event organizers
+            provide maps and course outlines. Participants
+            furnish their own mounts and compasses. Using
+            these tools, riders search for designated
+            “objective stations” (paper plates with letters
+            to be recorded to prove they were found) inside
+            a 3/4 mile circled area on the event map. Clues
+            for each station are listed on the back of the
+            map with intersecting compass bearings pointing
+            at the hidden plate. The objective is to find
+            all the hidden plates and record the letters on
+            the plates in the shortest amount of time.
+            Riders travel at their own pace and determine
+            which stations to find in any order.
+        </p>
+
+        <p>
+            Each event is divided into long (10 Objectives)
+            and short (5 Objectives) course divisions.
+            Typical rides can cover 5 to 25 miles. Riders
+            accumulate points for annual awards and ribbons
+            are awarded at each ride through 6th place on
+            the long course and 3rd place on the short
+            course. Events are staged out of horse camps
+            and DNR riding areas all across the state and
+            country. Spring and summer rides are held on
+            Saturday and Sunday with a potluck dinner and
+            campfire Saturday nights to hand out ribbons
+            and to visit and laugh about strategies that
+            did or didn’t work. Having a National and State
+            membership qualifies each rider and their horse
+            for lifetime awards. All breeds and disciplines
+            are WELCOME! To join CMO, simply attend a ride
+            in your area. The ride manager can help you with
+            the application form, and your membership is
+            valid right away!
+        </p>
+    </section>
+
+    <section class="home-board">
+        <h2>Your WACMO Board</h2>
+
+        <div class="board-members">
+            <div>
+                <strong>President:</strong>
+                <span>Kathy Davis</span>
+            </div>
+            <div>
+                <strong>Vice President:</strong>
+                <span>Sherry Brown</span>
+            </div>
+            <div>
+                <strong>Secretary:</strong>
+                <span>Ashtyn Conklin</span>
+            </div>
+            <div>
+                <strong>Treasurer:</strong>
+                <span>Melissa Rogers</span>
+            </div>
+            <div>
+                <strong>Director:</strong>
+                <span>Lisa Hayes</span>
             </div>
         </div>
 
-        <div class="hero-art" aria-hidden="true">
-            <span class="hero-art-mark">W</span>
-        </div>
-    </div>
-</section>
+        <p class="home-contact">
+            <strong>Questions?</strong> Contact us at:
+            <a href="mailto:wacmoforms@gmail.com">
+                wacmoforms@gmail.com
+            </a>
+        </p>
+    </section>
 
-<section class="content-section container"
-         aria-labelledby="explore-heading">
-    <div class="section-heading">
-        <p class="eyebrow">Find your way</p>
-        <h2 id="explore-heading">Explore WACMO</h2>
-        <p>Everything you need for the next adventure.</p>
-    </div>
-
-    <div class="features">
-        <article class="feature-card">
-            <span class="feature-number">01</span>
-            <h3>
-                <a href="{{ url_for('events') }}">
-                    Event Calendar
-                </a>
-            </h3>
-            <p>Upcoming rides and activities in one place.</p>
-        </article>
-
-        <article class="feature-card">
-            <span class="feature-number">02</span>
-            <h3>
-                <a href="{{ url_for('ride_flyers') }}">
-                    Ride Flyers
-                </a>
-            </h3>
-            <p>Find flyers and revisit past events.</p>
-        </article>
-
-        <article class="feature-card">
-            <span class="feature-number">03</span>
-            <h3>
-                <a href="{{ url_for('galleries') }}">
-                    Photo Galleries
-                </a>
-            </h3>
-            <p>Explore memories captured along the trail.</p>
-        </article>
-
-        <article class="feature-card">
-            <span class="feature-number">04</span>
-            <h3>
-                <a href="{{ url_for('riding_areas') }}">
-                    Riding Areas
-                </a>
-            </h3>
-            <p>Learn about the landscapes we explore.</p>
-        </article>
-    </div>
-</section>
+    <img
+        class="fir-ridge"
+        src="{{ url_for('static',
+            filename='images/douglas-fir-ridge.svg') }}"
+        alt=""
+        aria-hidden="true">
+</div>
 {% endblock %}

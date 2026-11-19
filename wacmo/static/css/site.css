@@ -457,3 +457,462 @@ h1, h2, h3 {
         flex-direction: column;
     }
 }
+
+/* WACMO heritage theme */
+
+body {
+    background-color: #44291d;
+    background-image:
+        repeating-linear-gradient(
+            91deg,
+            transparent 0 10px,
+            rgba(15, 7, 2, .16) 11px,
+            rgba(255, 205, 125, .09) 13px,
+            transparent 17px 35px
+        ),
+        repeating-linear-gradient(
+            89deg,
+            #442719 0 3px,
+            #613723 9px 22px,
+            #3e2319 30px 34px,
+            #583120 42px 57px
+        );
+}
+
+.site-header,
+body > main,
+.site-footer {
+    width: min(calc(100% - 56px), 1180px);
+    margin-inline: auto;
+    box-shadow: 0 0 28px rgba(20, 10, 3, .45);
+}
+
+body > main {
+    min-height: 65vh;
+    background:
+        radial-gradient(
+            ellipse at top,
+            rgba(255, 255, 255, .5),
+            transparent 55%
+        ),
+        #f1e1bf;
+}
+
+.site-header {
+    background: linear-gradient(
+        160deg, #183c27, #315c3a
+    );
+    border-bottom: 5px solid #92703c;
+}
+
+.header-inner {
+    flex-direction: column;
+    align-items: center;
+    gap: 1.3rem;
+    padding-block: 1.8rem 1.1rem;
+}
+
+.brand {
+    align-items: center;
+    text-align: center;
+    max-width: 850px;
+}
+
+.brand-name {
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: clamp(1.35rem, 3vw, 2rem);
+    font-weight: 700;
+    letter-spacing: -.025em;
+    color: #fff0d2;
+}
+
+.brand-description {
+    max-width: none;
+    margin-top: .4rem;
+    font-size: .94rem;
+    color: #e2efbd;
+    opacity: 1;
+}
+
+.site-nav {
+    justify-content: center;
+    gap: .25rem;
+}
+
+.site-nav a {
+    font-family: "Courier New", monospace;
+    font-size: .78rem;
+    font-weight: bold;
+    letter-spacing: -.025em;
+    padding: .55rem .6rem;
+}
+
+.site-nav a[aria-current="page"] {
+    background: #ead7a9;
+    color: #244b35;
+}
+
+.heritage-home {
+    max-width: 1050px;
+    margin: 0 auto;
+    padding: 2.7rem clamp(1.3rem, 5vw, 4rem) 0;
+    font-family: Georgia, "Times New Roman", serif;
+    color: #2d291b;
+}
+
+.legacy-notice {
+    padding: .75rem 1rem;
+    border-left: 4px solid #73824e;
+    background: rgba(255, 255, 255, .43);
+    font-family: system-ui, sans-serif;
+    font-size: .82rem;
+    color: #4d573f;
+}
+
+.home-welcome {
+    text-align: center;
+    padding-block: 2rem;
+}
+
+.home-welcome h1 {
+    font-family: "Courier New", monospace;
+    font-size: clamp(1.35rem, 3.3vw, 2.3rem);
+    color: #285c30;
+    letter-spacing: -.035em;
+}
+
+.home-announcement {
+    margin: 2.1rem 0;
+    font-size: clamp(1.2rem, 2.5vw, 1.8rem);
+    font-weight: bold;
+    color: #294c2b;
+}
+
+.home-announcement-small {
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.home-information {
+    margin-block: 1.5rem 2.7rem;
+}
+
+.home-information p,
+.home-story p {
+    margin: 1.1rem 0;
+    line-height: 1.65;
+}
+
+.home-story h2 {
+    font-family: "Courier New", monospace;
+    font-size: clamp(1.3rem, 2.8vw, 1.8rem);
+    color: #28642e;
+    text-decoration: underline;
+    text-underline-offset: 6px;
+}
+
+.home-board {
+    margin-top: 3rem;
+    padding: 1.5rem 0;
+    text-align: center;
+}
+
+.home-board h2 {
+    font-size: 1.35rem;
+    color: #285c30;
+}
+
+.board-members {
+    display: grid;
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+    gap: 1rem;
+    margin-top: 1.5rem;
+}
+
+.board-members div {
+    display: flex;
+    flex-direction: column;
+    line-height: 1.35;
+    font-size: .88rem;
+}
+
+.home-contact {
+    margin-top: 2rem;
+}
+
+.home-contact a {
+    color: #216328;
+}
+
+.home-national {
+    margin-top: 2rem;
+    padding: 1.2rem;
+    background: #c4a354;
+    text-align: center;
+    font-weight: bold;
+}
+
+.home-national p {
+    max-width: 430px;
+    margin-inline: auto;
+}
+
+.fir-ridge {
+    display: block;
+    width: 100%;
+    max-height: 130px;
+    object-fit: contain;
+    object-position: bottom;
+    margin-top: 2rem;
+}
+
+.page-intro {
+    background: rgba(231, 232, 203, .75);
+}
+
+.page-intro h1,
+.section-heading h2 {
+    font-family: Georgia, serif;
+    color: #285c30;
+}
+
+@media (max-width: 760px) {
+    .board-members {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 650px) {
+    .site-header,
+    body > main,
+    .site-footer {
+        width: 100%;
+    }
+
+    .site-nav a {
+        font-size: .76rem;
+    }
+
+    .heritage-home {
+        padding-inline: 1.2rem;
+    }
+}
+
+/* What is CMO page */
+
+@font-face {
+    font-family: "WACMO Rye";
+    src: url("../fonts/Rye-Regular.ttf") format("truetype");
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+}
+
+.cmo-page {
+    max-width: 1050px;
+    padding-block: 2.5rem 4.5rem;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 1.09rem;
+    line-height: 1.5;
+    color: #2f231b;
+    display: flow-root;
+}
+
+.cmo-page h1 {
+    font-family: "WACMO Rye", Georgia, serif;
+    font-weight: 400;
+    font-size: clamp(2.1rem, 4.2vw, 3.4rem);
+    line-height: 1.2;
+    color: #402515;
+    text-shadow: 1px 1px 0 #c59d69;
+    margin: 0 0 1.8rem;
+}
+
+.cmo-page p {
+    margin: 0 0 1.15rem;
+}
+
+.cmo-page strong {
+    font-weight: 700;
+}
+
+.cmo-map {
+    float: right;
+    width: min(32%, 260px);
+    margin: .15rem 0 1rem 1.5rem;
+    padding: .35rem;
+    border: 1px solid #bda679;
+    background: #fffdf5;
+    box-shadow: 0 3px 11px rgba(40, 20, 6, .12);
+}
+
+.cmo-map img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+@media (max-width: 650px) {
+    .cmo-page {
+        padding-block: 1.8rem 3rem;
+        font-size: 1rem;
+    }
+
+    .cmo-map {
+        float: none;
+        width: min(100%, 300px);
+        margin: 1rem auto 1.25rem;
+    }
+}
+
+/* Responsive WACMO wood and navigation */
+
+body {
+    background-color: #32170d;
+    background-image: url("../images/wacmo_wood_texture.png");
+    background-position: center top;
+    background-repeat: repeat;
+}
+
+.site-header,
+body > main,
+.site-footer {
+    width: min(
+        calc(100% - clamp(48px, 16vw, 260px)),
+        1120px
+    );
+}
+
+.site-nav a {
+    font-size: 1rem;
+}
+
+.heritage-home {
+    font-size: 1.08rem;
+}
+
+.cmo-page {
+    font-size: 1.16rem;
+}
+
+.menu-toggle {
+    display: none;
+    align-items: center;
+    justify-content: center;
+    gap: .7rem;
+    min-height: 48px;
+    padding: .65rem 1.1rem;
+    border: 2px solid #e2d1a1;
+    border-radius: .45rem;
+    background: #f1dfb7;
+    color: #173725;
+    font: 700 1.05rem system-ui, sans-serif;
+    cursor: pointer;
+}
+
+.menu-bars {
+    font-size: 1.5rem;
+    line-height: 1;
+}
+
+.site-footer {
+    background: #bd9b4b;
+    color: #271c0d;
+    border-top: 4px solid #86683b;
+}
+
+.footer-inner {
+    align-items: center;
+    gap: 1.5rem;
+    padding-block: .4rem;
+}
+
+.footer-brand {
+    font-family: Georgia, serif;
+    font-size: 1.2rem;
+}
+
+.footer-nacmo-copy {
+    margin: 0;
+    max-width: 32rem;
+    text-align: center;
+    font-weight: 700;
+    line-height: 1.4;
+}
+
+.footer-nacmo-link {
+    display: block;
+    flex: 0 0 auto;
+    border-radius: .25rem;
+}
+
+.footer-nacmo-link img {
+    display: block;
+    width: 96px;
+    height: auto;
+}
+
+@media (max-width: 900px) {
+    .header-inner {
+        align-items: stretch;
+    }
+
+    .brand {
+        align-items: center;
+        text-align: center;
+    }
+
+    .menu-toggle:not([hidden]) {
+        display: inline-flex;
+        align-self: stretch;
+    }
+
+    .site-nav {
+        width: 100%;
+        flex-direction: column;
+        align-items: stretch;
+        gap: .25rem;
+    }
+
+    .has-js .site-nav:not(.is-open) {
+        display: none;
+    }
+
+    .site-nav a {
+        display: block;
+        min-height: 44px;
+        padding: .75rem .85rem;
+        font-size: 1.08rem;
+        text-align: center;
+    }
+
+    .footer-inner {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+}
+
+@media (max-width: 760px) {
+    body {
+        background: #f1e1bf;
+    }
+
+    .site-header,
+    body > main,
+    .site-footer {
+        width: 100%;
+    }
+
+    .footer-inner {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .heritage-home {
+        font-size: 1.06rem;
+    }
+
+    .cmo-page {
+        font-size: 1.08rem;
+    }
+}

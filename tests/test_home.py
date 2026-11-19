@@ -10,8 +10,8 @@ def test_homepage():
 
     assert response.status_code == 200
     assert b"WACMO" in response.data
-    assert b"Event Calendar" in response.data
-    assert b"Photo Galleries" in response.data
+    assert b"Schedule of Events" in response.data
+    assert b"Photo Gallery" in response.data
 
 
 def test_stylesheet():

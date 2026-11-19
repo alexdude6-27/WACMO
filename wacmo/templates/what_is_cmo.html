@@ -1,0 +1,74 @@
+{% extends "base.html" %}
+
+{% block title %}What is CMO?{% endblock %}
+
+{% block content %}
+<article class="cmo-page container">
+
+    <h1>What is CMO?</h1>
+
+    <p>
+        The letters C.M.O. stand for
+        <strong>Competitive Mounted Orienteering.</strong>
+    </p>
+
+    <p>
+        C.M.O. is <strong>“competitive”</strong> because you
+        compete, as an individual or a team, against other
+        riders to find all of the hidden objective stations.
+        This is a timed event and you compete for a placing
+        for that ride. The points you and your horse earn
+        add up towards year-end placing and lifetime points
+        with the National Association of Competitive Mounted
+        Orienteering (N.A.C.M.O.) and your State organization.
+    </p>
+
+    <p>
+        The <strong>“mounted”</strong> part of the name is
+        because the game is played on horseback. In theory,
+        you shouldn’t have to ever get off the horse as each
+        objective station should be visible from horseback.
+        And, finally, <strong>“orienteering”</strong> because
+        you must be able to orient your self on a provided
+        map and find your way around the course. The use of
+        a map and compass, navigating your way around the
+        designated course, identifying landmarks and finding
+        the objective stations is what orienteering is
+        all about.
+    </p>
+
+    <figure class="cmo-map">
+        <img
+            src="{{ url_for('static',
+                filename='images/cmo-map-preview.png') }}"
+            alt="Illustrative CMO map with example red and dark circles in altered positions"
+            width="371"
+            height="228"
+            loading="lazy">
+        <figcaption class="visually-hidden">
+            Illustrative thumbnail only, not an actual
+            competition course map.
+        </figcaption>
+    </figure>
+
+    <p>
+        Both CMO and Endurance are fast-paced, long-distance
+        trail sports that challenge the fitness of the
+        horse and the skill of the rider over many miles
+        of varied terrain. However, unlike endurance,
+        which follows a set, marked course designed to
+        test speed and physical welfare, CMO is a
+        navigation-based challenge where the "course" is
+        up to you. While endurance trails are clearly
+        flagged so you can focus on pacing and how well
+        your horse is conditioned to recover, CMO requires
+        you to use a map and compass to find hidden markers
+        scattered across the landscape. There is usually
+        a six-hour time limit; sometimes this is extended
+        at the discretion of the ride manager depending
+        on the distance and terrain. Most rides average
+        two to four hours.
+    </p>
+
+</article>
+{% endblock %}

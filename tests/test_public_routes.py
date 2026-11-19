@@ -1,3 +1,5 @@
+from html import unescape
+
 import pytest
 
 from wacmo import create_app
@@ -13,22 +15,22 @@ def client():
 @pytest.mark.parametrize(
     ("path", "title"),
     [
-        ("/", "Adventure starts with a direction."),
+        ("/", "WELCOME TO OUR 2026 SEASON!"),
         ("/events", "Event Calendar"),
-        ("/ride-flyers", "Ride Flyers"),
-        ("/galleries", "Photo Galleries"),
-        ("/riding-areas", "Riding Areas"),
+        ("/ride-flyers", "Flyers (Rides & Invites)"),
+        ("/galleries", "Photo Gallery"),
+        ("/riding-areas", "Maps"),
         ("/about", "About WACMO"),
     ],
 )
 def test_public_pages(client, path, title):
     response = client.get(path)
-    body = response.get_data(as_text=True)
+    body = unescape(response.get_data(as_text=True))
 
     assert response.status_code == 200
     assert title in body
-    assert 'aria-current="page"' in body
-    assert body.count('aria-current="page"') == 1
+    expected = 0 if path == "/about" else 1
+    assert body.count('aria-current="page"') == expected
 
 
 def test_home_navigation(client):
@@ -39,7 +41,10 @@ def test_home_navigation(client):
         "/ride-flyers",
         "/galleries",
         "/riding-areas",
-        "/about",
+        "/what-is-cmo",
+        "/cmo-history",
+        "/forms",
+        "/links",
     ):
         assert f'href="{path}"' in body
 

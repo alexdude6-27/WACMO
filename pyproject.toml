@@ -22,7 +22,15 @@ dev = [
 include = ["wacmo*"]
 
 [tool.setuptools.package-data]
-wacmo = ["templates/*.html", "static/css/*.css"]
+wacmo = [
+    "templates/*.html",
+    "static/css/*.css",
+    "static/js/*.js",
+    "static/images/*.svg",
+    "static/images/*.png",
+    "static/fonts/*.ttf",
+    "static/fonts/*.txt",
+]
 
 [tool.pytest.ini_options]
 testpaths = ["tests"]

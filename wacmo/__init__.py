@@ -5,17 +5,51 @@ from .calendar import build_month, pacific_today
 
 NAVIGATION = (
     ("Home", "home"),
-    ("Events", "events"),
-    ("Ride Flyers", "ride_flyers"),
-    ("Galleries", "galleries"),
-    ("Riding Areas", "riding_areas"),
-    ("About", "about"),
+    ("What is CMO?", "what_is_cmo"),
+    ("CMO History", "cmo_history"),
+    ("Schedule of Events", "events"),
+    ("Flyers (Rides & Invites)", "ride_flyers"),
+    ("Photo Gallery", "galleries"),
+    ("Maps", "riding_areas"),
+    ("Forms", "forms"),
+    ("Links", "links"),
 )
 
 
 PAGES = {
+    "what_is_cmo": {
+        "title": "What is CMO?",
+        "description": (
+            "Learn about Competitive Mounted Orienteering."
+        ),
+        "note": (
+            "The original WACMO information will be "
+            "transferred here."
+        ),
+    },
+    "cmo_history": {
+        "title": "CMO History",
+        "description": "The history of mounted orienteering.",
+        "note": (
+            "Historical WACMO materials will be added here."
+        ),
+    },
+    "forms": {
+        "title": "Forms",
+        "description": "WACMO forms and documents.",
+        "note": (
+            "Approved downloadable forms will appear here."
+        ),
+    },
+    "links": {
+        "title": "Links",
+        "description": "Helpful mounted orienteering resources.",
+        "note": (
+            "Approved links will be added here."
+        ),
+    },
     "ride_flyers": {
-        "title": "Ride Flyers",
+        "title": "Flyers (Rides & Invites)",
         "description": "Flyers for rides, past and present.",
         "note": (
             "Flyer uploads, searching, and automatic "
@@ -23,7 +57,7 @@ PAGES = {
         ),
     },
     "galleries": {
-        "title": "Photo Galleries",
+        "title": "Photo Gallery",
         "description": "Memories from WACMO riding adventures.",
         "note": (
             "Approved photographs will be organized into "
@@ -31,7 +65,7 @@ PAGES = {
         ),
     },
     "riding_areas": {
-        "title": "Riding Areas",
+        "title": "Maps",
         "description": "Discover the landscapes where we ride.",
         "note": (
             "General riding locations and approved historical "
@@ -97,6 +131,28 @@ def create_app():
         return render_template(
             "events.html",
             calendar=calendar_view,
+        )
+
+    @app.get("/what-is-cmo")
+    def what_is_cmo():
+        return render_template("what_is_cmo.html")
+
+    @app.get("/cmo-history")
+    def cmo_history():
+        return render_template(
+            "section.html", page=PAGES["cmo_history"]
+        )
+
+    @app.get("/forms")
+    def forms():
+        return render_template(
+            "section.html", page=PAGES["forms"]
+        )
+
+    @app.get("/links")
+    def links():
+        return render_template(
+            "section.html", page=PAGES["links"]
         )
 
     @app.get("/ride-flyers")

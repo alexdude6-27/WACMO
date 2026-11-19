@@ -8,6 +8,8 @@
     <title>{% block title %}Home{% endblock %} | WACMO</title>
     <link rel="stylesheet"
           href="{{ url_for('static', filename='css/site.css') }}">
+    <script defer
+            src="{{ url_for('static', filename='js/navigation.js') }}"></script>
 </head>
 <body>
     <a class="skip-link" href="#main-content">
@@ -17,14 +19,25 @@
     <header class="site-header">
         <div class="container header-inner">
             <a class="brand" href="{{ url_for('home') }}">
-                <span class="brand-name">WACMO</span>
+                <span class="brand-name">
+                    Washington Assoc. of Competitive
+                    Mounted Orienteering
+                </span>
                 <span class="brand-description">
-                    Washington Association of
-                    Competitive Mounted Orienteering
+                    Chapter 1 (Western Washington &amp; Oregon)
                 </span>
             </a>
 
-            <nav class="site-nav" aria-label="Main navigation">
+            <button type="button" class="menu-toggle"
+                    aria-controls="site-navigation"
+                    aria-expanded="false" hidden>
+                <span class="menu-bars"
+                      aria-hidden="true">&#9776;</span>
+                <span>Menu</span>
+            </button>
+
+            <nav class="site-nav" id="site-navigation"
+                 aria-label="Main navigation">
                 {% for label, endpoint in navigation %}
                 <a href="{{ url_for(endpoint) }}"
                    {% if request.endpoint == endpoint %}aria-current="page"{% endif %}>
@@ -41,10 +54,17 @@
 
     <footer class="site-footer">
         <div class="container footer-inner">
-            <strong>WACMO</strong>
-            <span>
-                Riding adventures and shared memories.
-            </span>
+            <strong class="footer-brand">WACMO</strong>
+            <p class="footer-nacmo-copy">For ride results and more information, click on the NACMO logo to go to the National website!</p>
+            <a class="footer-nacmo-link"
+               href="https://www.nacmo.org/"
+               target="_blank"
+               rel="noopener noreferrer"
+               aria-label="Visit the NACMO national website">
+                <img src="{{ url_for('static', filename='images/wacmo_nacmo_logo.png') }}"
+                     alt="NACMO National Association of Competitive Mounted Orienteering logo"
+                     width="96" height="101">
+            </a>
         </div>
     </footer>
 </body>
