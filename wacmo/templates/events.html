@@ -1,0 +1,113 @@
+{% extends "base.html" %}
+
+{% block title %}Event Calendar{% endblock %}
+
+{% block content %}
+<section class="page-intro">
+    <div class="container">
+        <p class="eyebrow">The next adventure</p>
+        <h1>Event Calendar</h1>
+        <p>
+            Explore upcoming WACMO rides and activities.
+        </p>
+    </div>
+</section>
+
+<section class="content-section container">
+    <div class="calendar-heading">
+        <div>
+            <p class="eyebrow">Ride schedule</p>
+            <h2 id="calendar-month">
+                {{ calendar.title }}
+            </h2>
+        </div>
+
+        <nav class="calendar-navigation"
+             aria-label="Calendar month navigation">
+
+            {% if calendar.previous %}
+            <a class="calendar-nav-button"
+               href="{{ url_for(
+                   'events',
+                   year=calendar.previous[0],
+                   month=calendar.previous[1]
+               ) }}"
+               aria-label="Previous month">
+                &larr; Previous
+            </a>
+            {% else %}
+            <span class="calendar-nav-disabled">
+                Previous
+            </span>
+            {% endif %}
+
+            {% if calendar.following %}
+            <a class="calendar-nav-button"
+               href="{{ url_for(
+                   'events',
+                   year=calendar.following[0],
+                   month=calendar.following[1]
+               ) }}"
+               aria-label="Next month">
+                Next &rarr;
+            </a>
+            {% else %}
+            <span class="calendar-nav-disabled">
+                Next
+            </span>
+            {% endif %}
+        </nav>
+    </div>
+
+    <div class="calendar-container">
+        <table class="calendar-table">
+            <caption class="visually-hidden">
+                {{ calendar.title }} WACMO calendar
+            </caption>
+            <thead>
+                <tr>
+                    <th scope="col">Sun</th>
+                    <th scope="col">Mon</th>
+                    <th scope="col">Tue</th>
+                    <th scope="col">Wed</th>
+                    <th scope="col">Thu</th>
+                    <th scope="col">Fri</th>
+                    <th scope="col">Sat</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                {% for week in calendar.weeks %}
+                <tr>
+                    {% for day in week %}
+                    <td class="calendar-day
+                        {% if not day.in_month %}
+                            calendar-outside
+                        {% endif %}
+                        {% if day.is_today %}
+                            calendar-today
+                        {% endif %}">
+                        <time datetime="{{ day.iso }}"
+                              title="{{ day.label }}"
+                              {% if day.is_today %}
+                              aria-current="date"
+                              {% endif %}>
+                            {{ day.number }}
+                        </time>
+                    </td>
+                    {% endfor %}
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+
+    <div class="calendar-empty">
+        <h3>No rides published for this month yet</h3>
+        <p>
+            Upcoming rides will appear on this calendar
+            once event publishing is available.
+        </p>
+    </div>
+</section>
+{% endblock %}

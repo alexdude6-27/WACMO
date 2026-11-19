@@ -1,4 +1,6 @@
-from flask import Flask, render_template
+from flask import Flask, abort, render_template, request
+
+from .calendar import build_month, pacific_today
 
 
 NAVIGATION = (
@@ -12,14 +14,6 @@ NAVIGATION = (
 
 
 PAGES = {
-    "events": {
-        "title": "Event Calendar",
-        "description": "Find upcoming WACMO rides and events.",
-        "note": (
-            "The event calendar and downloadable calendar "
-            "entries will be added with event management."
-        ),
-    },
     "ride_flyers": {
         "title": "Ride Flyers",
         "description": "Flyers for rides, past and present.",
@@ -71,8 +65,38 @@ def create_app():
 
     @app.get("/events")
     def events():
+        today = pacific_today()
+
+        year_text = request.args.get("year")
+        month_text = request.args.get("month")
+
+        if year_text is None and month_text is None:
+            year, month = today.year, today.month
+        else:
+            if year_text is None or month_text is None:
+                abort(400)
+
+            if not (
+                len(year_text) == 4
+                and year_text.isascii()
+                and year_text.isdigit()
+                and 1 <= len(month_text) <= 2
+                and month_text.isascii()
+                and month_text.isdigit()
+            ):
+                abort(400)
+
+            year = int(year_text)
+            month = int(month_text)
+
+        try:
+            calendar_view = build_month(year, month, today)
+        except ValueError:
+            abort(400)
+
         return render_template(
-            "section.html", page=PAGES["events"]
+            "events.html",
+            calendar=calendar_view,
         )
 
     @app.get("/ride-flyers")
