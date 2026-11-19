@@ -1,54 +1,83 @@
-<!doctype html>
-<html lang="en">
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport"
-          content="width=device-width, initial-scale=1">
-    <title>WACMO | Mounted Orienteering</title>
-    <link rel="stylesheet"
-          href="{{ url_for('static', filename='css/site.css') }}">
-</head>
-<body>
-    <header class="site-header">
-        <div class="container">
-            <h1>WACMO</h1>
-            <p>Washington Association of Competitive
-               Mounted Orienteering</p>
+{% extends "base.html" %}
+
+{% block title %}Home{% endblock %}
+
+{% block content %}
+<section class="hero">
+    <div class="container hero-inner">
+        <div class="hero-copy">
+            <p class="eyebrow">Mounted orienteering in Washington</p>
+            <h1>Adventure starts with a direction.</h1>
+            <p class="hero-description">
+                Discover upcoming rides, explore riding areas,
+                and revisit the moments that make WACMO special.
+            </p>
+            <div class="hero-actions">
+                <a class="button button-primary"
+                   href="{{ url_for('events') }}">
+                    Explore Events
+                </a>
+                <a class="button button-secondary"
+                   href="{{ url_for('galleries') }}">
+                    Photo Galleries
+                </a>
+            </div>
         </div>
-    </header>
 
-    <main class="container">
-        <h2>Welcome to WACMO</h2>
-        <p>
-            Your home for rides, events, photographs,
-            and mounted orienteering adventures.
-        </p>
-
-        <div class="features">
-            <section>
-                <h3>Event Calendar</h3>
-                <p>Upcoming rides and activities.</p>
-            </section>
-
-            <section>
-                <h3>Ride Flyers</h3>
-                <p>Current and archived event flyers.</p>
-            </section>
-
-            <section>
-                <h3>Photo Galleries</h3>
-                <p>Memories from past rides.</p>
-            </section>
-
-            <section>
-                <h3>Riding Areas</h3>
-                <p>Explore places where we ride.</p>
-            </section>
+        <div class="hero-art" aria-hidden="true">
+            <span class="hero-art-mark">W</span>
         </div>
-    </main>
+    </div>
+</section>
 
-    <footer class="site-footer">
-        <p>WACMO Website</p>
-    </footer>
-</body>
-</html>
+<section class="content-section container"
+         aria-labelledby="explore-heading">
+    <div class="section-heading">
+        <p class="eyebrow">Find your way</p>
+        <h2 id="explore-heading">Explore WACMO</h2>
+        <p>Everything you need for the next adventure.</p>
+    </div>
+
+    <div class="features">
+        <article class="feature-card">
+            <span class="feature-number">01</span>
+            <h3>
+                <a href="{{ url_for('events') }}">
+                    Event Calendar
+                </a>
+            </h3>
+            <p>Upcoming rides and activities in one place.</p>
+        </article>
+
+        <article class="feature-card">
+            <span class="feature-number">02</span>
+            <h3>
+                <a href="{{ url_for('ride_flyers') }}">
+                    Ride Flyers
+                </a>
+            </h3>
+            <p>Find flyers and revisit past events.</p>
+        </article>
+
+        <article class="feature-card">
+            <span class="feature-number">03</span>
+            <h3>
+                <a href="{{ url_for('galleries') }}">
+                    Photo Galleries
+                </a>
+            </h3>
+            <p>Explore memories captured along the trail.</p>
+        </article>
+
+        <article class="feature-card">
+            <span class="feature-number">04</span>
+            <h3>
+                <a href="{{ url_for('riding_areas') }}">
+                    Riding Areas
+                </a>
+            </h3>
+            <p>Learn about the landscapes we explore.</p>
+        </article>
+    </div>
+</section>
+{% endblock %}
