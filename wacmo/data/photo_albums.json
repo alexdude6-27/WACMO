@@ -1,0 +1,74 @@
+{
+  "version": 1,
+  "albums": [
+    {
+      "slug": "original-wacmo-ride-photos",
+      "title": "Original WACMO Ride Photos",
+      "description": "Photographs preserved from the original WACMO website. Their original event dates have not been verified.",
+      "year": null,
+      "event_id": null,
+      "photos": [
+        {
+          "path": "photos/original-wacmo-ride-photos/IMG005.JPG",
+          "original_filename": "IMG005.JPG",
+          "sha256": "40ee3a26696b0ebaedfdcee451651382a5a73f6ffeb8318dba2bbda646e41966"
+        },
+        {
+          "path": "photos/original-wacmo-ride-photos/IMG002.JPG",
+          "original_filename": "IMG002.JPG",
+          "sha256": "5291aaab00d4bb609cafec21c73fa21e704370bd53493c9d852e96c071bd30d1"
+        },
+        {
+          "path": "photos/original-wacmo-ride-photos/IMG003.JPG",
+          "original_filename": "IMG003.JPG",
+          "sha256": "ad79c104affd0ecbf7ddf8c08beb1d12cf5ef390246bbce5ca025ab4af4c2878"
+        },
+        {
+          "path": "photos/original-wacmo-ride-photos/IMG001.JPG",
+          "original_filename": "IMG001.JPG",
+          "sha256": "56f58a4965d7cdb92bd36e7163af089dec37a34f0c9b648a4f244dd6d0202c1d"
+        },
+        {
+          "path": "photos/original-wacmo-ride-photos/IMG007.JPG",
+          "original_filename": "IMG007.JPG",
+          "sha256": "78d87d48b18533dae2178856f53c7614c34ffda76ed816782d337a786ec02c3b"
+        },
+        {
+          "path": "photos/original-wacmo-ride-photos/IMG011.JPG",
+          "original_filename": "IMG011.JPG",
+          "sha256": "69561cb624794857fa0926c8b8c5792751340f9a7e35821e1f675645e6059c7e"
+        },
+        {
+          "path": "photos/original-wacmo-ride-photos/IMG008.JPG",
+          "original_filename": "IMG008.JPG",
+          "sha256": "10428bd55fb75e5d1b19e0b8d6e458a5ccaf72baa6ef9be8b9e2891cb00eb8b4"
+        },
+        {
+          "path": "photos/original-wacmo-ride-photos/IMG006.JPG",
+          "original_filename": "IMG006.JPG",
+          "sha256": "9f562627d85defc0302f3f33ca1e8783eed997b2d37dd8fe0e0744082a45a532"
+        },
+        {
+          "path": "photos/original-wacmo-ride-photos/IMG009.JPG",
+          "original_filename": "IMG009.JPG",
+          "sha256": "0c020fbd8edfec6e82a827052406538564a1954b4a9cc65616bf546fdacbaf42"
+        },
+        {
+          "path": "photos/original-wacmo-ride-photos/IMG012.JPG",
+          "original_filename": "IMG012.JPG",
+          "sha256": "03c24252913f7deb2218fe9da05a6809590713d3becd7a430ed978cb955484e7"
+        },
+        {
+          "path": "photos/original-wacmo-ride-photos/IMG013.JPG",
+          "original_filename": "IMG013.JPG",
+          "sha256": "fd43fbaeb6c82f82100986732efb3b6860618ff5a409d976e2ee84f00b5e7348"
+        },
+        {
+          "path": "photos/original-wacmo-ride-photos/IMG014.JPG",
+          "original_filename": "IMG014.JPG",
+          "sha256": "eca55898c2205566c07847767970959989988787661a2ea1e9f2dc5126ee0ac8"
+        }
+      ]
+    }
+  ]
+}

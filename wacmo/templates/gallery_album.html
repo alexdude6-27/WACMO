@@ -1,0 +1,54 @@
+{% extends "base.html" %}
+{% block title %}{{ album.title }}{% endblock %}
+{% block content %}
+<section class="photo-album-page container">
+    <nav class="photo-back-link">
+        <a href="{{ url_for('galleries') }}">
+            &larr; All photo collections
+        </a>
+    </nav>
+
+    <header class="photo-page-heading">
+        <p class="eyebrow">WACMO photo collection</p>
+        <h1>{{ album.title }}</h1>
+        <p>{{ album.description }}</p>
+        <p class="photo-album-count">
+            {{ album.photos | length }} original photographs
+        </p>
+
+        {% if album.event_id %}
+        <p>
+            <a href="{{ url_for(
+                'event_detail',
+                event_id=album.event_id
+            ) }}">
+                View the related WACMO event
+            </a>
+        </p>
+        {% endif %}
+    </header>
+
+    <div class="photo-image-grid">
+        {% for photo in album.photos %}
+        <a href="{{ url_for(
+            'static',
+            filename=photo.path
+        ) }}"
+           target="_blank"
+           rel="noopener noreferrer"
+           aria-label="Open original photograph {{ loop.index }}">
+            <img src="{{ url_for(
+                'static',
+                filename=photo.path
+            ) }}"
+                 alt="WACMO album photograph {{ loop.index }}"
+                 loading="lazy">
+        </a>
+        {% endfor %}
+    </div>
+
+    <p class="photo-album-footnote">
+        Select any photograph to view the original image.
+    </p>
+</section>
+{% endblock %}

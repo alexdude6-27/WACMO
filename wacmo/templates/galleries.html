@@ -1,6 +1,101 @@
 {% extends "base.html" %}
 {% block title %}Photo Gallery{% endblock %}
 {% block content %}
+
+<section class="photo-gallery-home container">
+    <header class="photo-page-heading">
+        <p class="eyebrow">WACMO memories</p>
+        <h1>Photo Gallery</h1>
+        <p>
+            Trail companions, camp memories, and moments
+            from the WACMO community.
+        </p>
+    </header>
+
+    <section class="photo-facebook-section"
+             aria-labelledby="facebook-photos-heading">
+        <div>
+            <h2 id="facebook-photos-heading">
+                More riding memories on Facebook
+            </h2>
+            <p>
+                WACMO members share many more photographs
+                in the WACMO Facebook group.
+            </p>
+        </div>
+
+        <a href="https://www.facebook.com/search/groups/?q=WACMO"
+           target="_blank"
+           rel="noopener noreferrer">
+            Find WACMO on Facebook
+        </a>
+    </section>
+
+    <section aria-labelledby="photo-collections-heading">
+        <div class="photo-collections-heading">
+            <h2 id="photo-collections-heading">
+                Photo Collections
+            </h2>
+            <p>
+                Selected photographs preserved on the WACMO website.
+            </p>
+        </div>
+
+        <div class="photo-album-list">
+            {% for album in photo_albums %}
+            <article class="photo-album-card">
+                <a class="photo-album-cover"
+                   href="{{ url_for(
+                       'gallery_album',
+                       slug=album.slug
+                   ) }}"
+                   aria-label="View {{ album.title }}">
+                    {% for photo in album.photos[:4] %}
+                    <img src="{{ url_for(
+                        'static',
+                        filename=photo.path
+                    ) }}"
+                         alt="Photograph from {{ album.title }}"
+                         loading="lazy">
+                    {% endfor %}
+                </a>
+
+                <div class="photo-album-info">
+                    <h3>
+                        <a href="{{ url_for(
+                            'gallery_album',
+                            slug=album.slug
+                        ) }}">
+                            {{ album.title }}
+                        </a>
+                    </h3>
+
+                    <p>{{ album.description }}</p>
+
+                    <p class="photo-album-count">
+                        {{ album.photos | length }} photographs
+                    </p>
+
+                    <a class="photo-album-open"
+                       href="{{ url_for(
+                           'gallery_album',
+                           slug=album.slug
+                       ) }}">
+                        View collection
+                    </a>
+                </div>
+            </article>
+            {% endfor %}
+        </div>
+    </section>
+</section>
+
+<details class="photo-original-archive container">
+    <summary>View the original WACMO photo gallery page</summary>
+    <p>
+        The original website layout and photo links
+        are preserved here for historical reference.
+    </p>
 <section class="heritage-article heritage-media heritage-media--galleries container">
     <h1>Photo Gallery</h1>
     <div class="heritage-article-body">
@@ -70,4 +165,6 @@
 
     </div>
 </section>
+
+</details>
 {% endblock %}

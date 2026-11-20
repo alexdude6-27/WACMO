@@ -255,9 +255,12 @@ def create_app():
         if event is None:
             abort(404)
 
+        from .photo_albums import albums_for_event
+
         return render_template(
             "event_detail.html",
             event=event,
+            event_photo_albums=albums_for_event(event_id),
         )
 
     @app.get("/what-is-cmo")
@@ -399,7 +402,32 @@ def create_app():
 
     @app.get("/galleries")
     def galleries():
-        return render_template("galleries.html")
+        from .photo_albums import load_photo_albums
+
+        return render_template(
+            "galleries.html",
+            photo_albums=load_photo_albums(),
+        )
+
+    @app.get("/galleries/<slug>")
+    def gallery_album(slug):
+        from .photo_albums import load_photo_albums
+
+        album = next(
+            (
+                item for item in load_photo_albums()
+                if item["slug"] == slug
+            ),
+            None,
+        )
+
+        if album is None:
+            abort(404)
+
+        return render_template(
+            "gallery_album.html",
+            album=album,
+        )
 
     @app.get("/riding-areas")
     def riding_areas():
