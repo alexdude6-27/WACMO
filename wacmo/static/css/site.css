@@ -668,12 +668,62 @@ body > main {
 
 .page-intro {
     background: rgba(231, 232, 203, .75);
+    padding-block: clamp(1.25rem, 2.5vw, 2rem);
 }
 
+/* Shared western-style page headings. */
 .page-intro h1,
-.section-heading h2 {
-    font-family: Georgia, serif;
-    color: #285c30;
+.section-heading h2,
+.calendar-heading h2,
+.history-heading h2 {
+    font-family: "WACMO Rye", Georgia, serif;
+    font-weight: 400;
+    letter-spacing: 0;
+    line-height: 1.3;
+    color: #422817;
+    text-shadow: 1px 1px 0 #d7bc83;
+}
+
+.page-intro h1 {
+    margin: 0;
+    font-size: clamp(1.65rem, 3.1vw, 2.55rem);
+}
+
+.page-intro .eyebrow {
+    margin: 0 0 .4rem;
+}
+
+.page-intro p:last-child {
+    margin: .35rem 0 0;
+}
+
+/* Compact historical event detail pages. */
+.content-section.event-detail-content {
+    padding-block: 1rem 2.5rem;
+}
+
+.heritage-article.event-detail-article {
+    max-width: 900px;
+    padding: 0;
+    font-size: clamp(1rem, 1.5vw, 1.1rem);
+    line-height: 1.5;
+}
+
+.event-detail-article h2 {
+    margin: .15rem 0 .65rem;
+    font-family: "WACMO Rye", Georgia, serif;
+    font-weight: 400;
+    font-size: clamp(1.2rem, 2.2vw, 1.65rem);
+    line-height: 1.35;
+    color: #422817;
+}
+
+.event-detail-article p {
+    margin: .5rem 0;
+}
+
+.event-detail-article p:last-child {
+    margin-top: 1.2rem;
 }
 
 @media (max-width: 760px) {

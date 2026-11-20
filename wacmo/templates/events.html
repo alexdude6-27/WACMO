@@ -95,20 +95,11 @@
                             {{ day.number }}
                         </time>
                         {% for event in day.events %}
-                        {% if event.nacmo_details_url %}
                         <a class="calendar-event-chip"
-                           href="{{ event.nacmo_details_url }}"
-                           target="_blank"
-                           rel="noopener noreferrer"
-                           title="NACMO schedule details; occurrence unconfirmed">
+                           href="{{ url_for('event_detail', event_id=event.id) }}"
+                           title="View WACMO historical event">
                             {{ event.title }}
                         </a>
-                        {% else %}
-                        <span class="calendar-event-chip"
-                              title="Historical schedule listing; occurrence unconfirmed">
-                            {{ event.title }}
-                        </span>
-                        {% endif %}
                         {% endfor %}
                     </td>
                     {% endfor %}
@@ -132,14 +123,7 @@
                 <span class="calendar-event-date">
                     {{ event.date_label }}
                 </span>
-                <strong>{{ event.title }}</strong>
-                {% if event.nacmo_details_url %}
-                <a href="{{ event.nacmo_details_url }}"
-                   target="_blank"
-                   rel="noopener noreferrer">
-                    NACMO event details
-                </a>
-                {% endif %}
+                <a href="{{ url_for('event_detail', event_id=event.id) }}"><strong>{{ event.title }}</strong></a>
                 {% if event.location %}
                 <span>{{ event.location }}</span>
                 {% endif %}
@@ -194,20 +178,13 @@
                     <span class="history-event-date">
                         {{ event.date_label }}
                     </span>
-                    <strong>{{ event.title }}</strong>
+                    <a href="{{ url_for('event_detail', event_id=event.id) }}"><strong>{{ event.title }}</strong></a>
                     {% if event.location %}
                     <span class="history-event-location">
                         {{ event.location }}
                     </span>
                     {% endif %}
                 </div>
-                {% if event.nacmo_details_url %}
-                <a href="{{ event.nacmo_details_url }}"
-                   target="_blank"
-                   rel="noopener noreferrer">
-                    NACMO details
-                </a>
-                {% endif %}
             </li>
             {% endfor %}
         </ol>
@@ -225,7 +202,7 @@
             <summary>Browse Earlier Years</summary>
             <div class="history-year-links">
                 {% for year in older_years %}
-                <a href="{{ url_for('events', archive_year=year) }}#event-history"
+                <a href="{{ url_for('events', archive_year=year) }}#selected-archive-year"
                    {% if archive_year == year %}aria-current="true"{% endif %}>
                     {{ year }}
                 </a>
@@ -235,6 +212,7 @@
 
         {% if archive_year is not none %}
         <section class="history-season"
+                 id="selected-archive-year"
                  aria-label="{{ archive_year }} archived events">
             <h3>{{ archive_year }} Season</h3>
             {% if older_events %}
@@ -245,20 +223,13 @@
                         <span class="history-event-date">
                             {{ event.date_label }}
                         </span>
-                        <strong>{{ event.title }}</strong>
+                        <a href="{{ url_for('event_detail', event_id=event.id) }}"><strong>{{ event.title }}</strong></a>
                         {% if event.location %}
                         <span class="history-event-location">
                             {{ event.location }}
                         </span>
                         {% endif %}
                     </div>
-                    {% if event.nacmo_details_url %}
-                    <a href="{{ event.nacmo_details_url }}"
-                       target="_blank"
-                       rel="noopener noreferrer">
-                        NACMO details
-                    </a>
-                    {% endif %}
                 </li>
                 {% endfor %}
             </ol>

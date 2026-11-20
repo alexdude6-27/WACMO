@@ -1,0 +1,73 @@
+{% extends "base.html" %}
+
+{% block title %}{{ event.title }} – {{ event.date_label }}{% endblock %}
+
+{% block meta_description %}WACMO {{ event.category }} history: {{ event.title }}, {{ event.date_label }}{% if event.location %}, {{ event.location }}{% endif %}. Explore this historical event listing.{% endblock %}
+
+{% block content %}
+<section class="page-intro event-detail-intro">
+    <div class="container">
+        <p class="eyebrow">WACMO Event History</p>
+        <h1>{{ event.title }}</h1>
+        <p>{{ event.date_label }}</p>
+    </div>
+</section>
+
+<section class="content-section container event-detail-content">
+    <article class="heritage-article event-detail-article">
+        <h2>Historical Event Information</h2>
+
+        <p>
+            <strong>Date:</strong> {{ event.date_label }}
+        </p>
+
+        {% if event.location %}
+        <p>
+            <strong>Location:</strong> {{ event.location }}
+        </p>
+        {% endif %}
+
+        <p>
+            <strong>Event type:</strong>
+            {{ event.category | title }}
+        </p>
+
+        {% if event.start_time %}
+        <p>
+            <strong>Published start time:</strong>
+            {{ event.start_time }}
+        </p>
+        {% endif %}
+
+        {% if event.wacmo_original is defined
+              and event.wacmo_original.title
+              and event.wacmo_original.title != event.title %}
+        <p>
+            <strong>Original WACMO schedule name:</strong>
+            {{ event.wacmo_original.title }}
+        </p>
+        {% endif %}
+
+        <p>
+            This event appeared in a published WACMO schedule.
+            The listing alone does not confirm that the event
+            took place.
+        </p>
+
+        <p>
+            Original flyers and historical photographs will
+            be linked here as the archives are restored.
+        </p>
+
+        <p>
+            <a href="{{ url_for(
+                'events',
+                year=event.start_date[:4],
+                month=event.start_date[5:7] | int
+            ) }}">
+                Return to this month in the WACMO calendar
+            </a>
+        </p>
+    </article>
+</section>
+{% endblock %}

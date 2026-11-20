@@ -233,6 +233,25 @@ def create_app():
             older_events=older_events,
         )
 
+    @app.get("/events/<event_id>")
+    def event_detail(event_id):
+        event = next(
+            (
+                record
+                for record in load_archived_schedule()
+                if record["id"] == event_id
+            ),
+            None,
+        )
+
+        if event is None:
+            abort(404)
+
+        return render_template(
+            "event_detail.html",
+            event=event,
+        )
+
     @app.get("/what-is-cmo")
     def what_is_cmo():
         return render_template("what_is_cmo.html")

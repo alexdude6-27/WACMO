@@ -6,6 +6,10 @@
           content="width=device-width, initial-scale=1">
     <meta name="theme-color" content="#244b35">
     <title>{% block title %}Home{% endblock %} | WACMO</title>
+    <meta name="robots" content="index,follow">
+    <meta name="description"
+          content="{% block meta_description %}Washington Association of Competitive Mounted Orienteering. Explore WACMO rides, event schedules, flyers, and historical adventures.{% endblock %}">
+    <link rel="canonical" href="{{ request.base_url }}">
     <link rel="stylesheet"
           href="{{ url_for('static', filename='css/site.css') }}">
     <script defer
@@ -44,8 +48,7 @@
                     Home
                 </a>
                 {% for group in nav_groups %}
-                <details class="nav-group"
-                         {% if group.active %}open{% endif %}>
+                <details class="nav-group">
                     <summary {% if group.active %}class="nav-group-active"{% endif %}>
                         {{ group.label }}
                         <span aria-hidden="true">⌄</span>

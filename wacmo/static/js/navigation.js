@@ -27,7 +27,12 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
     navigation.addEventListener("click", (event) => {
-        if (event.target.closest("a")) close();
+        if (event.target.closest("a")) {
+            navigation.querySelectorAll(".nav-group").forEach(
+                (group) => { group.open = false; }
+            );
+            close();
+        }
     });
 
     document.addEventListener("keydown", (event) => {

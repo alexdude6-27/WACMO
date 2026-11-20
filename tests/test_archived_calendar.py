@@ -93,4 +93,4 @@ def test_nacmo_references_and_original_names():
     ).get_data(as_text=True)
 
     assert "MT Pockets take 2" in page
-    assert "rdkey=20102093&amp;rikey=20101161" in page
+    assert 'href="/events/2026-06-27-mt-pockets-take-2"' in page
