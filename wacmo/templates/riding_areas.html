@@ -1,6 +1,97 @@
 {% extends "base.html" %}
 {% block title %}Maps{% endblock %}
 {% block content %}
+<section class="riding-map-library container">
+    <header class="riding-map-heading">
+        <p class="eyebrow">Explore WACMO riding areas</p>
+        <h1>Riding Area Maps</h1>
+        <p>
+            Explore the trails and terrain of historical
+            WACMO riding areas. Select a map to enlarge
+            its preview, or open its original printable PDF.
+        </p>
+    </header>
+
+    <form class="riding-map-search"
+          action="{{ url_for('riding_areas') }}"
+          method="get"
+          role="search">
+        <label for="riding-map-query">
+            Search riding areas
+        </label>
+        <div class="riding-map-search-row">
+            <input id="riding-map-query"
+                   name="q"
+                   type="search"
+                   value="{{ map_query }}"
+                   placeholder="Search by area, location, or map name">
+            <button type="submit">Search maps</button>
+            {% if map_query %}
+            <a href="{{ url_for('riding_areas') }}">
+                Clear
+            </a>
+            {% endif %}
+        </div>
+    </form>
+
+    <p class="riding-map-results">
+        Showing {{ riding_maps | length }}
+        of {{ map_total }} riding-area maps
+    </p>
+
+    <div class="riding-map-grid">
+        {% for map_item in riding_maps %}
+        <article class="riding-map-card">
+            <a class="riding-map-preview photo-lightbox-trigger"
+               href="{{ url_for(
+                   'static',
+                   filename=map_item.zoom_path
+               ) }}"
+               data-lightbox-group="wacmo-riding-maps"
+               data-lightbox-caption="{{ map_item.title }}"
+               aria-label="Enlarge {{ map_item.title }} map">
+                <img src="{{ url_for(
+                    'static',
+                    filename=map_item.preview_path
+                ) }}"
+                     alt="Map preview of {{ map_item.title }}"
+                     loading="lazy">
+                <span>Enlarge map</span>
+            </a>
+
+            <div class="riding-map-card-details">
+                <h2>{{ map_item.title }}</h2>
+                <p>Original WACMO riding-area reference map</p>
+
+                <a class="riding-map-pdf"
+                   href="{{ url_for(
+                       'static',
+                       filename=map_item.pdf_path
+                   ) }}"
+                   target="_blank"
+                   rel="noopener noreferrer">
+                    View Printable PDF
+                </a>
+            </div>
+        </article>
+        {% else %}
+        <p class="riding-map-empty">
+            No maps match your search. Try a different
+            riding area or location.
+        </p>
+        {% endfor %}
+    </div>
+
+    <p class="riding-map-disclaimer">
+        Historical reference maps may not reflect current
+        trails, access restrictions, or land management rules.
+        Always verify current conditions before riding.
+    </p>
+</section>
+
+<details class="riding-map-original container">
+    <summary>View the original WACMO Maps page</summary>
+
 <section class="heritage-article heritage-media heritage-media--riding_areas container">
     <h1>Maps</h1>
     <div class="heritage-article-body">
@@ -148,4 +239,8 @@
 
     </div>
 </section>
+
+</details>
+
+{% include "_photo_lightbox.html" %}
 {% endblock %}

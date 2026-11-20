@@ -1,0 +1,240 @@
+{
+  "version": 1,
+  "source": "Original publicly listed WACMO Maps page",
+  "maps": [
+    {
+      "title": "Ahtanum State Forest Near Tampico, WA",
+      "original_filename": "2023Ahtanum.pdf",
+      "pdf_path": "riding_maps/pdfs/2023Ahtanum.pdf",
+      "preview_path": "riding_maps/thumbnails/2023Ahtanum.jpg",
+      "zoom_path": "riding_maps/full_previews/2023Ahtanum.jpg",
+      "pdf_sha256": "098e9a88cc4bb73fb8976213640a26a943152b04d9e447c123acb7ff12621eb4",
+      "preview_sha256": "447ce0bb43ae8f7bf2c10f2642d43222113b590984e34c2777360d25350d73f4"
+    },
+    {
+      "title": "Cathedral Falls/Vanson Lake/Green River Horse Camp, Morton, WA",
+      "original_filename": "2011-cathedral-fallsvanson.pdf",
+      "pdf_path": "riding_maps/pdfs/2011-cathedral-fallsvanson.pdf",
+      "preview_path": "riding_maps/thumbnails/cathedral_falls-vanson.jpeg",
+      "zoom_path": "riding_maps/full_previews/2011-cathedral-fallsvanson.jpg",
+      "pdf_sha256": "49a6b97ff3acb11678d398e820e7195d2e8e19a4e1c377cf0b3fedbcbcdcfb0f",
+      "preview_sha256": "47ca272bbb75a0411a4e1a3ad790ecf1b95df93d6e7d02482c26cd0f9cb50a45"
+    },
+    {
+      "title": "Cody & Walupt Lake Horse Camps, Randle, WA",
+      "original_filename": "CodyHorseCamp-Randle-2024.pdf",
+      "pdf_path": "riding_maps/pdfs/CodyHorseCamp-Randle-2024.pdf",
+      "preview_path": "riding_maps/thumbnails/CodyHorseCamp-Randle-2024.jpg",
+      "zoom_path": "riding_maps/full_previews/CodyHorseCamp-Randle-2024.jpg",
+      "pdf_sha256": "fa13e155c948cce72471921e6b240f2d1fb40b193d606066f5eb102473dcefa7",
+      "preview_sha256": "d1fece6b858c90e2bf3db5a3efed370939a0be4bb91d6a1aed740c25848d5765"
+    },
+    {
+      "title": "Cowlitz Wildlife Area, Randle, WA",
+      "original_filename": "cowlitz-wildlife-area-randl.pdf",
+      "pdf_path": "riding_maps/pdfs/cowlitz-wildlife-area-randl.pdf",
+      "preview_path": "riding_maps/thumbnails/29019396_10211783874460064_.jpeg",
+      "zoom_path": "riding_maps/full_previews/cowlitz-wildlife-area-randl.jpg",
+      "pdf_sha256": "50b24b20a7e5dd7a0a1773b95d82cf880765b28aab830a685f599df302522bb4",
+      "preview_sha256": "a4e265210a8e09b0efcdb6e07d0c7eba6847a834de1a0e6a94ab912e6beb4f12"
+    },
+    {
+      "title": "Danville-Georgetown, Maple Valley, WA",
+      "original_filename": "DanvilleGeorgetown_2021-blank.pdf",
+      "pdf_path": "riding_maps/pdfs/DanvilleGeorgetown_2021-blank.pdf",
+      "preview_path": "riding_maps/thumbnails/DanvilleGeorgetown_blank-2021.jpg",
+      "zoom_path": "riding_maps/full_previews/DanvilleGeorgetown_2021-blank.jpg",
+      "pdf_sha256": "0a2220ac7e2c7a7f3cbcad6284fda0f6e7e032a380b157684e4851e0f7b7b4fb",
+      "preview_sha256": "c60d87d920bd742a5924d0fa3ac09786d20218a6db322b8e54d56eb57801f9a9"
+    },
+    {
+      "title": "Elbe Hills State Forest, Elbe, WA",
+      "original_filename": "ElbeMaps2024.pdf",
+      "pdf_path": "riding_maps/pdfs/ElbeMaps2024.pdf",
+      "preview_path": "riding_maps/thumbnails/elbe-hills-state-forest-.jpeg",
+      "zoom_path": "riding_maps/full_previews/ElbeMaps2024.jpg",
+      "pdf_sha256": "a02aad03ab4c971ab037da0d599eaf02c52084a659846ccc133e85eeca3bb8a0",
+      "preview_sha256": "af4b38a3fce8ff9e2d92c810987f5844eb271c33eaf57d64191a1f02dd725e6a"
+    },
+    {
+      "title": "Fall Creek & Margaret McKinney - Capitol State Forest, WA",
+      "original_filename": "2022CapForest-FallCreek_MMK.pdf",
+      "pdf_path": "riding_maps/pdfs/2022CapForest-FallCreek_MMK.pdf",
+      "preview_path": "riding_maps/thumbnails/2022CapForest.jpg",
+      "zoom_path": "riding_maps/full_previews/2022CapForest-FallCreek_MMK.jpg",
+      "pdf_sha256": "99bbfd124d1751fbca9f4f55d447ee32220479eac0663aa0b4235a9987f6b2f9",
+      "preview_sha256": "0334760c15616fd6582157b2b2ae012f5bb9b2ab187c83adc3504b94f148afdd"
+    },
+    {
+      "title": "Green Mt. DNR Horse Camp, Belfair, WA",
+      "original_filename": "2012-green-mt-belfair-wa.pdf",
+      "pdf_path": "riding_maps/pdfs/2012-green-mt-belfair-wa.pdf",
+      "preview_path": "riding_maps/thumbnails/green_mountain_belfair_wa.jpeg",
+      "zoom_path": "riding_maps/full_previews/2012-green-mt-belfair-wa.jpg",
+      "pdf_sha256": "1d92998594b714c25b0962bfdd043a6cc0b6aef7a7cb3b09deb7363b663aff4e",
+      "preview_sha256": "bd87c5ab09b17b6a21c581349d67047f76cc8dcf0a900c5efc79e4b06ac2a070"
+    },
+    {
+      "title": "Green River Horse Camp - Randle, WA",
+      "original_filename": "2023GreenRiver-Randle.pdf",
+      "pdf_path": "riding_maps/pdfs/2023GreenRiver-Randle.pdf",
+      "preview_path": "riding_maps/thumbnails/2023GreenRiver-Randle.jpg",
+      "zoom_path": "riding_maps/full_previews/2023GreenRiver-Randle.jpg",
+      "pdf_sha256": "9cf1b93ddfd35c05ffe4d71505316d0199a931a6445a4509ab76b8691d7d2791",
+      "preview_sha256": "9fe3413bc8eaca360eb8443e2cde738dd2324ad45a8842bbc024042327f0682f"
+    },
+    {
+      "title": "Joe Watt Canyon-Ellensburg - NoMileage, WA",
+      "original_filename": "2025-JoeWattCanyon-Ellensburg-NoMileage.pdf",
+      "pdf_path": "riding_maps/pdfs/2025-JoeWattCanyon-Ellensburg-NoMileage.pdf",
+      "preview_path": "riding_maps/thumbnails/2025-JoeWattCanyon-Ellensburg-NoMileage.jpg",
+      "zoom_path": "riding_maps/full_previews/2025-JoeWattCanyon-Ellensburg-NoMileage.jpg",
+      "pdf_sha256": "843a607b14840aba06c8d060a34fa081503c2eee9ee1adbb8cdbb1ee27b2dc1b",
+      "preview_sha256": "2bab9706c366be10e6d279417316da2df9f0af3da3e813f7f8e9be3a1c1c2089"
+    },
+    {
+      "title": "Kalama Horse Camp, Cougar, WA",
+      "original_filename": "2014-kalama-horse-camp.pdf",
+      "pdf_path": "riding_maps/pdfs/2014-kalama-horse-camp.pdf",
+      "preview_path": "riding_maps/thumbnails/2014-kalama-horse-camp.jpg",
+      "zoom_path": "riding_maps/full_previews/2014-kalama-horse-camp.jpg",
+      "pdf_sha256": "4272e05bc169dc7ae7cd0655b4f1043272795fb3729cc050e611380ceb0e224f",
+      "preview_sha256": "9966a15bec5cfd0d8d956cc06fc15e0737dd0bb1c43805700dd84dae68fad283"
+    },
+    {
+      "title": "Keenes Horse Camp, Packwood/Randle, WA",
+      "original_filename": "KeenesHorseCamp-Randle-2024.pdf",
+      "pdf_path": "riding_maps/pdfs/KeenesHorseCamp-Randle-2024.pdf",
+      "preview_path": "riding_maps/thumbnails/KeenesHorseCamp-Randle-2024.jpg",
+      "zoom_path": "riding_maps/full_previews/KeenesHorseCamp-Randle-2024.jpg",
+      "pdf_sha256": "e293529956db26b4f8e4a2e0064745e5123ef7d559b0438de9407b79c91db80c",
+      "preview_sha256": "af7f5f928bceeddca6c5f237427571666e9dc7cbc11ff1ad257dab15261970bb"
+    },
+    {
+      "title": "Ken Wilcox Horse Camp-Haney Meadow - North, CleElum, WA",
+      "original_filename": "KenWilcoxHorseCamp-HaneyMeadow-North-CleElum-2024.pdf",
+      "pdf_path": "riding_maps/pdfs/KenWilcoxHorseCamp-HaneyMeadow-North-CleElum-2024.pdf",
+      "preview_path": "riding_maps/thumbnails/KenWilcoxHorseCamp-HaneyMeadow-North-CleElum-2024.jpg",
+      "zoom_path": "riding_maps/full_previews/KenWilcoxHorseCamp-HaneyMeadow-North-CleElum-2024.jpg",
+      "pdf_sha256": "5cfe75c8c473e309e08f2fef0c50ffafea708b0e1e6693fe2812f746dd12de65",
+      "preview_sha256": "35afaf02c840bad97626e7784e21cc1ab98f2f513b6ea2a9926862b940aec0f1"
+    },
+    {
+      "title": "Les Hilde, Sedro Wooley, WA",
+      "original_filename": "LES_HILDE_MAP.pdf",
+      "pdf_path": "riding_maps/pdfs/LES_HILDE_MAP.pdf",
+      "preview_path": "riding_maps/thumbnails/LHMap.jpg",
+      "zoom_path": "riding_maps/full_previews/LES_HILDE_MAP.jpg",
+      "pdf_sha256": "06a5adbd7994dd87ddd369313ceaf37e6b423ed2aa32d5c15a9e3a410b2b9b54",
+      "preview_sha256": "7f4426cd6b48cba5eca1de51a8defb02678086d551c5339ec3666c69e50636f4"
+    },
+    {
+      "title": "Mt. Adams Horse Camp, Trout Lake, WA",
+      "original_filename": "2015-mount-adam-draft-revis.pdf",
+      "pdf_path": "riding_maps/pdfs/2015-mount-adam-draft-revis.pdf",
+      "preview_path": "riding_maps/thumbnails/2015-mount-adam-draft-revis.jpg",
+      "zoom_path": "riding_maps/full_previews/2015-mount-adam-draft-revis.jpg",
+      "pdf_sha256": "1b05f522543c6a3ad450f17a8bd9ec0248ee8ed4cf4c2d4d07f230945a0c4fdf",
+      "preview_sha256": "cfa83e0fbfaab1c4f6ba01016b824a1b7f5edf0ccb0e45dad41ded17cc112d32"
+    },
+    {
+      "title": "Nisqually State Park, Eatonville, WA",
+      "original_filename": "nisqually-state-park-eatonv.pdf",
+      "pdf_path": "riding_maps/pdfs/nisqually-state-park-eatonv.pdf",
+      "preview_path": "riding_maps/thumbnails/nisqually-state-park-eatonv.jpeg",
+      "zoom_path": "riding_maps/full_previews/nisqually-state-park-eatonv.jpg",
+      "pdf_sha256": "55e657d7b35e055387cb4a9c406ddfbe9265fc6804c0dcb9bfe0fbcbafaf9383",
+      "preview_sha256": "40c203f6752c11285c9e71f995a7caaf2e705d826af05a66b56925f5ccf8af14"
+    },
+    {
+      "title": "Norse Peak Wilderness - Government Meadow, WA",
+      "original_filename": "2025-NorsePeakWilderness-GovernmentMeadow.pdf",
+      "pdf_path": "riding_maps/pdfs/2025-NorsePeakWilderness-GovernmentMeadow.pdf",
+      "preview_path": "riding_maps/thumbnails/2025-NorsePeakWilderness-GovernmentMeadow.jpg",
+      "zoom_path": "riding_maps/full_previews/2025-NorsePeakWilderness-GovernmentMeadow.jpg",
+      "pdf_sha256": "7f71c650b31a80e259ce92ffec6d79016d5b930638f17940857ae0f341cb858a",
+      "preview_sha256": "8f05cb3ac00483b96898b581ec42b94a61178dc5b9d24e0b58c4ed4252de236d"
+    },
+    {
+      "title": "Pack Forest, Eatonville, WA",
+      "original_filename": "2025-PackForestEatonville.pdf",
+      "pdf_path": "riding_maps/pdfs/2025-PackForestEatonville.pdf",
+      "preview_path": "riding_maps/thumbnails/2025-PackForestEatonville.jpg",
+      "zoom_path": "riding_maps/full_previews/2025-PackForestEatonville.jpg",
+      "pdf_sha256": "7e4730e058606cf63b73974c18aae6b02747d68ae45aabb1c4a38f16f0baea2b",
+      "preview_sha256": "1fdbb36c0e285daa48e5283973c9eca8ac976331f22390942f439adb5043c82f"
+    },
+    {
+      "title": "Packwood Lake, Packwood, WA",
+      "original_filename": "2014-packwood-lake-packwood.pdf",
+      "pdf_path": "riding_maps/pdfs/2014-packwood-lake-packwood.pdf",
+      "preview_path": "riding_maps/thumbnails/2014-packwood-lake-packwood.jpeg",
+      "zoom_path": "riding_maps/full_previews/2014-packwood-lake-packwood.jpg",
+      "pdf_sha256": "3f3989c0b63d5f08cb7f620c6f8696387f3886794b3b22c57ac50fa061f73c0d",
+      "preview_sha256": "566676db1246eb9b963658f31684e39b052167e36bc2c77612a68a3dc37ec509"
+    },
+    {
+      "title": "Peterman Hill Trails, Morton WA",
+      "original_filename": "2023-peterman-hill.pdf",
+      "pdf_path": "riding_maps/pdfs/2023-peterman-hill.pdf",
+      "preview_path": "riding_maps/thumbnails/2023-peterman-hill.jpg",
+      "zoom_path": "riding_maps/full_previews/2023-peterman-hill.jpg",
+      "pdf_sha256": "9e5cef574caa9f82e570e6cc0c06bcde4be63e3a90eb51c14a4aca2ea792ac2b",
+      "preview_sha256": "78d94d051e216da0d0ce31a004f41538af5fe65c2f2ae056f96c85b88b568779"
+    },
+    {
+      "title": "Rimrock Lake, Rimrock, WA",
+      "original_filename": "2014-rimrock-lake-rimrock.pdf",
+      "pdf_path": "riding_maps/pdfs/2014-rimrock-lake-rimrock.pdf",
+      "preview_path": "riding_maps/thumbnails/2014-rimrock-lake-rimrock.jpeg",
+      "zoom_path": "riding_maps/full_previews/2014-rimrock-lake-rimrock.jpg",
+      "pdf_sha256": "2006407a8f188927e2e5fc030b7d5186e718179a47e0b2ad987499929ada6304",
+      "preview_sha256": "3ae233035146188343e77c7361493896828cd1626742ddc4b3d8fc0555183a48"
+    },
+    {
+      "title": "Rock Creek Horse Camp, Yacolt Burns State Forest, WA",
+      "original_filename": "2023RockCreek.pdf",
+      "pdf_path": "riding_maps/pdfs/2023RockCreek.pdf",
+      "preview_path": "riding_maps/thumbnails/2023RockCreek.jpg",
+      "zoom_path": "riding_maps/full_previews/2023RockCreek.jpg",
+      "pdf_sha256": "4efb0e3f67bd345cfea57b5f81d65be66bde8f35aca79891a9bf99271b141e1b",
+      "preview_sha256": "ddf2c2aa93c0a7a7ba48806af99a2c80867161372693a1155e9dba6b2d978126"
+    },
+    {
+      "title": "Sand Ridge, White Pass, WA",
+      "original_filename": "2014-sand-ridge-white-pass.pdf",
+      "pdf_path": "riding_maps/pdfs/2014-sand-ridge-white-pass.pdf",
+      "preview_path": "riding_maps/thumbnails/2014-sand-ridge-white-pass.jpeg",
+      "zoom_path": "riding_maps/full_previews/2014-sand-ridge-white-pass.jpg",
+      "pdf_sha256": "0d26cf0f8e809d1b9a6b4595949589067e039049228911f9897b4ca08e9bc279",
+      "preview_sha256": "4e843a47e6acd3729d7bc6a83750dff754254b1144971a898c5b3644e3612a5c"
+    },
+    {
+      "title": "Scatter Creek, Rochester, WA",
+      "original_filename": "2022-scatter-creek.pdf",
+      "pdf_path": "riding_maps/pdfs/2022-scatter-creek.pdf",
+      "preview_path": "riding_maps/thumbnails/2022-scatter-creek.jpg",
+      "zoom_path": "riding_maps/full_previews/2022-scatter-creek.jpg",
+      "pdf_sha256": "3998e2f91ef579c614b52e81710bc1cf4a08311e01bae60489df3c6bf2146c83",
+      "preview_sha256": "c56c5bbe26fc28a5b8087fdbd29353cf92295cf955746108587c854c27311653"
+    },
+    {
+      "title": "Soda Springs, Packwood, WA",
+      "original_filename": "2014-soda-springs-packwood.pdf",
+      "pdf_path": "riding_maps/pdfs/2014-soda-springs-packwood.pdf",
+      "preview_path": "riding_maps/thumbnails/2014-soda-springs-packwood.jpeg",
+      "zoom_path": "riding_maps/full_previews/2014-soda-springs-packwood.jpg",
+      "pdf_sha256": "7bc1f9a8d960b61dd7f410dbdaaaa031b10d757979d4e47ca021d85abb1169e3",
+      "preview_sha256": "3833ba2ccf7dfd897c2132c1c31defab7c1c8be75e2b9d9526f66c79dd5facd4"
+    },
+    {
+      "title": "Walupt Lake Horse Camp - Chambers Lake, Randle, WA",
+      "original_filename": "WaluptLakeHorseCamp-ChambersLake-Randle-2024.pdf",
+      "pdf_path": "riding_maps/pdfs/WaluptLakeHorseCamp-ChambersLake-Randle-2024.pdf",
+      "preview_path": "riding_maps/thumbnails/WaluptLakeHorseCamp-ChambersLake-Randle-2024.jpg",
+      "zoom_path": "riding_maps/full_previews/WaluptLakeHorseCamp-ChambersLake-Randle-2024.jpg",
+      "pdf_sha256": "0589e6cc389629b3519907c2b6a125845c6bcc94f7735d54a66410b760c41d6d",
+      "preview_sha256": "046f5ee4626c6ca018c0be4d94d8ea153bab57593f7339f2fee5bc9f06969737"
+    }
+  ]
+}

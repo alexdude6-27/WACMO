@@ -2332,3 +2332,201 @@ body > main:has(.photo-album-page) {
         font-size: .8rem;
     }
 }
+
+/* WACMO searchable historical riding-area maps */
+
+.riding-map-library {
+    padding-block: 2rem 2.5rem;
+}
+
+.riding-map-heading {
+    max-width: 850px;
+    margin-bottom: 1.7rem;
+}
+
+.riding-map-heading h1 {
+    margin: .3rem 0 .8rem;
+    color: #294731;
+}
+
+.riding-map-heading p {
+    line-height: 1.6;
+}
+
+.riding-map-search {
+    padding: 1rem 1.2rem;
+    background: #f9f1e2;
+    border: 1px solid #d5c2a3;
+    border-radius: .75rem;
+}
+
+.riding-map-search label {
+    display: block;
+    margin-bottom: .5rem;
+    font-weight: 700;
+    color: #304c35;
+}
+
+.riding-map-search-row {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: .75rem;
+}
+
+.riding-map-search input {
+    flex: 1 1 260px;
+    min-width: 0;
+    min-height: 44px;
+    padding: .7rem .8rem;
+    border: 1px solid #b8aa92;
+    border-radius: .45rem;
+    background: #fffdf8;
+    color: #243c2a;
+    font: inherit;
+}
+
+.riding-map-search button,
+.riding-map-pdf {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 44px;
+    padding: .7rem 1rem;
+    background: #45654b;
+    border: 0;
+    border-radius: .45rem;
+    color: #fffaf0;
+    font: inherit;
+    font-weight: 700;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.riding-map-search button:hover,
+.riding-map-pdf:hover {
+    background: #305038;
+    color: white;
+}
+
+.riding-map-results {
+    margin: 1.2rem 0;
+    color: #51654d;
+    font-weight: 700;
+}
+
+.riding-map-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1.15rem;
+}
+
+.riding-map-card {
+    min-width: 0;
+    overflow: hidden;
+    background: #fcf7ec;
+    border: 1px solid #d4c1a4;
+    border-radius: .75rem;
+    box-shadow: 0 4px 12px rgba(58, 41, 25, .09);
+}
+
+.riding-map-preview {
+    position: relative;
+    display: grid;
+    place-items: center;
+    height: 215px;
+    background: #e9dfcd;
+    overflow: hidden;
+}
+
+.riding-map-preview img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.riding-map-preview span {
+    position: absolute;
+    bottom: .65rem;
+    right: .65rem;
+    padding: .3rem .6rem;
+    background: rgba(38, 67, 45, .91);
+    color: #fffaf0;
+    border-radius: .3rem;
+    font-size: .85rem;
+    font-weight: 700;
+}
+
+.riding-map-card-details {
+    padding: 1rem 1.1rem 1.2rem;
+}
+
+.riding-map-card h2 {
+    margin: 0 0 .6rem;
+    color: #2d4b35;
+    font-size: 1.15rem;
+    line-height: 1.35;
+}
+
+.riding-map-card-details p {
+    color: #5b6756;
+    font-size: .9rem;
+}
+
+.riding-map-pdf {
+    margin-top: .5rem;
+}
+
+.riding-map-disclaimer {
+    margin-top: 1.6rem;
+    color: #5d6858;
+    font-size: .92rem;
+    line-height: 1.6;
+}
+
+.riding-map-empty {
+    grid-column: 1 / -1;
+    padding: 1.5rem;
+}
+
+.riding-map-original {
+    margin-bottom: 2rem;
+    padding: 1rem 1.3rem;
+    background: #f6eddb;
+    border: 1px solid #d4c19f;
+    border-radius: .75rem;
+}
+
+.riding-map-original summary {
+    color: #2e5036;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.riding-map-original .heritage-article {
+    margin-top: 1rem;
+}
+
+@media (max-width: 950px) {
+    .riding-map-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 600px) {
+    .riding-map-grid {
+        grid-template-columns: minmax(0, 1fr);
+    }
+
+    .riding-map-search-row {
+        align-items: stretch;
+        flex-direction: column;
+    }
+
+    .riding-map-search input,
+    .riding-map-search button {
+        width: 100%;
+        flex-basis: auto;
+    }
+}

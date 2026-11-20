@@ -435,7 +435,27 @@ def create_app():
 
     @app.get("/riding-areas")
     def riding_areas():
-        return render_template("riding_areas.html")
+        from flask import request
+        from .riding_area_maps import load_riding_area_maps
+
+        records = load_riding_area_maps()
+        query = request.args.get("q", "").strip()[:100]
+        needle = query.casefold()
+
+        selected = [
+            item for item in records
+            if not needle or needle in (
+                item["title"] + " " +
+                item["original_filename"]
+            ).casefold()
+        ]
+
+        return render_template(
+            "riding_areas.html",
+            riding_maps=selected,
+            map_query=query,
+            map_total=len(records),
+        )
 
     @app.get("/about")
     def about():
