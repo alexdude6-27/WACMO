@@ -19,7 +19,7 @@ def test_2026_flyers_reference_real_events():
         for event in load_archived_schedule()
     }
 
-    assert len(flyers) == 13
+    assert len(flyers) == 14
     assert set(flyers).issubset(event_ids)
 
     for event_id, documents in flyers.items():
@@ -97,3 +97,47 @@ def test_original_pdf_is_served():
 
     assert response.status_code == 200
     assert response.mimetype == "application/pdf"
+
+
+def test_teanaway_indian_camp_flyer():
+    event_id = "2026-09-12-teanaway-indian-camp"
+
+    events = load_archived_schedule()
+    event = next(
+        item for item in events
+        if item["id"] == event_id
+    )
+
+    assert event["title"] == "Teanaway Indian Camp"
+
+    flyers = load_event_flyers()
+    assert event_id in flyers
+    assert (
+        flyers[event_id][0]["original_filename"]
+        == "2026Teanaway.pdf"
+    )
+
+    app = create_app()
+    app.config["TESTING"] = True
+    client = app.test_client()
+
+    response = client.get(f"/events/{event_id}")
+    html = response.get_data(as_text=True)
+
+    assert response.status_code == 200
+    assert "Teanaway Indian Camp" in html
+    assert f"/static/flyers/2026/{event_id}.pdf" in html
+    assert "Open original PDF" in html
+
+    pdf_response = client.get(
+        f"/static/flyers/2026/{event_id}.pdf"
+    )
+    assert pdf_response.status_code == 200
+    assert pdf_response.mimetype == "application/pdf"
+
+    calendar = client.get(
+        "/events?year=2026&month=9"
+    ).get_data(as_text=True)
+
+    assert "Teanaway Indian Camp" in calendar
+    assert f"/events/{event_id}#event-flyers" in calendar

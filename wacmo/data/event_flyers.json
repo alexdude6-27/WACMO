@@ -101,6 +101,15 @@
         "size_bytes": 512127
       }
     ],
+    "2026-09-12-teanaway-indian-camp": [
+      {
+        "path": "flyers/2026/2026-09-12-teanaway-indian-camp.pdf",
+        "original_filename": "2026Teanaway.pdf",
+        "source_path": "flyers-rides--invites/2026Teanaway.pdf",
+        "sha256": "70ee63892c910ed52aef0a2da5f0586a063bc9a680a534e549f7b3cacd1c5327",
+        "size_bytes": 1706700
+      }
+    ],
     "2026-09-26-buck-creek": [
       {
         "path": "flyers/2026/2026-09-26-buck-creek.pdf",
