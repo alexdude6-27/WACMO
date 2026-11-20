@@ -1502,3 +1502,84 @@ body > main,
         min-height: 0;
     }
 }
+
+/* WACMO softer parchment calendar */
+
+/* Lighter page background, only on the calendar page. */
+body > main:has(.calendar-container) {
+    background:
+        radial-gradient(
+            ellipse at top,
+            rgba(255, 255, 255, .50),
+            transparent 57%
+        ),
+        #f6e9d0;
+}
+
+/* Gentle paper frame around the calendar. */
+.calendar-container {
+    background: #f9f4e9;
+    border-color: #d6c6aa;
+    box-shadow: 0 5px 18px rgba(70, 48, 24, .09);
+}
+
+/* Softer evergreen day headings. */
+.calendar-table th {
+    background: #496950;
+    color: #fff9ed;
+}
+
+/* Warm ivory replaces stark white. */
+.calendar-table td {
+    background: #f9f4e9;
+    border-color: #ddd0ba;
+    color: #304b37;
+}
+
+/* Almost imperceptible alternating row warmth. */
+.calendar-table tbody tr:nth-child(even)
+td:not(.calendar-outside):not(.calendar-today) {
+    background: #f7f0e2;
+}
+
+/* Dates outside the selected month. */
+.calendar-table td.calendar-outside {
+    background: #ece3d3;
+    color: #807d71;
+}
+
+/* Today remains distinct without being harsh. */
+.calendar-table td.calendar-today {
+    background: #eee6d0;
+}
+
+.calendar-today time {
+    background: #45684d;
+    color: #fffaf0;
+}
+
+/* Gentle hover for desktop users. */
+.calendar-table td.calendar-day:not(.calendar-outside):hover {
+    background: #efe6d4;
+}
+
+/* Navigation and empty-state panels. */
+.calendar-nav-button {
+    background: #faf3e6;
+    border-color: #d8c7aa;
+    color: #2d4b35;
+}
+
+.calendar-nav-button:hover {
+    background: #ede4d2;
+}
+
+.calendar-nav-disabled {
+    background: #f1e8d8;
+    border-color: #ddceb4;
+}
+
+.calendar-empty {
+    background: #faf3e6;
+    border-color: #d8c7aa;
+}
