@@ -17,7 +17,7 @@
     <div class="calendar-heading">
         <div>
             <p class="eyebrow">Ride schedule</p>
-            <h2 id="calendar-month">
+            <h2 id="calendar-month" tabindex="-1">
                 {{ calendar.title }}
             </h2>
         </div>
@@ -31,7 +31,7 @@
                    'events',
                    year=calendar.previous[0],
                    month=calendar.previous[1]
-               ) }}"
+               ) }}#calendar-month"
                aria-label="Previous month">
                 &larr; Previous
             </a>
@@ -47,7 +47,7 @@
                    'events',
                    year=calendar.following[0],
                    month=calendar.following[1]
-               ) }}"
+               ) }}#calendar-month"
                aria-label="Next month">
                 Next &rarr;
             </a>
