@@ -1016,3 +1016,64 @@ body > main,
         padding-block: 1.6rem;
     }
 }
+
+/* WACMO migrated heritage articles */
+
+.heritage-article {
+    max-width: 1000px;
+    padding-block: clamp(2rem, 5vw, 4rem);
+    color: #302418;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: clamp(1.05rem, 1.6vw, 1.17rem);
+    line-height: 1.75;
+}
+
+.heritage-article > h1 {
+    margin: 0 0 2rem;
+    font-family: "WACMO Rye", Georgia, serif;
+    font-weight: 400;
+    font-size: clamp(2rem, 4vw, 3rem);
+    color: #422817;
+}
+
+.heritage-article-body {
+    overflow-wrap: anywhere;
+}
+
+.heritage-article-body h2,
+.heritage-article-body h3 {
+    color: #285c30;
+    line-height: 1.4;
+    margin-top: 2rem;
+}
+
+.heritage-article-body a {
+    color: #205e33;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 3px;
+}
+
+.heritage-article-body a:hover {
+    color: #783b17;
+}
+
+.heritage-article-body img {
+    max-width: 100%;
+    height: auto;
+}
+
+.heritage-article-body table {
+    display: block;
+    max-width: 100%;
+    overflow-x: auto;
+}
+
+.heritage-article-body p {
+    margin-block: 1rem;
+}
+
+@media (max-width: 650px) {
+    .heritage-article {
+        padding-inline: 1.2rem;
+    }
+}

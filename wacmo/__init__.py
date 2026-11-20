@@ -139,21 +139,15 @@ def create_app():
 
     @app.get("/cmo-history")
     def cmo_history():
-        return render_template(
-            "section.html", page=PAGES["cmo_history"]
-        )
+        return render_template("cmo_history.html")
 
     @app.get("/forms")
     def forms():
-        return render_template(
-            "section.html", page=PAGES["forms"]
-        )
+        return render_template("forms.html")
 
     @app.get("/links")
     def links():
-        return render_template(
-            "section.html", page=PAGES["links"]
-        )
+        return render_template("links.html")
 
     @app.get("/ride-flyers")
     def ride_flyers():
