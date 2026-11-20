@@ -1077,3 +1077,62 @@ body > main,
         padding-inline: 1.2rem;
     }
 }
+
+/* WACMO media page refinement */
+
+.heritage-media .heritage-article-body {
+    overflow-wrap: anywhere;
+}
+
+.heritage-media .heritage-article-body h2,
+.heritage-media .heritage-article-body h3 {
+    color: #285c30;
+    line-height: 1.4;
+}
+
+.heritage-media .heritage-article-body a {
+    color: #205e33;
+    text-underline-offset: 3px;
+}
+
+.heritage-media .heritage-article-body img {
+    display: block;
+    max-width: 100%;
+    width: auto;
+    height: auto;
+    max-height: 460px;
+    padding: .4rem;
+    background: #fff8e8;
+    border: 1px solid #bca47b;
+    border-radius: .4rem;
+    box-shadow: 0 3px 12px rgba(42, 25, 10, .15);
+}
+
+.heritage-media .heritage-article-body a:has(img) {
+    display: inline-block;
+    max-width: 100%;
+    margin-block: .6rem 1rem;
+}
+
+.heritage-media--galleries .heritage-article-body a:has(img) {
+    width: min(100%, 265px);
+    margin: .35rem .65rem 1rem 0;
+    vertical-align: top;
+}
+
+.heritage-media--galleries .heritage-article-body img {
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+    max-height: none;
+}
+
+@media (max-width: 650px) {
+    .heritage-media .heritage-article-body img {
+        max-height: none;
+    }
+
+    .heritage-media--galleries .heritage-article-body a:has(img) {
+        width: 100%;
+    }
+}

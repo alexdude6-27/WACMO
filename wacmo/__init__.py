@@ -151,21 +151,15 @@ def create_app():
 
     @app.get("/ride-flyers")
     def ride_flyers():
-        return render_template(
-            "section.html", page=PAGES["ride_flyers"]
-        )
+        return render_template("ride_flyers.html")
 
     @app.get("/galleries")
     def galleries():
-        return render_template(
-            "section.html", page=PAGES["galleries"]
-        )
+        return render_template("galleries.html")
 
     @app.get("/riding-areas")
     def riding_areas():
-        return render_template(
-            "section.html", page=PAGES["riding_areas"]
-        )
+        return render_template("riding_areas.html")
 
     @app.get("/about")
     def about():
