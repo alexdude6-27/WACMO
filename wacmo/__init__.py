@@ -256,11 +256,13 @@ def create_app():
             abort(404)
 
         from .photo_albums import albums_for_event
+        from .event_maps import maps_for_event
 
         return render_template(
             "event_detail.html",
             event=event,
             event_photo_albums=albums_for_event(event_id),
+            event_riding_maps=maps_for_event(event_id),
         )
 
     @app.get("/what-is-cmo")
@@ -437,6 +439,7 @@ def create_app():
     def riding_areas():
         from flask import request
         from .riding_area_maps import load_riding_area_maps
+        from .event_maps import related_events_for_maps
 
         records = load_riding_area_maps()
         query = request.args.get("q", "").strip()[:100]
@@ -455,6 +458,9 @@ def create_app():
             riding_maps=selected,
             map_query=query,
             map_total=len(records),
+            map_related_events=related_events_for_maps(
+                load_archived_schedule()
+            ),
         )
 
     @app.get("/about")

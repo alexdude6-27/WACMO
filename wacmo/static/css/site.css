@@ -2490,24 +2490,6 @@ body > main:has(.photo-album-page) {
     padding: 1.5rem;
 }
 
-.riding-map-original {
-    margin-bottom: 2rem;
-    padding: 1rem 1.3rem;
-    background: #f6eddb;
-    border: 1px solid #d4c19f;
-    border-radius: .75rem;
-}
-
-.riding-map-original summary {
-    color: #2e5036;
-    font-weight: 700;
-    cursor: pointer;
-}
-
-.riding-map-original .heritage-article {
-    margin-top: 1rem;
-}
-
 @media (max-width: 950px) {
     .riding-map-grid {
         grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -2528,5 +2510,69 @@ body > main:has(.photo-album-page) {
     .riding-map-search button {
         width: 100%;
         flex-basis: auto;
+    }
+}
+
+/* WACMO curated historical map/event relationships */
+
+.event-riding-maps {
+    margin-block: 1.75rem;
+}
+
+.event-riding-map-entry {
+    display: grid;
+    grid-template-columns: minmax(130px, 220px) minmax(0, 1fr);
+    align-items: start;
+    gap: 1rem;
+    margin-block: 1rem;
+    padding: 1rem;
+    border: 1px solid #d6c4aa;
+    border-radius: .65rem;
+    background: #fbf6ea;
+}
+
+.event-riding-map-preview {
+    display: block;
+    overflow: hidden;
+    border-radius: .4rem;
+    background: #e9dfcd;
+}
+
+.event-riding-map-preview img {
+    display: block;
+    width: 100%;
+    max-height: 230px;
+    object-fit: contain;
+}
+
+.event-riding-map-entry h3 {
+    margin-top: 0;
+}
+
+.riding-map-events {
+    margin-top: 1rem;
+    padding-top: .75rem;
+    border-top: 1px solid #d6c4aa;
+}
+
+.riding-map-events summary {
+    cursor: pointer;
+    font-weight: 700;
+    color: #35563d;
+}
+
+.riding-map-events ul {
+    margin: .65rem 0 0;
+    padding-left: 1.3rem;
+    line-height: 1.6;
+}
+
+@media (max-width: 600px) {
+    .event-riding-map-entry {
+        grid-template-columns: minmax(0, 1fr);
+    }
+
+    .event-riding-map-preview img {
+        max-height: 270px;
     }
 }

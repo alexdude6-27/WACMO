@@ -10,8 +10,6 @@ from wacmo import create_app
 ROOT = Path(__file__).resolve().parents[1]
 
 PAGES = (
-    ("maps", "/riding-areas",
-     "https://www.wacmo.org/maps/"),
     ("flyers", "/ride-flyers",
      "https://www.wacmo.org/flyers-rides--invites/"),
     ("photo-gallery", "/galleries",

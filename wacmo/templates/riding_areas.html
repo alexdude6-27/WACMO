@@ -72,6 +72,33 @@
                    rel="noopener noreferrer">
                     View Printable PDF
                 </a>
+
+                {% set related_events = map_related_events.get(
+                    map_item.original_filename, []
+                ) %}
+
+                {% if related_events %}
+                <details class="riding-map-events">
+                    <summary>
+                        Related WACMO Events
+                        ({{ related_events | length }})
+                    </summary>
+
+                    <ul>
+                        {% for related in related_events %}
+                        <li>
+                            <a href="{{ url_for(
+                                'event_detail',
+                                event_id=related.id
+                            ) }}">
+                                {{ related.title }}
+                                — {{ related.date_label }}
+                            </a>
+                        </li>
+                        {% endfor %}
+                    </ul>
+                </details>
+                {% endif %}
             </div>
         </article>
         {% else %}
@@ -88,159 +115,6 @@
         Always verify current conditions before riding.
     </p>
 </section>
-
-<details class="riding-map-original container">
-    <summary>View the original WACMO Maps page</summary>
-
-<section class="heritage-article heritage-media heritage-media--riding_areas container">
-    <h1>Maps</h1>
-    <div class="heritage-article-body">
-
-									<div>
-										<div><p><span><strong><em><b>Please note:</b> Some maps are a few years old and we are working to update and add to them.</em></strong></span></p>
-
-										<p><span>Click on a thumbnail to download a printable pdf file. You'll need a copy of Adobe Acrobat Reader installed on your computer to view and print this file, a free download is available </span><span><strong><u><a href="http://get.adobe.com/reader/">HERE</a></u></strong></span><strong><span>. </span><br></strong></p><p><strong>Disclaimer:</strong> The provided information is believed the best available but can contain errors. These are member created maps and were developed using many different resources including uncountable hours of saddle time. There is <strong>NO</strong> guarantee of accuracy as trails and conditions constantly change. If you find an error email me <strong><u><a href="mailto:lm98498@comcast.net?subject=Map%20corrections%20and%20updates">HERE</a></u></strong> so we can make corrections and keep our maps as updated as possible!</p>
-
-											<div>
-												<div>
-													<div>
-
-
-													<div>
-														    <a href="https://www.wacmo.org/maps/2023Ahtanum.pdf" title="Ahtanum State Forest Near Tampico, WA"><img src="https://www.wacmo.org/_Media/2023Ahtanum.jpg" alt="Ahtanum State Forest Near Tampico, WA"></a>
-														    <h3><a href="https://www.wacmo.org/maps/2023Ahtanum.pdf" title="Ahtanum State Forest Near Tampico, WA"><span>Ahtanum State Forest Near Tampico, WA</span></a></h3></div>
-
-
-													<div>
-														    <a href="https://www.wacmo.org/maps/2011-cathedral-fallsvanson.pdf" title="Cathedral Falls/Vanson Lake/Green River Horse Camp, Morton, WA"><img src="https://www.wacmo.org/_Media/cathedral_falls-vanson.jpeg" alt="Cathedral Falls/Vanson Lake/Green River Horse Camp, Morton, WA"></a>
-														    <h3><a href="https://www.wacmo.org/maps/2011-cathedral-fallsvanson.pdf" title="Cathedral Falls/Vanson Lake/Green River Horse Camp, Morton, WA"><span>Cathedral Falls/Vanson Lake/Green River Horse Camp, Morton, WA</span></a></h3></div>
-
-
-													<div>
-														    <a href="https://www.wacmo.org/maps/CodyHorseCamp-Randle-2024.pdf" title="Cody &amp; Walupt Lake Horse Camps, Randle, WA"><img src="https://www.wacmo.org/_Media/CodyHorseCamp-Randle-2024.jpg" alt="Cody &amp; Walupt Lake Horse Camps, Randle, WA"></a>
-														    <h3><a href="https://www.wacmo.org/maps/CodyHorseCamp-Randle-2024.pdf" title="Cody &amp; Walupt Lake Horse Camps, Randle, WA"><span>Cody &amp; Walupt Lake Horse Camps, Randle, WA</span></a></h3></div>
-
-													<div>
-														    <a href="https://www.wacmo.org/maps/cowlitz-wildlife-area-randl.pdf" title="Cowlitz Wildlife Area, Randle, WA"><img src="https://www.wacmo.org/_Media/29019396_10211783874460064_.jpeg" alt="Cowlitz Wildlife Area, Randle, WA"></a>
-														    <h3><a href="https://www.wacmo.org/maps/cowlitz-wildlife-area-randl.pdf" title="Cowlitz Wildlife Area, Randle, WA"><span>Cowlitz Wildlife Area, Randle, WA</span></a></h3></div>
-
-                                                    <div>
-														    <a href="https://www.wacmo.org/maps/DanvilleGeorgetown_2021-blank.pdf" title="Danville-Georgetown, Maple Valley, WA"><img src="https://www.wacmo.org/_Media/DanvilleGeorgetown_blank-2021.jpg" alt="Danville-Georgetown, Maple Valley, WA"></a>
-														    <h3><a href="https://www.wacmo.org/maps/DanvilleGeorgetown_2021-blank.pdf" title="Danville-Georgetown, Maple Valley, WA"><span>Danville-Georgetown, Maple Valley, WA</span></a></h3></div>
-
-													<div>
-														    <a href="https://www.wacmo.org/maps/2022CapForest-FallCreek_MMK.pdf" title="Fall Creek &amp; Margaret McKinney - Capitol State Forest, Littlerock, WA"><img src="https://www.wacmo.org/_Media/2022CapForest.jpg" alt="Fall Creek &amp; Margaret McKinney - Capitol State Forest, Littlerock, WA"></a>
-														    <h3><a href="https://www.wacmo.org/maps/2022CapForest-FallCreek_MMK.pdf" title="Fall Creek &amp; Margaret McKinney - Capitol State Forest, Littlerock, WA"><span>Fall Creek &amp; Margaret McKinney - Capitol State Forest, WA</span></a></h3></div>
-
-
-
-										<div>
-										<a href="https://www.wacmo.org/maps/ElbeMaps2024.pdf" title="Elbe Hills State Forest, Elbe, WA"><img src="https://www.wacmo.org/_Media/elbe-hills-state-forest-.jpeg" alt="Elbe Hills State Forest, Elbe, WA"></a>
-														    <h3><a href="https://www.wacmo.org/maps/ElbeMaps2024.pdf" title="Elbe Hills State Forest, Elbe, WA"><span>Elbe Hills State Forest, Elbe, WA</span></a></h3></div>
-
-
-													<div>
-														    <a href="https://www.wacmo.org/maps/2012-green-mt-belfair-wa.pdf" title="Green Mt. DNR Horse Camp, Belfair, WA"><img src="https://www.wacmo.org/_Media/green_mountain_belfair_wa.jpeg" alt="Green Mt. DNR Horse Camp, Belfair, WA"></a>
-														    <h3><a href="https://www.wacmo.org/maps/2012-green-mt-belfair-wa.pdf" title="Green Mt. DNR Horse Camp, Belfair, WA"><span>Green Mt. DNR Horse Camp, Belfair, WA</span></a></h3></div>
-
-
-
-										<div>
-														    <a href="https://www.wacmo.org/maps/2023GreenRiver-Randle.pdf" title="Green River Horse Camp - Randle, WA"><img src="https://www.wacmo.org/_Media/2023GreenRiver-Randle.jpg" alt="Green River Horse Camp - Randle, WA"></a>
-														    <h3><a href="https://www.wacmo.org/maps/2023GreenRiver-Randle.pdf" title="Green River Horse Camp - Randle, WA"><span>Green River Horse Camp - Randle, WA</span></a></h3></div>
-
-
-
-													<div>
-														    <a href="https://www.wacmo.org/maps/2025-JoeWattCanyon-Ellensburg-NoMileage.pdf" title="Joe Watt Canyon-Ellensburg - NoMileage, WA"><img src="https://www.wacmo.org/_Media/2025-JoeWattCanyon-Ellensburg-NoMileage.jpg" alt="Joe Watt Canyon-Ellensburg - NoMileage, WA"></a>
-														    <h3><a href="https://www.wacmo.org/maps/2025-JoeWattCanyon-Ellensburg-NoMileage.pdf" title="Joe Watt Canyon-Ellensburg - NoMileage, WA"><span>Joe Watt Canyon-Ellensburg - NoMileage, WA</span></a></h3></div>
-
-
-													<div>
-														    <a href="https://www.wacmo.org/maps/2014-kalama-horse-camp.pdf" title="Kalama Horse Camp, Cougar, WA"><img src="https://www.wacmo.org/_Media/2014-kalama-horse-camp.jpg" alt="Kalama Horse Camp, Cougar, WA"></a>
-														    <h3><a href="https://www.wacmo.org/maps/2014-kalama-horse-camp.pdf" title="Kalama Horse Camp, Cougar, WA"><span>Kalama Horse Camp, Cougar, WA</span></a></h3></div>
-
-													<div>
-														<a href="https://www.wacmo.org/maps/KeenesHorseCamp-Randle-2024.pdf" title="Keenes Horse Camp, Packwood/Randle, WA"><img src="https://www.wacmo.org/_Media/KeenesHorseCamp-Randle-2024.jpg" alt="Keenes Horse Camp, Packwood/Randle, WA"></a>
-														    <h3><a href="https://www.wacmo.org/maps/KeenesHorseCamp-Randle-2024.pdf" title="Keenes Horse Camp, Packwood/Randle, WA"><span>Keenes Horse Camp, Packwood/Randle, WA</span></a></h3></div>
-
-
-													<div>
-														    <a href="https://www.wacmo.org/maps/KenWilcoxHorseCamp-HaneyMeadow-North-CleElum-2024.pdf" title="Ken Wilcox Horse Camp - Haney Meadow-North, CleElum, WA"><img src="https://www.wacmo.org/_Media/KenWilcoxHorseCamp-HaneyMeadow-North-CleElum-2024.jpg" alt="Ken Wilcox Horse Camp - Haney Meadow-North, CleElum, WA"></a>
-														    <h3><a href="https://www.wacmo.org/maps/KenWilcoxHorseCamp-HaneyMeadow-North-CleElum-2024.pdf" title="Ken Wilcox Horse Camp - Haney Meadow-North, CleElum, WA"><span>Ken Wilcox Horse Camp-Haney Meadow  - North, CleElum, WA</span></a></h3></div>
-
-
-
-													<div>
-														    <a href="https://www.wacmo.org/maps/LES_HILDE_MAP.pdf" title="Les Hilde, Sedro Wooley, WA"><img src="https://www.wacmo.org/_Media/LHMap.jpg" alt="Les Hilde, Sedro Wooley, WA"></a>
-														    <h3><a href="https://www.wacmo.org/maps/LES_HILDE_MAP.pdf" title="Les Hilde, Sedro Wooley, WA"><span>Les Hilde, Sedro Wooley, WA</span></a></h3></div>
-
-													<div>
-														    <a href="https://www.wacmo.org/maps/2015-mount-adam-draft-revis.pdf" title="Mt. Adams Horse Camp, Trout Lake, WA"><img src="https://www.wacmo.org/_Media/2015-mount-adam-draft-revis.jpg" alt="Mt. Adams Horse Camp, Trout Lake, WA"></a>
-														    <h3><a href="https://www.wacmo.org/maps/2015-mount-adam-draft-revis.pdf" title="Mt. Adams Horse Camp, Trout Lake, WA"><span>Mt. Adams Horse Camp, Trout Lake, WA</span></a></h3></div>
-
-
-													<div>
-														    <a href="https://www.wacmo.org/maps/nisqually-state-park-eatonv.pdf" title="Nisqually State Park, Eatonville, WA"><img src="https://www.wacmo.org/_Media/nisqually-state-park-eatonv.jpeg" alt="Nisqually State Park, Eatonville, WA"></a>
-														    <h3><a href="https://www.wacmo.org/maps/nisqually-state-park-eatonv.pdf" title="Nisqually State Park, Eatonville, WA"><span>Nisqually State Park, Eatonville, WA</span></a></h3></div>
-
-
-													<div>
-														    <a href="https://www.wacmo.org/maps/2025-NorsePeakWilderness-GovernmentMeadow.pdf" title="Nisqually State Park, Eatonville, WA"><img src="https://www.wacmo.org/_Media/2025-NorsePeakWilderness-GovernmentMeadow.jpg" alt="Norse Peak Wilderness - Government Meadow, WA"></a>
-														    <h3><a href="https://www.wacmo.org/maps/2025-NorsePeakWilderness-GovernmentMeadow.pdf" title="Norse Peak Wilderness - Government Meadow, WA"><span>Norse Peak Wilderness - Government Meadow, WA</span></a></h3></div>
-
-													<div>
-														    <a href="https://www.wacmo.org/maps/2025-PackForestEatonville.pdf" title="Pack Forest, Eatonville, WA"><img src="https://www.wacmo.org/_Media/2025-PackForestEatonville.jpg" alt="Pack Forest, Eatonville, WA"></a>
-														    <h3><a href="https://www.wacmo.org/maps/2025-PackForestEatonville.pdf" title="Pack Forest, Eatonville, WA"><span>Pack Forest, Eatonville, WA</span></a></h3></div>
-
-													<div>
-														    <a href="https://www.wacmo.org/maps/2014-packwood-lake-packwood.pdf" title="Packwood Lake, Packwood, WA"><img src="https://www.wacmo.org/_Media/2014-packwood-lake-packwood.jpeg" alt="Packwood Lake, Packwood, WA"></a>
-														    <h3><a href="https://www.wacmo.org/maps/2014-packwood-lake-packwood.pdf" title="Packwood Lake, Packwood, WA"><span>Packwood Lake, Packwood, WA</span></a></h3></div>
-
-													<div>
-														    <a href="https://www.wacmo.org/maps/2023-peterman-hill.pdf" title="Peterman Hill Trails, Morton WA"><img src="https://www.wacmo.org/_Media/2023-peterman-hill.jpg" alt="Peterman Hill Trails, Morton WA"></a>
-														    <h3><a href="https://www.wacmo.org/maps/2023-peterman-hill.pdf" title="Peterman Hill Trails, Morton WA"><span>Peterman Hill Trails, Morton WA</span></a></h3></div>
-
-													<div>
-														    <a href="https://www.wacmo.org/maps/2014-rimrock-lake-rimrock.pdf" title="Rimrock Lake, Rimrock, WA"><img src="https://www.wacmo.org/_Media/2014-rimrock-lake-rimrock.jpeg" alt="Rimrock Lake, Rimrock, WA"></a>
-														    <h3><a href="https://www.wacmo.org/maps/2014-rimrock-lake-rimrock.pdf" title="Rimrock Lake, Rimrock, WA"><span>Rimrock Lake, Rimrock, WA</span></a></h3></div>
-
-													<div><a href="https://www.wacmo.org/maps/2023RockCreek.pdf" title="Rock Creek Horse Camp, Yacolt Burns State Forest, WA"><img src="https://www.wacmo.org/_Media/2023RockCreek.jpg" alt="Rock Creek Horse Camp, Yacolt Burns State Forest, WA"></a>
-														    <h3><a href="https://www.wacmo.org/maps/2023RockCreek.pdf" title="Rock Creek Horse Camp, Yacolt Burns State Forest, WA"><span>Rock Creek Horse Camp, Yacolt Burns State Forest, WA</span></a></h3></div>
-
-
-													<div>
-														    <a href="https://www.wacmo.org/maps/2014-sand-ridge-white-pass.pdf" title="Sand Ridge, White Pass, WA"><img src="https://www.wacmo.org/_Media/2014-sand-ridge-white-pass.jpeg" alt="Sand Ridge, White Pass, WA"></a>
-														    <h3><a href="https://www.wacmo.org/maps/2014-sand-ridge-white-pass.pdf" title="Sand Ridge, White Pass, WA"><span>Sand Ridge, White Pass, WA</span></a></h3></div>
-
-													<div>
-														    <a href="https://www.wacmo.org/maps/2022-scatter-creek.pdf" title="2022 Scatter Creek, Rochester, WA"><img src="https://www.wacmo.org/_Media/2022-scatter-creek.jpg" alt="Scatter Creek, Rochester, WA"></a>
-														    <h3><a href="https://www.wacmo.org/maps/2022-scatter-creek.pdf" title="2022 Scatter Creek, Rochester, WA"><span>Scatter Creek, Rochester, WA</span></a></h3></div>
-
-													<div><a href="https://www.wacmo.org/maps/2014-soda-springs-packwood.pdf" title="Soda Springs, Packwood, WA"><img src="https://www.wacmo.org/_Media/2014-soda-springs-packwood.jpeg" alt="Soda Springs, Packwood, WA"></a>
-														    <h3><a href="https://www.wacmo.org/maps/2014-soda-springs-packwood.pdf" title="Soda Springs, Packwood, WA"><span>Soda Springs, Packwood, WA</span></a></h3></div>
-
-
-													<div><a href="https://www.wacmo.org/maps/WaluptLakeHorseCamp-ChambersLake-Randle-2024.pdf" title="Walupt Lake Horse Camp - Chambers Lake, Randle, WA"><img src="https://www.wacmo.org/_Media/WaluptLakeHorseCamp-ChambersLake-Randle-2024.jpg" alt="Walupt Lake Horse Camp - Chambers Lake, Randle, WA"></a>
-														    <h3><a href="https://www.wacmo.org/maps/WaluptLakeHorseCamp-ChambersLake-Randle-2024.pdf" title="Walupt Lake Horse Camp - Chambers Lake, Randle, WA"><span>Walupt Lake Horse Camp - Chambers Lake, Randle, WA</span></a></h3></div>
-
-
-
-
-														<div></div>
-
-													</div>
-												</div>
-											</div>
-											<br>
-
-										</div>
-									</div>
-
-    </div>
-</section>
-
-</details>
 
 {% include "_photo_lightbox.html" %}
 {% endblock %}

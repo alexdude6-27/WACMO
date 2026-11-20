@@ -51,7 +51,7 @@ def test_maps_page_has_all_published_areas():
     assert html.count('class="riding-map-card"') == 26
     assert "Showing 26" in html
     assert "Norse Peak Wilderness" in html
-    assert "View the original WACMO Maps page" in html
+    assert "View the original WACMO Maps page" not in html
     assert "wacmo-photo-lightbox" in html
     assert "View Printable PDF" in html
 
@@ -104,3 +104,20 @@ def test_unlisted_course_files_are_not_imported():
         ROOT / "wacmo/static/riding_maps/pdfs/"
         "2021DanvilleMap.pdf"
     ).exists()
+
+
+def test_legacy_maps_are_preserved_without_duplicate_display():
+    browser = client()
+    html = browser.get("/riding-areas").get_data(
+        as_text=True
+    )
+
+    assert html.count('class="riding-map-card"') == 26
+    assert "https://www.wacmo.org/maps/" not in html
+    assert "View the original WACMO Maps page" not in html
+
+    original = (
+        ROOT / "reference/original-site/maps.html"
+    )
+
+    assert original.is_file()

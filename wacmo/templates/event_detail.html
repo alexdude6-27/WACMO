@@ -162,6 +162,71 @@
         </section>
         {% endif %}
 
+
+        {% if event_riding_maps %}
+        <section class="event-riding-maps"
+                 aria-labelledby="event-riding-maps-heading">
+            <h2 id="event-riding-maps-heading">
+                Riding Area Reference Map
+            </h2>
+
+            <p>
+                These historical maps show the general riding
+                area. They are not necessarily the exact course
+                used during this event.
+            </p>
+
+            {% for map_item in event_riding_maps %}
+            <div class="event-riding-map-entry">
+                <a class="event-riding-map-preview photo-lightbox-trigger"
+                   href="{{ url_for(
+                       'static',
+                       filename=map_item.zoom_path
+                   ) }}"
+                   data-lightbox-group="event-reference-maps"
+                   data-lightbox-caption="{{ map_item.title }}"
+                   aria-label="Enlarge {{ map_item.title }}">
+                    <img src="{{ url_for(
+                        'static',
+                        filename=map_item.preview_path
+                    ) }}"
+                         alt="Riding-area map for {{ map_item.title }}"
+                         loading="lazy">
+                </a>
+
+                <div>
+                    <h3>{{ map_item.title }}</h3>
+                    <p>
+                        General riding-area reference.
+                        Historical trails and access
+                        may have changed.
+                    </p>
+
+                    <p>
+                        <a href="{{ url_for(
+                            'static',
+                            filename=map_item.pdf_path
+                        ) }}"
+                           target="_blank"
+                           rel="noopener noreferrer">
+                            View printable map PDF
+                        </a>
+                    </p>
+
+                    <p>
+                        <a href="{{ url_for(
+                            'riding_areas',
+                            q=map_item.title
+                        ) }}">
+                            Find this map in the Maps library
+                        </a>
+                    </p>
+                </div>
+            </div>
+            {% endfor %}
+        </section>
+        {% endif %}
+
         <p>
             <a href="{{ url_for(
                 'events',
@@ -173,7 +238,7 @@
         </p>
     </article>
 </section>
-{% if event_photo_albums %}
+{% if event_photo_albums or event_riding_maps %}
 {% include "_photo_lightbox.html" %}
 {% endif %}
 {% endblock %}
