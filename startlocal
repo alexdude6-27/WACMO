@@ -1,0 +1,28 @@
+#!/bin/sh
+
+# WACMO Local Development Server
+# Accessible only from this computer.
+
+PROJECT_DIR=$(CDPATH= cd "$(dirname "$0")" && pwd)
+
+if [ ! -x "$PROJECT_DIR/.venv/bin/python" ]; then
+    printf 'ERROR: WACMO Python environment not found.\n' >&2
+else
+    cd "$PROJECT_DIR" && {
+        printf '\n'
+        printf '========================================\n'
+        printf '     WACMO Development Server\n'
+        printf '========================================\n'
+        printf '\n'
+        printf 'Website: http://127.0.0.1:5000\n'
+        printf 'Press Ctrl+C to stop the server.\n'
+        printf '\n'
+
+        exec "$PROJECT_DIR/.venv/bin/python" \
+            -m flask \
+            --app 'wacmo:create_app' \
+            --debug run \
+            --host 127.0.0.1 \
+            --port 5000
+    }
+fi
