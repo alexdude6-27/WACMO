@@ -3,7 +3,8 @@
 # WACMO Local Development Server
 # Accessible only from this computer.
 
-PROJECT_DIR=$(CDPATH= cd "$(dirname "$0")" && pwd)
+SCRIPT_PATH=$(realpath "$0")
+PROJECT_DIR=$(dirname "$SCRIPT_PATH")
 
 if [ ! -x "$PROJECT_DIR/.venv/bin/python" ]; then
     printf 'ERROR: WACMO Python environment not found.\n' >&2
