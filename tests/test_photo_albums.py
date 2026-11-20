@@ -188,6 +188,74 @@ def test_event_pages_show_facebook_album_previews():
         assert 'class="event-photo-albums"' in html
         assert f"/galleries/{slug}" in html
 
+
+def test_photo_lightbox_on_gallery_album_and_event():
+    browser = client()
+
+    gallery = browser.get("/galleries").get_data(
+        as_text=True
+    )
+
+    album = browser.get(
+        "/galleries/green-mountain-2026-06-13"
+    ).get_data(as_text=True)
+
+    event = browser.get(
+        "/events/2026-06-13-green-mountain"
+    ).get_data(as_text=True)
+
+    assert "photo-lightbox-trigger photo-album-thumb" in gallery
+    assert "wacmo-photo-lightbox" in gallery
+
+    assert 'class="photo-lightbox-trigger"' in album
+    assert "wacmo-photo-lightbox" in album
+    photo_grid = album.split(
+        '<div class="photo-image-grid">', 1
+    )[1].split("</div>", 1)[0]
+
+    assert photo_grid.count(
+        'class="photo-lightbox-trigger"'
+    ) == 4
+
+    assert 'target="_blank"' not in photo_grid
+
+    assert "photo-lightbox-trigger event-photo-trigger" in event
+    assert "wacmo-photo-lightbox" in event
+    assert "/galleries/green-mountain-2026-06-13" in event
+
+    script = browser.get(
+        "/static/js/photo_lightbox.js"
+    )
+
+    assert script.status_code == 200
+
+    source = script.get_data(as_text=True)
+
+    assert "showModal()" in source
+    assert "ArrowLeft" in source
+    assert "ArrowRight" in source
+    assert "touchstart" in source
+    assert "touchend" in source
+
+
+def test_site_favicon_is_served():
+    browser = client()
+
+    response = browser.get("/")
+
+    assert response.status_code == 200
+    assert "/static/favicon.ico" in (
+        response.get_data(as_text=True)
+    )
+
+    favicon = browser.get("/static/favicon.ico")
+
+    assert favicon.status_code == 200
+    assert favicon.data.startswith(
+        bytes.fromhex("00000100")
+    )
+
+
 def test_gallery_albums_newest_first():
     response = client().get("/galleries")
     html = response.get_data(as_text=True)

@@ -1,0 +1,38 @@
+<dialog id="wacmo-photo-lightbox"
+        class="photo-lightbox"
+        aria-label="Enlarged WACMO photograph">
+    <div class="photo-lightbox-panel">
+        <button type="button"
+                class="photo-lightbox-close"
+                data-photo-close
+                aria-label="Close enlarged photograph">
+            &times;
+        </button>
+
+        <button type="button"
+                class="photo-lightbox-nav"
+                data-photo-previous
+                aria-label="Previous photograph">
+            &#10094;
+        </button>
+
+        <figure class="photo-lightbox-figure">
+            <img data-photo-image
+                 alt="Enlarged WACMO photograph">
+            <figcaption data-photo-caption
+                        aria-live="polite"></figcaption>
+        </figure>
+
+        <button type="button"
+                class="photo-lightbox-nav"
+                data-photo-next
+                aria-label="Next photograph">
+            &#10095;
+        </button>
+    </div>
+</dialog>
+
+<script src="{{ url_for(
+    'static',
+    filename='js/photo_lightbox.js'
+) }}" defer></script>

@@ -130,10 +130,14 @@
 
                 <div class="event-photo-preview">
                     {% for photo in album.photos[:4] %}
-                    <a href="{{ url_for(
-                        'gallery_album',
-                        slug=album.slug
-                    ) }}">
+                    <a class="photo-lightbox-trigger event-photo-trigger"
+                       href="{{ url_for(
+                           'static',
+                           filename=photo.path
+                       ) }}"
+                       data-lightbox-group="{{ album.slug }}"
+                       data-lightbox-caption="{{ album.title }} — photograph {{ loop.index }}"
+                       aria-label="Enlarge photograph {{ loop.index }} from {{ album.title }}">
                         <img src="{{ url_for(
                             'static',
                             filename=photo.path
@@ -169,4 +173,7 @@
         </p>
     </article>
 </section>
+{% if event_photo_albums %}
+{% include "_photo_lightbox.html" %}
+{% endif %}
 {% endblock %}

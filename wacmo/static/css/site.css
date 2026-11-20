@@ -2199,3 +2199,136 @@ body > main:has(.photo-album-page) {
         grid-template-columns: repeat(2, minmax(0, 1fr));
     }
 }
+
+/* WACMO responsive in-page photo lightbox */
+
+.photo-album-cover {
+    grid-template-rows: repeat(2, minmax(0, 1fr));
+}
+
+.photo-album-cover .photo-album-thumb {
+    display: block;
+    min-height: 0;
+    height: 100%;
+    overflow: hidden;
+}
+
+.photo-album-thumb:hover img,
+.event-photo-trigger:hover img {
+    filter: brightness(1.08);
+}
+
+.photo-lightbox-trigger:focus-visible {
+    outline: 3px solid #b47b31;
+    outline-offset: 3px;
+}
+
+.photo-lightbox {
+    width: min(96vw, 1400px);
+    max-width: none;
+    max-height: 96vh;
+    max-height: 96dvh;
+    padding: 0;
+    overflow: hidden;
+    color: #fffaf0;
+    background: #172219;
+    border: 1px solid #71816b;
+    border-radius: .75rem;
+    box-shadow: 0 15px 60px rgba(0, 0, 0, .45);
+}
+
+.photo-lightbox::backdrop {
+    background: rgba(7, 14, 9, .91);
+}
+
+.photo-lightbox-panel {
+    position: relative;
+    display: grid;
+    grid-template-columns:
+        minmax(44px, 56px)
+        minmax(0, 1fr)
+        minmax(44px, 56px);
+    align-items: center;
+    gap: .8rem;
+    padding: 3.5rem 1rem 1.2rem;
+}
+
+.photo-lightbox-figure {
+    min-width: 0;
+    margin: 0;
+    text-align: center;
+}
+
+.photo-lightbox-figure img {
+    display: block;
+    width: auto;
+    max-width: 100%;
+    max-height: 73vh;
+    max-height: 73dvh;
+    margin-inline: auto;
+    object-fit: contain;
+    border-radius: .3rem;
+}
+
+.photo-lightbox-figure figcaption {
+    margin-top: .8rem;
+    color: #f0e6d0;
+    font-size: .9rem;
+    line-height: 1.4;
+}
+
+.photo-lightbox button {
+    display: grid;
+    place-items: center;
+    min-width: 44px;
+    min-height: 44px;
+    padding: .3rem;
+    color: #ffffff;
+    background: #36543b;
+    border: 1px solid #788b74;
+    border-radius: .45rem;
+    font-size: 1.35rem;
+    cursor: pointer;
+}
+
+.photo-lightbox button:hover {
+    background: #527158;
+}
+
+.photo-lightbox button:focus-visible {
+    outline: 3px solid #f1c16e;
+    outline-offset: 2px;
+}
+
+.photo-lightbox button[hidden] {
+    visibility: hidden;
+}
+
+.photo-lightbox-close {
+    position: absolute;
+    top: .55rem;
+    right: .65rem;
+    z-index: 1;
+}
+
+@media (max-width: 600px) {
+    .photo-lightbox {
+        width: 98vw;
+        max-height: 96dvh;
+    }
+
+    .photo-lightbox-panel {
+        grid-template-columns:
+            44px minmax(0, 1fr) 44px;
+        gap: .25rem;
+        padding: 3.6rem .4rem .8rem;
+    }
+
+    .photo-lightbox-figure img {
+        max-height: 69dvh;
+    }
+
+    .photo-lightbox-figure figcaption {
+        font-size: .8rem;
+    }
+}

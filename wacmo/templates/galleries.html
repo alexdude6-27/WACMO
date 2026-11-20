@@ -44,21 +44,25 @@
         <div class="photo-album-list">
             {% for album in photo_albums %}
             <article class="photo-album-card">
-                <a class="photo-album-cover"
-                   href="{{ url_for(
-                       'gallery_album',
-                       slug=album.slug
-                   ) }}"
-                   aria-label="View {{ album.title }}">
+                <div class="photo-album-cover">
                     {% for photo in album.photos[:4] %}
-                    <img src="{{ url_for(
-                        'static',
-                        filename=photo.path
-                    ) }}"
-                         alt="Photograph from {{ album.title }}"
-                         loading="lazy">
+                    <a class="photo-lightbox-trigger photo-album-thumb"
+                       href="{{ url_for(
+                           'static',
+                           filename=photo.path
+                       ) }}"
+                       data-lightbox-group="{{ album.slug }}"
+                       data-lightbox-caption="{{ album.title }} — photograph {{ loop.index }}"
+                       aria-label="Enlarge photograph {{ loop.index }} from {{ album.title }}">
+                        <img src="{{ url_for(
+                            'static',
+                            filename=photo.path
+                        ) }}"
+                             alt="Photograph {{ loop.index }} from {{ album.title }}"
+                             loading="lazy">
+                    </a>
                     {% endfor %}
-                </a>
+                </div>
 
                 <div class="photo-album-info">
                     {% if album.year %}
@@ -172,4 +176,5 @@
 </section>
 
 </details>
+{% include "_photo_lightbox.html" %}
 {% endblock %}
