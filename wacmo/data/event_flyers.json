@@ -2,6 +2,285 @@
   "schema_version": 1,
   "description": "Verified historical WACMO flyer associations.",
   "events": {
+    "2024-03-09-scatter-creek": [
+      {
+        "path": "flyers/2024/2024-03-09-scatter-creek.pdf",
+        "original_filename": "20240309-ScatterCreek.pdf",
+        "source_path": "flyers-rides--invites/Archive Ride Flyers-Ride Notes/20240309-ScatterCreek.pdf",
+        "sha256": "becd2e0becb5f5d2fcf921850f5d27b2a131d44ba101d3ada691c69a77f61923",
+        "size_bytes": 94999
+      }
+    ],
+    "2024-03-23-danville-georgetown": [
+      {
+        "path": "flyers/2024/2024-03-23-danville-georgetown.pdf",
+        "original_filename": "20240323-Danville.pdf",
+        "source_path": "flyers-rides--invites/Archive Ride Flyers-Ride Notes/20240323-Danville.pdf",
+        "sha256": "8af5b54a30106f777bc2ea0d34841a00ae674e6f01032f28b4230e576c5f7046",
+        "size_bytes": 257156
+      }
+    ],
+    "2024-04-13-nisqually-mashal": [
+      {
+        "path": "flyers/2024/2024-04-13-nisqually-mashal.pdf",
+        "original_filename": "20240413Nisqually.pdf",
+        "source_path": "flyers-rides--invites/Archive Ride Flyers-Ride Notes/20240413Nisqually.pdf",
+        "sha256": "5949087570bf6406f6518bdbb128ec91035785e20c9ddd5935833d5e08cbdaca",
+        "size_bytes": 268066
+      }
+    ],
+    "2024-04-27-taylor-mountain": [
+      {
+        "path": "flyers/2024/2024-04-27-taylor-mountain.pdf",
+        "original_filename": "20240427TaylorMt.pdf",
+        "source_path": "flyers-rides--invites/Archive Ride Flyers-Ride Notes/20240427TaylorMt.pdf",
+        "sha256": "31ab39f2c4339aaa7c34863c7046371f4bb51a6b42e4946e20c8ea7fdd115b02",
+        "size_bytes": 537855
+      }
+    ],
+    "2024-05-11-mt-pockets-spring-ride": [
+      {
+        "path": "flyers/2024/2024-05-11-mt-pockets-spring-ride.pdf",
+        "original_filename": "2024051112M.T.PocketsSpringRide.pdf",
+        "source_path": "flyers-rides--invites/Archive Ride Flyers-Ride Notes/2024051112M.T.PocketsSpringRide.pdf",
+        "sha256": "5332246d83b77e847bdc962a0b76d9a139e0377470d9ede1ad528a8ca559bc4f",
+        "size_bytes": 12047181
+      }
+    ],
+    "2024-05-25-mt-pockets": [
+      {
+        "path": "flyers/2024/2024-05-25-mt-pockets.pdf",
+        "original_filename": "2024052526MTPockets.pdf",
+        "source_path": "flyers-rides--invites/Archive Ride Flyers-Ride Notes/2024052526MTPockets.pdf",
+        "sha256": "68269afc21650d95ad37525356346ee70c1a0d7ff66e2cd722f577d2369da0f6",
+        "size_bytes": 127726
+      }
+    ],
+    "2024-06-08-green-mountain": [
+      {
+        "path": "flyers/2024/2024-06-08-green-mountain.pdf",
+        "original_filename": "2024060809-green-mountain.pdf",
+        "source_path": "flyers-rides--invites/Archive Ride Flyers-Ride Notes/2024060809-green-mountain.pdf",
+        "sha256": "648a84d9c230c2c0452d60ba5fbc70a7b7a02873b836c87365de5b9d992f1c98",
+        "size_bytes": 271408
+      }
+    ],
+    "2024-06-22-teanaway-indian-camp": [
+      {
+        "path": "flyers/2024/2024-06-22-teanaway-indian-camp.pdf",
+        "original_filename": "2024062223-Teanaway.pdf",
+        "source_path": "flyers-rides--invites/Archive Ride Flyers-Ride Notes/2024062223-Teanaway.pdf",
+        "sha256": "a30e1c62aacbaf0c1172baab14e19b09d9f34f66dc2acc3d6cc8c6fd0aef43dd",
+        "size_bytes": 455062
+      }
+    ],
+    "2024-07-13-margaret-mckenny-capitol-forest": [
+      {
+        "path": "flyers/2024/2024-07-13-margaret-mckenny-capitol-forest.pdf",
+        "original_filename": "2024071314-MMK.pdf",
+        "source_path": "flyers-rides--invites/Archive Ride Flyers-Ride Notes/2024071314-MMK.pdf",
+        "sha256": "26921c988e19d13943a0e317460ce60b78ec1b15711292cfb49f7c837e07cdc3",
+        "size_bytes": 888512
+      }
+    ],
+    "2024-07-27-les-hilde-horse-camp": [
+      {
+        "path": "flyers/2024/2024-07-27-les-hilde-horse-camp.pdf",
+        "original_filename": "2024072728-LesHilde.pdf",
+        "source_path": "flyers-rides--invites/Archive Ride Flyers-Ride Notes/2024072728-LesHilde.pdf",
+        "sha256": "afb595af0b107b3286069e33365ee04158296d36af6def5227c6ed0e01e8f962",
+        "size_bytes": 228558
+      }
+    ],
+    "2024-08-24-sahara-creek-horse-camp": [
+      {
+        "path": "flyers/2024/2024-08-24-sahara-creek-horse-camp.pdf",
+        "original_filename": "2024082425Elbe.pdf",
+        "source_path": "flyers-rides--invites/Archive Ride Flyers-Ride Notes/2024082425Elbe.pdf",
+        "sha256": "d6653a2122ec20e1c131f83a7c2f900432c00539bcb26d0203a5f857b596b84b",
+        "size_bytes": 168175
+      }
+    ],
+    "2024-09-14-mt-pockets": [
+      {
+        "path": "flyers/2024/2024-09-14-mt-pockets.pdf",
+        "original_filename": "2024091415M.T.Pockets.pdf",
+        "source_path": "flyers-rides--invites/Archive Ride Flyers-Ride Notes/2024091415M.T.Pockets.pdf",
+        "sha256": "645e2e2ea2751d557b696ae197e8d9d35035f31e75a4201e285b323efb6f9571",
+        "size_bytes": 123957
+      }
+    ],
+    "2024-09-28-taylor-mountain": [
+      {
+        "path": "flyers/2024/2024-09-28-taylor-mountain.pdf",
+        "original_filename": "202400928-TaylorMtn.pdf",
+        "source_path": "flyers-rides--invites/Archive Ride Flyers-Ride Notes/202400928-TaylorMtn.pdf",
+        "sha256": "131ae59746515f6635d3f65211c21c93950d4461e3eca62b610e675fd71f98f3",
+        "size_bytes": 413291
+      }
+    ],
+    "2024-10-12-scatter-creek": [
+      {
+        "path": "flyers/2024/2024-10-12-scatter-creek.pdf",
+        "original_filename": "20241012ScatterCrk.pdf",
+        "source_path": "flyers-rides--invites/Archive Ride Flyers-Ride Notes/20241012ScatterCrk.pdf",
+        "sha256": "16314681ce9b867019edd6a91988a85801c8e9aa7c528be58895754a1293827e",
+        "size_bytes": 15284713
+      }
+    ],
+    "2025-03-02-free-map-compass-rider-clinic": [
+      {
+        "path": "flyers/2025/2025-03-02-free-map-compass-rider-clinic.pdf",
+        "original_filename": "2025CMOClinicFlyer.pdf",
+        "source_path": "flyers-rides--invites/Archive Clinic Flyers/2025CMOClinicFlyer.pdf",
+        "sha256": "e7711bda86fea106e4eeaa9a4ac43f1ea8cd8a2ccf86c3426f896f91b653ef0f",
+        "size_bytes": 639661
+      }
+    ],
+    "2025-03-08-scatter-creek": [
+      {
+        "path": "flyers/2025/2025-03-08-scatter-creek.pdf",
+        "original_filename": "20250308ScatterCrk.pdf",
+        "source_path": "flyers-rides--invites/Archive Ride Flyers-Ride Notes/20250308ScatterCrk.pdf",
+        "sha256": "e15b896cbeb34ed696b0d10c29248e440d8b2f73b490a4cfaa4615a1e19d60a6",
+        "size_bytes": 96405
+      }
+    ],
+    "2025-03-22-danville-georgetown": [
+      {
+        "path": "flyers/2025/2025-03-22-danville-georgetown.pdf",
+        "original_filename": "20250322-Danville.pdf",
+        "source_path": "flyers-rides--invites/Archive Ride Flyers-Ride Notes/20250322-Danville.pdf",
+        "sha256": "fa26aa7e318b83c0cdf860eef518d3367e5c0a51b68fdca13f1b2ea25af54944",
+        "size_bytes": 252723
+      }
+    ],
+    "2025-04-12-les-hilde-horse-camp": [
+      {
+        "path": "flyers/2025/2025-04-12-les-hilde-horse-camp.pdf",
+        "original_filename": "2025041213LesHilde.pdf",
+        "source_path": "flyers-rides--invites/Archive Ride Flyers-Ride Notes/2025041213LesHilde.pdf",
+        "sha256": "311996200f082c65eac2cd8e8be99da4d58b0156053fe79c9b231cd21dd06fef",
+        "size_bytes": 4667229
+      }
+    ],
+    "2025-04-26-taylor-mountain": [
+      {
+        "path": "flyers/2025/2025-04-26-taylor-mountain.pdf",
+        "original_filename": "20250426TaylorMtn.pdf",
+        "source_path": "flyers-rides--invites/Archive Ride Flyers-Ride Notes/20250426TaylorMtn.pdf",
+        "sha256": "c5cc8551001bed084db98bc58bc18d57d21b0cdd0ce2fb7bb8c39f2628d0f2ec",
+        "size_bytes": 223272,
+        "label": "Original flyer"
+      },
+      {
+        "path": "flyers/2025/2025-04-26-taylor-mountain-2.pdf",
+        "original_filename": "20250426TaylorMtn2.pdf",
+        "source_path": "flyers-rides--invites/Archive Ride Flyers-Ride Notes/20250426TaylorMtn2.pdf",
+        "sha256": "8ecbd76606c283ba2d72fb7c21770d8a1d1b5bfd6334f41c299c772c4a01e4e9",
+        "size_bytes": 403576,
+        "label": "Alternate flyer"
+      }
+    ],
+    "2025-05-10-rock-creek": [
+      {
+        "path": "flyers/2025/2025-05-10-rock-creek.pdf",
+        "original_filename": "20250351011RockCreek.pdf",
+        "source_path": "flyers-rides--invites/Archive Ride Flyers-Ride Notes/20250351011RockCreek.pdf",
+        "sha256": "5c650a1aa98108c27f083e9f89d093a238a75d01b7c0b865da7d5955ec31707e",
+        "size_bytes": 569381
+      }
+    ],
+    "2025-05-24-mt-pockets": [
+      {
+        "path": "flyers/2025/2025-05-24-mt-pockets.pdf",
+        "original_filename": "2025052425MTPockets.pdf",
+        "source_path": "flyers-rides--invites/Archive Ride Flyers-Ride Notes/2025052425MTPockets.pdf",
+        "sha256": "cd5dff9f8052dafde905c7e874c699b7119c7089c2c045a3ed63bfb275d12cc8",
+        "size_bytes": 395101
+      }
+    ],
+    "2025-06-14-green-mountain": [
+      {
+        "path": "flyers/2025/2025-06-14-green-mountain.pdf",
+        "original_filename": "2025061415GrnMtn2.pdf",
+        "source_path": "flyers-rides--invites/Archive Ride Flyers-Ride Notes/2025061415GrnMtn2.pdf",
+        "sha256": "51a403757a62cad1f1a67db5a117008fc8af290a4a3e0cb3f52ad9b53328874b",
+        "size_bytes": 336874
+      }
+    ],
+    "2025-06-28-teanaway-indian-camp": [
+      {
+        "path": "flyers/2025/2025-06-28-teanaway-indian-camp.pdf",
+        "original_filename": "2025062829Teanaway.pdf",
+        "source_path": "flyers-rides--invites/Archive Ride Flyers-Ride Notes/2025062829Teanaway.pdf",
+        "sha256": "c2d4aacb098cfff384448c906236a3adf20e0b68abee163071668efd4af76f6b",
+        "size_bytes": 873904
+      }
+    ],
+    "2025-07-12-margaret-mckenny-capitol-forest": [
+      {
+        "path": "flyers/2025/2025-07-12-margaret-mckenny-capitol-forest.pdf",
+        "original_filename": "2025071213MMK.pdf",
+        "source_path": "flyers-rides--invites/Archive Ride Flyers-Ride Notes/2025071213MMK.pdf",
+        "sha256": "a85d51fa0981c9956d5fb6dbebaa4bc066727a717ee71304a5884fea5e47997e",
+        "size_bytes": 891971
+      }
+    ],
+    "2025-07-26-les-hilde-horse-camp": [
+      {
+        "path": "flyers/2025/2025-07-26-les-hilde-horse-camp.pdf",
+        "original_filename": "2025072627LesHilde.pdf",
+        "source_path": "flyers-rides--invites/Archive Ride Flyers-Ride Notes/2025072627LesHilde.pdf",
+        "sha256": "5bdf0bb5d7f0ba9a036f8401779a313f243b6d886c8cf2ae8a5e788bab2277f9",
+        "size_bytes": 228609
+      }
+    ],
+    "2025-08-02-south-seattle-saddle-club": [
+      {
+        "path": "flyers/2025/2025-08-02-south-seattle-saddle-club.pdf",
+        "original_filename": "2025080203SSSC.pdf",
+        "source_path": "flyers-rides--invites/Archive Ride Flyers-Ride Notes/2025080203SSSC.pdf",
+        "sha256": "6ba9338bbfdf7ae75d32d5b45066aaa26f63dd9a6d9b859ff5f84a513e4d9189",
+        "size_bytes": 391700
+      }
+    ],
+    "2025-08-23-sahara-creek-horse-camp": [
+      {
+        "path": "flyers/2025/2025-08-23-sahara-creek-horse-camp.pdf",
+        "original_filename": "2025082324Elbe.pdf",
+        "source_path": "flyers-rides--invites/Archive Ride Flyers-Ride Notes/2025082324Elbe.pdf",
+        "sha256": "878066a419f8bac7f8fbc28881031e4a4e095c56ae424b297c81af94748a2f6b",
+        "size_bytes": 587249
+      }
+    ],
+    "2025-09-13-joe-watt-canyon": [
+      {
+        "path": "flyers/2025/2025-09-13-joe-watt-canyon.pdf",
+        "original_filename": "2025091314JoeWatt.pdf",
+        "source_path": "flyers-rides--invites/Archive Ride Flyers-Ride Notes/2025091314JoeWatt.pdf",
+        "sha256": "f7281807c15b52d367cedc65828003dff1c21d5c4888b85a3b465793ea921051",
+        "size_bytes": 901453
+      }
+    ],
+    "2025-09-27-buck-creek": [
+      {
+        "path": "flyers/2025/2025-09-27-buck-creek.pdf",
+        "original_filename": "2025092728BuckCreek.pdf",
+        "source_path": "flyers-rides--invites/Archive Ride Flyers-Ride Notes/2025092728BuckCreek.pdf",
+        "sha256": "9a609bd027f2abc78ad433bc92823eef6ae12cb62b88b3d38d09905266309d4e",
+        "size_bytes": 628652
+      }
+    ],
+    "2025-10-11-scatter-creek": [
+      {
+        "path": "flyers/2025/2025-10-11-scatter-creek.pdf",
+        "original_filename": "20251011ScatterCreek.pdf",
+        "source_path": "flyers-rides--invites/Archive Ride Flyers-Ride Notes/20251011ScatterCreek.pdf",
+        "sha256": "a87f2e90f40cb166821674456df87faf3a46022a91118ac7548dbd9ebee32b01",
+        "size_bytes": 416055
+      }
+    ],
     "2026-03-13-free-cmo-clinic-without-horses": [
       {
         "path": "flyers/2026/2026-03-13-free-cmo-clinic-without-horses.pdf",

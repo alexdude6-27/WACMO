@@ -33,7 +33,7 @@ def test_rolling_archive_2026(monkeypatch):
         assert f"{year} Season" in html
 
     assert "2023 Season" not in html
-    assert "18 schedule entries" in html
+    assert "18 historical listings" in html
     assert "Fall Creek CMO" in html
     assert "Browse Earlier Years" in html
 

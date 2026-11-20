@@ -98,7 +98,7 @@
                         <a class="calendar-event-chip"
                            href="{{ url_for('event_detail', event_id=event.id) }}"
                            title="View WACMO historical event">
-                            {{ event.title }}
+                            {{ event.title }}{% if event.get('event_status') == 'cancelled' %} (Cancelled){% elif event.get('source_status') == 'flyer_only' %} (Flyer-only){% endif %}
                         </a>
                         {% endfor %}
                     </td>
@@ -111,8 +111,8 @@
 
     {% if month_events %}
     <section class="calendar-month-events"
-             aria-label="Historical schedule entries">
-        <h3>Historical schedule entries</h3>
+             aria-label="Historical historical listings">
+        <h3>Historical historical listings</h3>
         <p class="calendar-history-note">
             These events were listed in the original WACMO 2026 schedule.
             A listing does not confirm the event took place.
@@ -123,7 +123,7 @@
                 <span class="calendar-event-date">
                     {{ event.date_label }}
                 </span>
-                <a href="{{ url_for('event_detail', event_id=event.id) }}"><strong>{{ event.title }}</strong></a>
+                <a href="{{ url_for('event_detail', event_id=event.id) }}"><strong>{{ event.title }}{% if event.get('event_status') == 'cancelled' %} (Cancelled){% elif event.get('source_status') == 'flyer_only' %} (Flyer-only){% endif %}</strong></a>
                 {% if event_flyers.get(event.id) %}
                 <a class="event-flyer-shortcut" href="{{ url_for('event_detail', event_id=event.id) }}#event-flyers">View flyer</a>
                 {% endif %}
@@ -166,7 +166,7 @@
             <h3>{{ season.year }} Season</h3>
             <span>
                 {% if season.events %}
-                    {{ season.events | length }} schedule entries
+                    {{ season.events | length }} historical listings
                 {% else %}
                     Archive import pending
                 {% endif %}
@@ -181,7 +181,7 @@
                     <span class="history-event-date">
                         {{ event.date_label }}
                     </span>
-                    <a href="{{ url_for('event_detail', event_id=event.id) }}"><strong>{{ event.title }}</strong></a>
+                    <a href="{{ url_for('event_detail', event_id=event.id) }}"><strong>{{ event.title }}{% if event.get('event_status') == 'cancelled' %} (Cancelled){% elif event.get('source_status') == 'flyer_only' %} (Flyer-only){% endif %}</strong></a>
                     {% if event_flyers.get(event.id) %}
                     <a class="event-flyer-shortcut" href="{{ url_for('event_detail', event_id=event.id) }}#event-flyers">View flyer</a>
                     {% endif %}
@@ -229,7 +229,7 @@
                         <span class="history-event-date">
                             {{ event.date_label }}
                         </span>
-                        <a href="{{ url_for('event_detail', event_id=event.id) }}"><strong>{{ event.title }}</strong></a>
+                        <a href="{{ url_for('event_detail', event_id=event.id) }}"><strong>{{ event.title }}{% if event.get('event_status') == 'cancelled' %} (Cancelled){% elif event.get('source_status') == 'flyer_only' %} (Flyer-only){% endif %}</strong></a>
                         {% if event_flyers.get(event.id) %}
                         <a class="event-flyer-shortcut" href="{{ url_for('event_detail', event_id=event.id) }}#event-flyers">View flyer</a>
                         {% endif %}

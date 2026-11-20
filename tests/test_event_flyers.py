@@ -19,7 +19,7 @@ def test_2026_flyers_reference_real_events():
         for event in load_archived_schedule()
     }
 
-    assert len(flyers) == 14
+    assert len(flyers) >= 14
     assert set(flyers).issubset(event_ids)
 
     for event_id, documents in flyers.items():

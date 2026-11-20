@@ -8,7 +8,7 @@
 <section class="page-intro event-detail-intro">
     <div class="container">
         <p class="eyebrow">WACMO Event History</p>
-        <h1>{{ event.title }}</h1>
+        <h1>{{ event.title }}{% if event.get('event_status') == 'cancelled' %} (Cancelled){% endif %}</h1>
         <p>{{ event.date_label }}</p>
     </div>
 </section>
@@ -48,11 +48,25 @@
         </p>
         {% endif %}
 
+        {% if event.get('event_status') == 'cancelled' %}
+        <p>
+            <strong>Cancelled.</strong>
+            The original annual schedule marks this event as cancelled.
+        </p>
+        {% elif event.source_status == 'flyer_only' %}
+        <p>
+            <strong>Flyer-only historical listing.</strong>
+            An original flyer advertises this ride, but it does
+            not appear in the revised annual schedule.
+            This does not confirm that the ride occurred.
+        </p>
+        {% else %}
         <p>
             This event appeared in a published WACMO schedule.
             The listing alone does not confirm that the event
             took place.
         </p>
+        {% endif %}
 
         {% set flyers = event_flyers.get(event.id, []) %}
 
@@ -72,6 +86,9 @@
             ) %}
 
             <div class="event-flyer-document">
+                {% if flyers | length > 1 %}
+                <h3>{{ flyer.label | default(flyer.original_filename) }}</h3>
+                {% endif %}
                 <iframe
                     class="event-flyer-frame"
                     src="{{ pdf_url }}#view=FitH"

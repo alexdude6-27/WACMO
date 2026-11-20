@@ -8,20 +8,28 @@ _SCHEDULE = (
     Path(__file__).parent / "data" / "legacy_schedule_2026.json"
 )
 
+_HISTORICAL_SCHEDULES = tuple(
+    _SCHEDULE.with_name(f"legacy_schedule_{year}.json")
+    for year in (2025, 2024)
+)
+
 
 def load_archived_schedule():
     """Return named archived listings, excluding drafts."""
-    with _SCHEDULE.open(encoding="utf-8") as stream:
-        source = json.load(stream)
+    source_events = []
+
+    for path in (_SCHEDULE, *_HISTORICAL_SCHEDULES):
+        with path.open(encoding="utf-8") as stream:
+            source_events.extend(json.load(stream)["events"])
 
     results = []
     seen = set()
 
-    for entry in source["events"]:
+    for entry in source_events:
         if (
             entry.get("publication_status") != "archived"
             or entry.get("needs_review")
-            or entry.get("source_status") != "listed"
+            or entry.get("source_status") not in ("listed", "flyer_only")
         ):
             continue
 

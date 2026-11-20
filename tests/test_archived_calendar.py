@@ -7,7 +7,11 @@ from wacmo.events_archive import load_archived_schedule
 def test_archived_schedule_filters_tentative_and_drafts():
     entries = load_archived_schedule()
 
-    assert len(entries) == 18
+    entries_2026 = [
+        entry for entry in entries
+        if entry["start_date"].startswith("2026-")
+    ]
+    assert len(entries_2026) == 18
     assert all(
         e["publication_status"] == "archived"
         for e in entries
@@ -17,7 +21,7 @@ def test_archived_schedule_filters_tentative_and_drafts():
         and e["title"] == "MT Pockets take 2"
         for e in entries
     )
-    assert entries[0]["title"] == "Awards Banquet"
+    assert entries_2026[0]["title"] == "Awards Banquet"
 
 
 def test_historical_entries_render_in_month():

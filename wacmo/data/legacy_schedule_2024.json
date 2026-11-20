@@ -1,0 +1,219 @@
+{
+  "source": "flyers-rides--invites/Archive Ride Schedules/Schedule2024.pdf",
+  "source_sha256": "f2fe98c2bab62ceb20e70d60640796c518aa515d07d43a8b61eb83e25f4ddbd9",
+  "description": "Original published schedule. Listing does not establish that an event took place.",
+  "events": [
+    {
+      "id": "2024-02-24-free-map-compass-rider-clinic",
+      "title": "Free Map/Compass Rider Clinic",
+      "start_date": "2024-02-24",
+      "end_date": "2024-02-25",
+      "location": "Auburn, WA",
+      "category": "clinic",
+      "source_status": "listed",
+      "publication_status": "archived",
+      "needs_review": false
+    },
+    {
+      "id": "2024-03-02-awards-banquet",
+      "title": "Awards Banquet",
+      "start_date": "2024-03-02",
+      "end_date": "2024-03-02",
+      "location": "Olympia, WA",
+      "category": "banquet",
+      "source_status": "listed",
+      "publication_status": "archived",
+      "needs_review": false
+    },
+    {
+      "id": "2024-03-09-scatter-creek",
+      "title": "Scatter Creek",
+      "start_date": "2024-03-09",
+      "end_date": "2024-03-09",
+      "location": "Rochester, WA",
+      "category": "ride",
+      "source_status": "listed",
+      "publication_status": "archived",
+      "needs_review": false
+    },
+    {
+      "id": "2024-03-23-danville-georgetown",
+      "title": "Danville-Georgetown",
+      "start_date": "2024-03-23",
+      "end_date": "2024-03-23",
+      "location": "Maple Valley, WA",
+      "category": "ride",
+      "source_status": "listed",
+      "publication_status": "archived",
+      "needs_review": false
+    },
+    {
+      "id": "2024-04-13-nisqually-mashal",
+      "title": "Nisqually Mashal",
+      "start_date": "2024-04-13",
+      "end_date": "2024-04-13",
+      "location": "Eatonville, WA",
+      "category": "ride",
+      "source_status": "listed",
+      "publication_status": "archived",
+      "needs_review": false
+    },
+    {
+      "id": "2024-04-27-taylor-mountain",
+      "title": "Taylor Mountain",
+      "start_date": "2024-04-27",
+      "end_date": "2024-04-27",
+      "location": "Hobart, WA",
+      "category": "ride",
+      "source_status": "listed",
+      "publication_status": "archived",
+      "needs_review": false
+    },
+    {
+      "id": "2024-05-11-mt-pockets-spring-ride",
+      "title": "MT Pockets Spring Ride",
+      "start_date": "2024-05-11",
+      "end_date": "2024-05-12",
+      "location": "Tenino, WA",
+      "category": "ride",
+      "source_status": "listed",
+      "publication_status": "archived",
+      "needs_review": false
+    },
+    {
+      "id": "2024-05-25-mt-pockets",
+      "title": "MT Pockets",
+      "start_date": "2024-05-25",
+      "end_date": "2024-05-26",
+      "location": "Tenino, WA",
+      "category": "ride",
+      "source_status": "listed",
+      "publication_status": "archived",
+      "needs_review": false
+    },
+    {
+      "id": "2024-06-08-green-mountain",
+      "title": "Green Mountain",
+      "start_date": "2024-06-08",
+      "end_date": "2024-06-09",
+      "location": "Belfair, WA",
+      "category": "ride",
+      "source_status": "listed",
+      "publication_status": "archived",
+      "needs_review": false
+    },
+    {
+      "id": "2024-06-22-teanaway-indian-camp",
+      "title": "Teanaway Indian Camp",
+      "start_date": "2024-06-22",
+      "end_date": "2024-06-23",
+      "location": "Cle Elum, WA",
+      "category": "ride",
+      "source_status": "listed",
+      "publication_status": "archived",
+      "needs_review": false
+    },
+    {
+      "id": "2024-07-13-margaret-mckenny-capitol-forest",
+      "title": "Margaret McKenny–Capitol Forest",
+      "start_date": "2024-07-13",
+      "end_date": "2024-07-14",
+      "location": "Littlerock, WA",
+      "category": "ride",
+      "source_status": "listed",
+      "publication_status": "archived",
+      "needs_review": false
+    },
+    {
+      "id": "2024-07-27-les-hilde-horse-camp",
+      "title": "Les Hilde Horse Camp",
+      "start_date": "2024-07-27",
+      "end_date": "2024-07-28",
+      "location": "Sedro-Woolley, WA",
+      "category": "ride",
+      "source_status": "listed",
+      "publication_status": "archived",
+      "needs_review": false
+    },
+    {
+      "id": "2024-08-10-south-seattle-saddle-club",
+      "title": "South Seattle Saddle Club",
+      "start_date": "2024-08-10",
+      "end_date": "2024-08-11",
+      "location": "Maple Valley, WA",
+      "category": "ride",
+      "source_status": "listed",
+      "publication_status": "archived",
+      "needs_review": false
+    },
+    {
+      "id": "2024-08-24-sahara-creek-horse-camp",
+      "title": "Sahara Creek Horse Camp",
+      "start_date": "2024-08-24",
+      "end_date": "2024-08-25",
+      "location": "Elbe, WA",
+      "category": "ride",
+      "source_status": "listed",
+      "publication_status": "archived",
+      "needs_review": false
+    },
+    {
+      "id": "2024-09-14-sage-horse-camp",
+      "title": "Sage Horse Camp",
+      "start_date": "2024-09-14",
+      "end_date": "2024-09-15",
+      "location": "Sequim, WA",
+      "category": "ride",
+      "source_status": "listed",
+      "publication_status": "archived",
+      "needs_review": false,
+      "event_status": "cancelled"
+    },
+    {
+      "id": "2024-09-14-mt-pockets",
+      "title": "MT Pockets",
+      "start_date": "2024-09-14",
+      "end_date": "2024-09-15",
+      "location": "Tenino, WA",
+      "category": "ride",
+      "source_status": "listed",
+      "publication_status": "archived",
+      "needs_review": false
+    },
+    {
+      "id": "2024-09-28-green-river-horse-camp",
+      "title": "Green River Horse Camp",
+      "start_date": "2024-09-28",
+      "end_date": "2024-09-29",
+      "location": "Cougar, WA",
+      "category": "ride",
+      "source_status": "listed",
+      "publication_status": "archived",
+      "needs_review": false,
+      "event_status": "cancelled"
+    },
+    {
+      "id": "2024-10-12-scatter-creek",
+      "title": "Scatter Creek",
+      "start_date": "2024-10-12",
+      "end_date": "2024-10-12",
+      "location": "Rochester, WA",
+      "category": "ride",
+      "source_status": "listed",
+      "publication_status": "archived",
+      "needs_review": false
+    },
+    {
+      "id": "2024-09-28-taylor-mountain",
+      "title": "Taylor Mountain",
+      "start_date": "2024-09-28",
+      "end_date": "2024-09-28",
+      "location": "Issaquah, WA",
+      "category": "ride",
+      "source_status": "flyer_only",
+      "publication_status": "archived",
+      "needs_review": false,
+      "historical_note": "Advertised in an original flyer; absent from the revised annual schedule."
+    }
+  ]
+}

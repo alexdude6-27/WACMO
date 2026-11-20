@@ -1,0 +1,205 @@
+{
+  "source": "flyers-rides--invites/Archive Ride Schedules/Schedule2025.pdf",
+  "source_sha256": "beba8e67e20e631629ab9c457176a241bbfae33c8f13d45cd637736b6d91253c",
+  "description": "Original published schedule. Listing does not establish that an event took place.",
+  "events": [
+    {
+      "id": "2025-02-22-awards-banquet",
+      "title": "Awards Banquet",
+      "start_date": "2025-02-22",
+      "end_date": "2025-02-22",
+      "location": "Olympia, WA",
+      "category": "banquet",
+      "source_status": "listed",
+      "publication_status": "archived",
+      "needs_review": false
+    },
+    {
+      "id": "2025-03-02-free-map-compass-rider-clinic",
+      "title": "Free Map/Compass Rider Clinic",
+      "start_date": "2025-03-02",
+      "end_date": "2025-03-02",
+      "location": "Auburn, WA",
+      "category": "clinic",
+      "source_status": "listed",
+      "publication_status": "archived",
+      "needs_review": false
+    },
+    {
+      "id": "2025-03-07-evening-cmo-clinic-scatter-creek",
+      "title": "Evening CMO Clinic at Scatter Creek",
+      "start_date": "2025-03-07",
+      "end_date": "2025-03-07",
+      "location": "Rochester, WA",
+      "category": "clinic",
+      "source_status": "listed",
+      "publication_status": "archived",
+      "needs_review": false
+    },
+    {
+      "id": "2025-03-08-scatter-creek",
+      "title": "Scatter Creek",
+      "start_date": "2025-03-08",
+      "end_date": "2025-03-08",
+      "location": "Rochester, WA",
+      "category": "ride",
+      "source_status": "listed",
+      "publication_status": "archived",
+      "needs_review": false
+    },
+    {
+      "id": "2025-03-22-danville-georgetown",
+      "title": "Danville-Georgetown",
+      "start_date": "2025-03-22",
+      "end_date": "2025-03-22",
+      "location": "Maple Valley, WA",
+      "category": "ride",
+      "source_status": "listed",
+      "publication_status": "archived",
+      "needs_review": false
+    },
+    {
+      "id": "2025-04-12-les-hilde-horse-camp",
+      "title": "Les Hilde Horse Camp",
+      "start_date": "2025-04-12",
+      "end_date": "2025-04-13",
+      "location": "Sedro-Woolley, WA",
+      "category": "ride",
+      "source_status": "listed",
+      "publication_status": "archived",
+      "needs_review": false
+    },
+    {
+      "id": "2025-04-26-taylor-mountain",
+      "title": "Taylor Mountain",
+      "start_date": "2025-04-26",
+      "end_date": "2025-04-26",
+      "location": "Hobart, WA",
+      "category": "ride",
+      "source_status": "listed",
+      "publication_status": "archived",
+      "needs_review": false
+    },
+    {
+      "id": "2025-05-10-rock-creek",
+      "title": "Rock Creek CMO",
+      "start_date": "2025-05-10",
+      "end_date": "2025-05-11",
+      "location": "",
+      "category": "ride",
+      "source_status": "listed",
+      "publication_status": "archived",
+      "needs_review": false
+    },
+    {
+      "id": "2025-05-24-mt-pockets",
+      "title": "MT Pockets",
+      "start_date": "2025-05-24",
+      "end_date": "2025-05-25",
+      "location": "Tenino, WA",
+      "category": "ride",
+      "source_status": "listed",
+      "publication_status": "archived",
+      "needs_review": false
+    },
+    {
+      "id": "2025-06-14-green-mountain",
+      "title": "Green Mountain",
+      "start_date": "2025-06-14",
+      "end_date": "2025-06-15",
+      "location": "Belfair, WA",
+      "category": "ride",
+      "source_status": "listed",
+      "publication_status": "archived",
+      "needs_review": false
+    },
+    {
+      "id": "2025-06-28-teanaway-indian-camp",
+      "title": "Teanaway Indian Camp",
+      "start_date": "2025-06-28",
+      "end_date": "2025-06-29",
+      "location": "Cle Elum, WA",
+      "category": "ride",
+      "source_status": "listed",
+      "publication_status": "archived",
+      "needs_review": false
+    },
+    {
+      "id": "2025-07-12-margaret-mckenny-capitol-forest",
+      "title": "Margaret McKenny–Capitol Forest",
+      "start_date": "2025-07-12",
+      "end_date": "2025-07-13",
+      "location": "Littlerock, WA",
+      "category": "ride",
+      "source_status": "listed",
+      "publication_status": "archived",
+      "needs_review": false
+    },
+    {
+      "id": "2025-07-26-les-hilde-horse-camp",
+      "title": "Les Hilde Horse Camp",
+      "start_date": "2025-07-26",
+      "end_date": "2025-07-27",
+      "location": "Sedro-Woolley, WA",
+      "category": "ride",
+      "source_status": "listed",
+      "publication_status": "archived",
+      "needs_review": false
+    },
+    {
+      "id": "2025-08-02-south-seattle-saddle-club",
+      "title": "South Seattle Saddle Club",
+      "start_date": "2025-08-02",
+      "end_date": "2025-08-03",
+      "location": "Maple Valley, WA",
+      "category": "ride",
+      "source_status": "listed",
+      "publication_status": "archived",
+      "needs_review": false
+    },
+    {
+      "id": "2025-08-23-sahara-creek-horse-camp",
+      "title": "Sahara Creek Horse Camp",
+      "start_date": "2025-08-23",
+      "end_date": "2025-08-24",
+      "location": "Elbe, WA",
+      "category": "ride",
+      "source_status": "listed",
+      "publication_status": "archived",
+      "needs_review": false
+    },
+    {
+      "id": "2025-09-13-joe-watt-canyon",
+      "title": "Joe Watt Canyon",
+      "start_date": "2025-09-13",
+      "end_date": "2025-09-14",
+      "location": "",
+      "category": "ride",
+      "source_status": "listed",
+      "publication_status": "archived",
+      "needs_review": false
+    },
+    {
+      "id": "2025-09-27-buck-creek",
+      "title": "Buck Creek",
+      "start_date": "2025-09-27",
+      "end_date": "2025-09-28",
+      "location": "Greenwater, WA",
+      "category": "ride",
+      "source_status": "listed",
+      "publication_status": "archived",
+      "needs_review": false
+    },
+    {
+      "id": "2025-10-11-scatter-creek",
+      "title": "Scatter Creek",
+      "start_date": "2025-10-11",
+      "end_date": "2025-10-11",
+      "location": "Rochester, WA",
+      "category": "ride",
+      "source_status": "listed",
+      "publication_status": "archived",
+      "needs_review": false
+    }
+  ]
+}
