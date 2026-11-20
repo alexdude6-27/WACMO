@@ -1,0 +1,123 @@
+{
+  "schema_version": 1,
+  "description": "Verified historical WACMO flyer associations.",
+  "events": {
+    "2026-03-13-free-cmo-clinic-without-horses": [
+      {
+        "path": "flyers/2026/2026-03-13-free-cmo-clinic-without-horses.pdf",
+        "original_filename": "2026ClinicScatterCreek.pdf",
+        "source_path": "flyers-rides--invites/2026ClinicScatterCreek.pdf",
+        "sha256": "5c20ec9961e5472278b2e75082c18e9fe9d22e1657ee08168812faf3625038e3",
+        "size_bytes": 2836909
+      }
+    ],
+    "2026-03-14-scatter-creek": [
+      {
+        "path": "flyers/2026/2026-03-14-scatter-creek.pdf",
+        "original_filename": "20260314ScatterCrk.pdf",
+        "source_path": "flyers-rides--invites/20260314ScatterCrk.pdf",
+        "sha256": "cdef457e4a3dd2960903f3f435985028df89918d0ff00fdd980d67f6eb9accd4",
+        "size_bytes": 511506
+      }
+    ],
+    "2026-03-28-danville-georgetown": [
+      {
+        "path": "flyers/2026/2026-03-28-danville-georgetown.pdf",
+        "original_filename": "20260328-Danville.pdf",
+        "source_path": "flyers-rides--invites/20260328-Danville.pdf",
+        "sha256": "92da46faf6769f5a1ff7a0d91f2abaa5d0344b4bd6033e6bffa572508d9d1f71",
+        "size_bytes": 312751
+      }
+    ],
+    "2026-04-25-taylor-mountain": [
+      {
+        "path": "flyers/2026/2026-04-25-taylor-mountain.pdf",
+        "original_filename": "20260425Taylor.pdf",
+        "source_path": "flyers-rides--invites/20260425Taylor.pdf",
+        "sha256": "6ad33c7a67df96de7a41ba896bc63b6e7458651997f8557839abb5e42eeff0c4",
+        "size_bytes": 66679
+      }
+    ],
+    "2026-05-09-sage-horse-camp": [
+      {
+        "path": "flyers/2026/2026-05-09-sage-horse-camp.pdf",
+        "original_filename": "2026050910SageCamp.pdf",
+        "source_path": "flyers-rides--invites/2026050910SageCamp.pdf",
+        "sha256": "5aa24992971967ee3379cc627975aa2c6d3bd7cf29dca98bd83152559634e720",
+        "size_bytes": 307432
+      }
+    ],
+    "2026-05-23-m-t-pockets": [
+      {
+        "path": "flyers/2026/2026-05-23-m-t-pockets.pdf",
+        "original_filename": "2026MTPockets.pdf",
+        "source_path": "flyers-rides--invites/2026MTPockets.pdf",
+        "sha256": "48c81cfba2afd829871987adc334c25741bf201bc3fa07d5912ba4ca59c387e3",
+        "size_bytes": 259228
+      }
+    ],
+    "2026-06-13-green-mountain": [
+      {
+        "path": "flyers/2026/2026-06-13-green-mountain.pdf",
+        "original_filename": "2026GreenMountain.pdf",
+        "source_path": "flyers-rides--invites/2026GreenMountain.pdf",
+        "sha256": "f02fb80c54f465e0231dc4147379b810847a38e6634e422f0c98e51abe82ac8b",
+        "size_bytes": 1314923
+      }
+    ],
+    "2026-06-27-mt-pockets-take-2": [
+      {
+        "path": "flyers/2026/2026-06-27-mt-pockets-take-2.pdf",
+        "original_filename": "2026JuneMTPockets.pdf",
+        "source_path": "flyers-rides--invites/2026JuneMTPockets.pdf",
+        "sha256": "675336ddc7e983ab007f28b693e8e2817c68d9eb1a939d2af92b3e9bb355fffc",
+        "size_bytes": 88525
+      }
+    ],
+    "2026-07-25-les-hilde-horse-camp": [
+      {
+        "path": "flyers/2026/2026-07-25-les-hilde-horse-camp.pdf",
+        "original_filename": "2026072526LesHilde.pdf",
+        "source_path": "flyers-rides--invites/2026072526LesHilde.pdf",
+        "sha256": "4a9ecefcf9fe2e15aaf3a47021044c5c990d0bff860a0ad77c3e258583e15780",
+        "size_bytes": 228520
+      }
+    ],
+    "2026-08-08-rock-creek": [
+      {
+        "path": "flyers/2026/2026-08-08-rock-creek.pdf",
+        "original_filename": "2026080809RockCreek.pdf",
+        "source_path": "flyers-rides--invites/2026080809RockCreek.pdf",
+        "sha256": "2345120d0f7ba7a1ace1c309ab5afbca4e5772a873bddfc1314f4b6f91ff1117",
+        "size_bytes": 507910
+      }
+    ],
+    "2026-08-22-sahara-creek-horse-camp": [
+      {
+        "path": "flyers/2026/2026-08-22-sahara-creek-horse-camp.pdf",
+        "original_filename": "2026Elbe.pdf",
+        "source_path": "flyers-rides--invites/2026Elbe.pdf",
+        "sha256": "5b0ef27430808db76082ef176524ca43b2c25853f5e073c6022f370657089771",
+        "size_bytes": 512127
+      }
+    ],
+    "2026-09-26-buck-creek": [
+      {
+        "path": "flyers/2026/2026-09-26-buck-creek.pdf",
+        "original_filename": "2026BuckCreek.pdf",
+        "source_path": "flyers-rides--invites/2026BuckCreek.pdf",
+        "sha256": "e403dee320f3d91b2601fac724303404d703aa50f221676ddb455e6bcb5b1edb",
+        "size_bytes": 625171
+      }
+    ],
+    "2026-10-10-scatter-creek": [
+      {
+        "path": "flyers/2026/2026-10-10-scatter-creek.pdf",
+        "original_filename": "2026OctScatterCreek.pdf",
+        "source_path": "flyers-rides--invites/2026OctScatterCreek.pdf",
+        "sha256": "9c3aa1c359f62047ee512ad09528d8306ff90073f196415434a1fea2dc9cd98a",
+        "size_bytes": 442284
+      }
+    ]
+  }
+}

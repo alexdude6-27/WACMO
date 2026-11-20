@@ -233,6 +233,14 @@ def create_app():
             older_events=older_events,
         )
 
+    @app.context_processor
+    def inject_event_flyers():
+        from .event_flyers import load_event_flyers
+
+        return {
+            "event_flyers": load_event_flyers(),
+        }
+
     @app.get("/events/<event_id>")
     def event_detail(event_id):
         event = next(

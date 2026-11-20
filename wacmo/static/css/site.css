@@ -1452,3 +1452,53 @@ body > main,
         flex-direction: column;
     }
 }
+
+/* WACMO historical PDF flyers */
+.event-flyers {
+    margin-top: 1.5rem;
+}
+
+.event-flyers h2 {
+    margin-bottom: .8rem;
+}
+
+.event-flyer-document {
+    max-width: 850px;
+    margin: .75rem 0 1.5rem;
+}
+
+.event-flyer-frame {
+    display: block;
+    width: 100%;
+    height: min(70vh, 680px);
+    min-height: 340px;
+    border: 1px solid #bda77e;
+    border-radius: .35rem;
+    background: #fff;
+}
+
+.event-flyer-actions {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: .7rem 1.5rem;
+    margin-top: .65rem;
+}
+
+.event-flyer-actions a,
+.event-flyer-shortcut {
+    color: #205e33;
+    text-underline-offset: 3px;
+}
+
+.event-flyer-shortcut {
+    font-size: .9rem;
+    white-space: nowrap;
+}
+
+@media (max-width: 650px) {
+    .event-flyer-frame {
+        height: 420px;
+        min-height: 0;
+    }
+}

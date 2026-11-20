@@ -54,9 +54,55 @@
             took place.
         </p>
 
+        {% set flyers = event_flyers.get(event.id, []) %}
+
+        {% if flyers %}
+        <section class="event-flyers"
+                 id="event-flyers"
+                 aria-labelledby="event-flyers-heading">
+
+            <h2 id="event-flyers-heading">
+                Original Event Flyer
+            </h2>
+
+            {% for flyer in flyers %}
+            {% set pdf_url = url_for(
+                'static',
+                filename=flyer.path
+            ) %}
+
+            <div class="event-flyer-document">
+                <iframe
+                    class="event-flyer-frame"
+                    src="{{ pdf_url }}#view=FitH"
+                    title="Original PDF flyer for {{ event.title }}"
+                    loading="lazy">
+                </iframe>
+
+                <div class="event-flyer-actions">
+                    <a href="{{ pdf_url }}"
+                       target="_blank"
+                       rel="noopener noreferrer">
+                        Open original PDF
+                    </a>
+
+                    <a href="{{ pdf_url }}" download>
+                        Download flyer
+                    </a>
+                </div>
+            </div>
+            {% endfor %}
+        </section>
+        {% else %}
         <p>
-            Original flyers and historical photographs will
-            be linked here as the archives are restored.
+            An original flyer has not yet been linked
+            to this historical event.
+        </p>
+        {% endif %}
+
+        <p>
+            Historical photographs will be linked here
+            as the archive is restored.
         </p>
 
         <p>
