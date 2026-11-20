@@ -1,0 +1,59 @@
+{
+  "captured_utc": "2026-11-20T04:20:10.955078+00:00",
+  "pages": [
+    {
+      "page": "home",
+      "url": "https://www.wacmo.org/",
+      "bytes": 13911,
+      "sha256": "5252c977be0ae2423f4252fd454a0d6b34a827b600e762c5e6d423106713603f"
+    },
+    {
+      "page": "what-is-cmo",
+      "url": "https://www.wacmo.org/what-is-cmo.html",
+      "bytes": 13171,
+      "sha256": "62c188f6ee8f459524012e6f4993d169598f8be93bf4a856845a7e7529765a4d"
+    },
+    {
+      "page": "cmo-history",
+      "url": "https://www.wacmo.org/cmo-history.html",
+      "bytes": 11564,
+      "sha256": "c3b7953843a6a5be089d2c01d6c721ae07739e95c18149856a0584400db67865"
+    },
+    {
+      "page": "schedule",
+      "url": "https://www.wacmo.org/2013-schedule.html",
+      "bytes": 9040,
+      "sha256": "9ebcc534ef6950e9496d6fb20a38c269ed3cc56269cbc2cbc3794e5ab6e70c74"
+    },
+    {
+      "page": "flyers",
+      "url": "https://www.wacmo.org/flyers-rides--invites/",
+      "bytes": 18650,
+      "sha256": "1693f7e70a4e531d51c20ca958980b5b95b74ff175d46adc5f8c9a9d2071c3a4"
+    },
+    {
+      "page": "photo-gallery",
+      "url": "https://www.wacmo.org/photo-gallery/",
+      "bytes": 11369,
+      "sha256": "3756842b83d7db4128a1f74dd399be9740a6dda5ca3f96cde2e69bdaafb9b18f"
+    },
+    {
+      "page": "maps",
+      "url": "https://www.wacmo.org/maps/",
+      "bytes": 20813,
+      "sha256": "7a153cfa3473765e4b3bc052f073551322e89848864bab60ba4d89136aeae2f2"
+    },
+    {
+      "page": "forms",
+      "url": "https://www.wacmo.org/ride-manager-forms.html",
+      "bytes": 14313,
+      "sha256": "271fa298ab9e9478e6bf05c772018553bbb345b59621fd9a64fa3e0fe46cb651"
+    },
+    {
+      "page": "links",
+      "url": "https://www.wacmo.org/links.html",
+      "bytes": 12788,
+      "sha256": "1b1538f29893eb627a05b2fd2345c350a93977fdd9cbba8e90d7f589b6c56205"
+    }
+  ]
+}
