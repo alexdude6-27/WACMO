@@ -95,10 +95,20 @@
                             {{ day.number }}
                         </time>
                         {% for event in day.events %}
+                        {% if event.nacmo_details_url %}
+                        <a class="calendar-event-chip"
+                           href="{{ event.nacmo_details_url }}"
+                           target="_blank"
+                           rel="noopener noreferrer"
+                           title="NACMO schedule details; occurrence unconfirmed">
+                            {{ event.title }}
+                        </a>
+                        {% else %}
                         <span class="calendar-event-chip"
                               title="Historical schedule listing; occurrence unconfirmed">
                             {{ event.title }}
                         </span>
+                        {% endif %}
                         {% endfor %}
                     </td>
                     {% endfor %}
@@ -123,6 +133,13 @@
                     {{ event.date_label }}
                 </span>
                 <strong>{{ event.title }}</strong>
+                {% if event.nacmo_details_url %}
+                <a href="{{ event.nacmo_details_url }}"
+                   target="_blank"
+                   rel="noopener noreferrer">
+                    NACMO event details
+                </a>
+                {% endif %}
                 {% if event.location %}
                 <span>{{ event.location }}</span>
                 {% endif %}
