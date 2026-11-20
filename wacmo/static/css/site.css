@@ -2053,6 +2053,14 @@ body > main:has(.photo-album-page) {
     padding: 1.2rem;
 }
 
+.photo-album-year {
+    margin: 0 0 .5rem;
+    color: #526b4c;
+    font-size: .85rem;
+    font-weight: 700;
+    letter-spacing: .03em;
+}
+
 .photo-album-info h3 {
     margin: 0 0 .6rem;
 }

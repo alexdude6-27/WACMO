@@ -69,6 +69,181 @@
           "sha256": "eca55898c2205566c07847767970959989988787661a2ea1e9f2dc5126ee0ac8"
         }
       ]
+    },
+    {
+      "slug": "green-mountain-2026-06-13",
+      "title": "Green Mountain",
+      "description": "Facebook photographs from the Green Mountain ride.",
+      "year": 2026,
+      "event_id": "2026-06-13-green-mountain",
+      "date": "2026-06-13",
+      "photos": [
+        {
+          "path": "photos/facebook/green-mountain-2026-06-13/01-Green Mountain 6.13.2026.jpg",
+          "original_filename": "Green Mountain 6.13.2026.jpg",
+          "sha256": "fe057cae66b0e2c260f70fb7e9bf54feb101401ec9c1bd8e662c07248fe1256c"
+        },
+        {
+          "path": "photos/facebook/green-mountain-2026-06-13/02-Green Mountain 6.13.2026 - 2.jpg",
+          "original_filename": "Green Mountain 6.13.2026 - 2.jpg",
+          "sha256": "dba879d490962715371dce58a82a1cff8f8ad111e686e9edaa79604d70e910e2"
+        },
+        {
+          "path": "photos/facebook/green-mountain-2026-06-13/03-Green Mountain 6.13.2026 - 3.jpg",
+          "original_filename": "Green Mountain 6.13.2026 - 3.jpg",
+          "sha256": "a4097e0abbcb3d8e1606e61502b288e9ce415a6b28ed4af848106d1e115a9643"
+        },
+        {
+          "path": "photos/facebook/green-mountain-2026-06-13/04-Green Mountain 6.13.2026 -2.jpg",
+          "original_filename": "Green Mountain 6.13.2026 -2.jpg",
+          "sha256": "8dc68045bf88d3af121a1862709817ee60fd18578d3f293c0ffcb3247e3de2bc"
+        }
+      ]
+    },
+    {
+      "slug": "scatter-creek-2026-10-10",
+      "title": "Scatter Creek",
+      "description": "Facebook photographs from the Scatter Creek ride.",
+      "year": 2026,
+      "event_id": "2026-10-10-scatter-creek",
+      "date": "2026-10-10",
+      "photos": [
+        {
+          "path": "photos/facebook/scatter-creek-2026-10-10/01-Scatter Creek - 10.10.2026 -.jpg",
+          "original_filename": "Scatter Creek - 10.10.2026 -.jpg",
+          "sha256": "4411b59e3efa20dfffbe4ad5875bb17a5cd22ac44a0e209c7a90e903a018153e"
+        },
+        {
+          "path": "photos/facebook/scatter-creek-2026-10-10/02-Scatter Creek - 10.10.2026 -2.jpg",
+          "original_filename": "Scatter Creek - 10.10.2026 -2.jpg",
+          "sha256": "16b0b7fb4617c50a50c0c7ba6f3819778a675184177f5993ab1f8d781469b3b0"
+        },
+        {
+          "path": "photos/facebook/scatter-creek-2026-10-10/03-Scatter Creek - 10.10.2026 -3.jpg",
+          "original_filename": "Scatter Creek - 10.10.2026 -3.jpg",
+          "sha256": "7e65325cf3af31d57baec442678210033c055eebcf70455aa97cc202d4eaeaa8"
+        }
+      ]
+    },
+    {
+      "slug": "mt-pockets-2026-05-23",
+      "title": "MT Pockets",
+      "description": "Facebook photographs from the MT Pockets ride.",
+      "year": 2026,
+      "event_id": "2026-05-23-m-t-pockets",
+      "date": "2026-05-23",
+      "photos": [
+        {
+          "path": "photos/facebook/mt-pockets-2026-05-23/01-MT Pockets 5.23-24.2026 - 1.jpg",
+          "original_filename": "MT Pockets 5.23-24.2026 - 1.jpg",
+          "sha256": "a4d47a3d8f21ba858aab13fdfc91aa8e26aa6dd3ccfea87c2fec8b5240178bc8"
+        },
+        {
+          "path": "photos/facebook/mt-pockets-2026-05-23/02-MT Pockets 5.23-24.2026 - 2.jpg",
+          "original_filename": "MT Pockets 5.23-24.2026 - 2.jpg",
+          "sha256": "494408f28a376e552f8bbc57124c8d8637ffd4eec04ca9480cb314781dd9c1f9"
+        },
+        {
+          "path": "photos/facebook/mt-pockets-2026-05-23/03-MT Pockets 5.23-24.2026 - 3.jpg",
+          "original_filename": "MT Pockets 5.23-24.2026 - 3.jpg",
+          "sha256": "703331ccb210bebf322954fb4232220e39001484a6e69b97d9e4d08551d6e66d"
+        },
+        {
+          "path": "photos/facebook/mt-pockets-2026-05-23/04-MT Pockets 5.23-24.2026 - 4.jpg",
+          "original_filename": "MT Pockets 5.23-24.2026 - 4.jpg",
+          "sha256": "e4248c8ed1da566caeb122bf25a90c73471729fd1f7e1ea73bd540d0a12f4d9f"
+        },
+        {
+          "path": "photos/facebook/mt-pockets-2026-05-23/05-MT Pockets 5.23-24.2026 - 5.jpg",
+          "original_filename": "MT Pockets 5.23-24.2026 - 5.jpg",
+          "sha256": "310d95d655009dcfaff5c6c1d4521f2c3a508d20598b912adedf36e0214cd281"
+        },
+        {
+          "path": "photos/facebook/mt-pockets-2026-05-23/06-MT Pockets 5.23-24.2026 - 6.jpg",
+          "original_filename": "MT Pockets 5.23-24.2026 - 6.jpg",
+          "sha256": "d20d230ef9c870b4ad66287ebc587e43ff78fb70555cc3e69181b7455e55a600"
+        },
+        {
+          "path": "photos/facebook/mt-pockets-2026-05-23/07-MT Pockets 5.23-24.2026 - 7.jpg",
+          "original_filename": "MT Pockets 5.23-24.2026 - 7.jpg",
+          "sha256": "f16a191d07e9e9ce81d9c2101951b42ebaa47d3509b8ed9f1109a27a18289442"
+        },
+        {
+          "path": "photos/facebook/mt-pockets-2026-05-23/08-MT Pockets 5.23-24.2026 - 8.jpg",
+          "original_filename": "MT Pockets 5.23-24.2026 - 8.jpg",
+          "sha256": "05fdd8373c87a6e3665f6de00586febffef08bbdab79096b7bb0c79b5cbe55b8"
+        }
+      ]
+    },
+    {
+      "slug": "teanaway-cmo-2026-09-12",
+      "title": "Teanaway CMO",
+      "description": "Facebook photographs from the Teanaway ride.",
+      "year": 2026,
+      "event_id": "2026-09-12-teanaway-indian-camp",
+      "date": "2026-09-12",
+      "photos": [
+        {
+          "path": "photos/facebook/teanaway-cmo-2026-09-12/01-Teanaway - CMO 09.12-13.2026.jpg",
+          "original_filename": "Teanaway - CMO 09.12-13.2026.jpg",
+          "sha256": "8a89ae7d2112a489b22d16fbd9cf0d5e465b5313d45f105c6e338dae61c2b148"
+        },
+        {
+          "path": "photos/facebook/teanaway-cmo-2026-09-12/02-Teanaway - CMO 09.12-13.2026 -02.jpg",
+          "original_filename": "Teanaway - CMO 09.12-13.2026 -02.jpg",
+          "sha256": "f55f2ea9ff86df4f115fedb3ab70cb186fdfe03a544a61500bea1134c3a9e758"
+        },
+        {
+          "path": "photos/facebook/teanaway-cmo-2026-09-12/03-Teanaway - CMO 09.12-13.2026-03.jpg",
+          "original_filename": "Teanaway - CMO 09.12-13.2026-03.jpg",
+          "sha256": "0e3d90a9cd898d301708dfbfe6170f1f5059be5acc3e91f849d41bc8f9147af8"
+        }
+      ]
+    },
+    {
+      "slug": "danville-georgetown-cmo-2022-10-15",
+      "title": "Danville-Georgetown CMO",
+      "description": "Facebook photographs from Danville-Georgetown.",
+      "year": 2022,
+      "event_id": null,
+      "date": "2022-10-15",
+      "photos": [
+        {
+          "path": "photos/facebook/danville-georgetown-cmo-2022-10-15/01-Danville-Georgetown CMO 10.15.2022 - 1.jpg",
+          "original_filename": "Danville-Georgetown CMO 10.15.2022 - 1.jpg",
+          "sha256": "3077dce6b9237c05ceb9a1c5873b34ea0e0d233d1b4ac2b90276970b98d13ffd"
+        },
+        {
+          "path": "photos/facebook/danville-georgetown-cmo-2022-10-15/02-Danville-Georgetown CMO 10.15.2022 - 2.jpg",
+          "original_filename": "Danville-Georgetown CMO 10.15.2022 - 2.jpg",
+          "sha256": "71c9ad0fa74be1e15ab3c1848438e6ec0c326d8839179cd48a2dcd41c56e0020"
+        }
+      ]
+    },
+    {
+      "slug": "sahara-creek-2021-07-24",
+      "title": "Sahara Creek",
+      "description": "Facebook photographs from Sahara Creek.",
+      "year": 2021,
+      "event_id": null,
+      "date": "2021-07-24",
+      "photos": [
+        {
+          "path": "photos/facebook/sahara-creek-2021-07-24/01-Sahara Creek - 7.24-25.2021 - 1.jpg",
+          "original_filename": "Sahara Creek - 7.24-25.2021 - 1.jpg",
+          "sha256": "9e00f8f26c2ee13af35d80f38ff349a0abaeaa298238ef5b3cc706640d47eae8"
+        },
+        {
+          "path": "photos/facebook/sahara-creek-2021-07-24/02-Sahara Creek - 7.24-25.2021 - 2.jpg",
+          "original_filename": "Sahara Creek - 7.24-25.2021 - 2.jpg",
+          "sha256": "d508fdb0843aa599d2125c7a11e5f9af26426de6e12d01f2ec7118265b27f541"
+        },
+        {
+          "path": "photos/facebook/sahara-creek-2021-07-24/03-Sahara Creek - 7.24-25.2021 - 3.jpg",
+          "original_filename": "Sahara Creek - 7.24-25.2021 - 3.jpg",
+          "sha256": "2cff96c540dfd8b086eaf2b1dd0f827a1a89ecaf10e4f7b78e61d4f7be86511f"
+        }
+      ]
     }
   ]
 }

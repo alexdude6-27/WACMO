@@ -61,6 +61,11 @@
                 </a>
 
                 <div class="photo-album-info">
+                    {% if album.year %}
+                    <p class="photo-album-year">
+                        {{ album.year }} Season
+                    </p>
+                    {% endif %}
                     <h3>
                         <a href="{{ url_for(
                             'gallery_album',

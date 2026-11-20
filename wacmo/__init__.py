@@ -406,7 +406,11 @@ def create_app():
 
         return render_template(
             "galleries.html",
-            photo_albums=load_photo_albums(),
+            photo_albums=sorted(
+                load_photo_albums(),
+                key=lambda album: album.get("date") or "",
+                reverse=True,
+            ),
         )
 
     @app.get("/galleries/<slug>")
