@@ -1,6 +1,7 @@
 from flask import Flask, abort, render_template, request
 
 from .calendar import build_month, pacific_today
+from .events_archive import load_archived_schedule
 
 
 NAVIGATION = (
@@ -128,9 +129,32 @@ def create_app():
         except ValueError:
             abort(400)
 
+        days_in_month = [
+            day["iso"]
+            for week in calendar_view["weeks"]
+            for day in week
+            if day["in_month"]
+        ]
+        first_day, last_day = days_in_month[0], days_in_month[-1]
+
+        month_events = [
+            event for event in load_archived_schedule()
+            if event["start_date"] <= last_day
+            and event["end_date"] >= first_day
+        ]
+
+        for week in calendar_view["weeks"]:
+            for day in week:
+                day["events"] = [
+                    event for event in month_events
+                    if day["in_month"]
+                    and event["start_date"] <= day["iso"] <= event["end_date"]
+                ]
+
         return render_template(
             "events.html",
             calendar=calendar_view,
+            month_events=month_events,
         )
 
     @app.get("/what-is-cmo")

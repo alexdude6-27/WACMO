@@ -1136,3 +1136,43 @@ body > main,
         width: 100%;
     }
 }
+
+/* Archived event listings in the monthly calendar. */
+.calendar-event-chip {
+    display: block;
+    margin-top: 0.3rem;
+    padding: 0.2rem 0.3rem;
+    border-left: 3px solid currentColor;
+    background: rgba(90, 120, 70, 0.12);
+    font-size: 0.75rem;
+    line-height: 1.3;
+    overflow-wrap: anywhere;
+}
+
+.calendar-month-events {
+    margin-top: 1.5rem;
+}
+
+.calendar-history-note {
+    max-width: 65ch;
+}
+
+.calendar-event-list {
+    list-style: none;
+    padding: 0;
+    margin: 1rem 0 0;
+}
+
+.calendar-event-list li {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    gap: 0.35rem 0.8rem;
+    padding: 0.7rem 0;
+    border-bottom: 1px solid currentColor;
+}
+
+.calendar-event-date {
+    min-width: 8rem;
+    font-weight: 700;
+}

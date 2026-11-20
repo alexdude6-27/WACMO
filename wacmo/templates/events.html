@@ -94,6 +94,12 @@
                               {% endif %}>
                             {{ day.number }}
                         </time>
+                        {% for event in day.events %}
+                        <span class="calendar-event-chip"
+                              title="Historical schedule listing; occurrence unconfirmed">
+                            {{ event.title }}
+                        </span>
+                        {% endfor %}
                     </td>
                     {% endfor %}
                 </tr>
@@ -102,6 +108,29 @@
         </table>
     </div>
 
+    {% if month_events %}
+    <section class="calendar-month-events"
+             aria-label="Historical schedule entries">
+        <h3>Historical schedule entries</h3>
+        <p class="calendar-history-note">
+            These events were listed in the original WACMO 2026 schedule.
+            A listing does not confirm the event took place.
+        </p>
+        <ul class="calendar-event-list">
+            {% for event in month_events %}
+            <li>
+                <span class="calendar-event-date">
+                    {{ event.date_label }}
+                </span>
+                <strong>{{ event.title }}</strong>
+                {% if event.location %}
+                <span>{{ event.location }}</span>
+                {% endif %}
+            </li>
+            {% endfor %}
+        </ul>
+    </section>
+    {% else %}
     <div class="calendar-empty">
         <h3>No rides published for this month yet</h3>
         <p>
@@ -109,5 +138,6 @@
             once event publishing is available.
         </p>
     </div>
+    {% endif %}
 </section>
 {% endblock %}

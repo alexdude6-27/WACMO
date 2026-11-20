@@ -1,0 +1,209 @@
+{
+  "source": "public_html/Schedule2026.pdf",
+  "source_updated": "2026-03-04",
+  "source_sha256": "348aee0b7a89ba26126af2b62bfb0a417d80195c579bb27986dd7950ba504105",
+  "description": "Historical 2026 published schedule. Listing does not confirm an event occurred.",
+  "events": [
+    {
+      "id": "2026-02-28-awards-banquet",
+      "title": "Awards Banquet",
+      "start_date": "2026-02-28",
+      "end_date": "2026-02-28",
+      "location": "Olympia, WA",
+      "category": "banquet",
+      "source_status": "listed",
+      "publication_status": "archived",
+      "needs_review": false
+    },
+    {
+      "id": "2026-03-08-free-cmo-clinic-without-horses",
+      "title": "Free CMO Clinic (without horses)",
+      "start_date": "2026-03-08",
+      "end_date": "2026-03-08",
+      "location": "Tenino, WA",
+      "category": "clinic",
+      "source_status": "listed",
+      "publication_status": "archived",
+      "needs_review": false,
+      "start_time": "14:30"
+    },
+    {
+      "id": "2026-03-13-free-cmo-clinic-without-horses",
+      "title": "Free CMO Clinic (without horses)",
+      "start_date": "2026-03-13",
+      "end_date": "2026-03-13",
+      "location": "Scatter Creek, Rochester, WA",
+      "category": "clinic",
+      "source_status": "listed",
+      "publication_status": "archived",
+      "needs_review": false,
+      "start_time": "16:00"
+    },
+    {
+      "id": "2026-03-14-scatter-creek",
+      "title": "Scatter Creek",
+      "start_date": "2026-03-14",
+      "end_date": "2026-03-14",
+      "location": "Rochester, WA",
+      "category": "ride",
+      "source_status": "listed",
+      "publication_status": "archived",
+      "needs_review": false
+    },
+    {
+      "id": "2026-03-28-danville-georgetown",
+      "title": "Danville Georgetown",
+      "start_date": "2026-03-28",
+      "end_date": "2026-03-28",
+      "location": "Maple Valley, WA",
+      "category": "ride",
+      "source_status": "listed",
+      "publication_status": "archived",
+      "needs_review": false
+    },
+    {
+      "id": "2026-04-11-les-hilde-horse-camp",
+      "title": "Les Hilde Horse Camp",
+      "start_date": "2026-04-11",
+      "end_date": "2026-04-12",
+      "location": "Sedro Wooley, WA",
+      "category": "ride",
+      "source_status": "listed",
+      "publication_status": "archived",
+      "needs_review": false
+    },
+    {
+      "id": "2026-04-25-taylor-mountain",
+      "title": "Taylor Mountain",
+      "start_date": "2026-04-25",
+      "end_date": "2026-04-25",
+      "location": "Hobart, WA",
+      "category": "ride",
+      "source_status": "listed",
+      "publication_status": "archived",
+      "needs_review": false
+    },
+    {
+      "id": "2026-05-09-sage-horse-camp",
+      "title": "Sage Horse Camp",
+      "start_date": "2026-05-09",
+      "end_date": "2026-05-10",
+      "location": "Sequim, WA",
+      "category": "ride",
+      "source_status": "listed",
+      "publication_status": "archived",
+      "needs_review": false
+    },
+    {
+      "id": "2026-05-23-m-t-pockets",
+      "title": "M.T. Pockets",
+      "start_date": "2026-05-23",
+      "end_date": "2026-05-24",
+      "location": "Tenino, WA",
+      "category": "ride",
+      "source_status": "listed",
+      "publication_status": "archived",
+      "needs_review": false
+    },
+    {
+      "id": "2026-06-13-green-mountain",
+      "title": "Green Mountain",
+      "start_date": "2026-06-13",
+      "end_date": "2026-06-14",
+      "location": "Belfair, WA",
+      "category": "ride",
+      "source_status": "listed",
+      "publication_status": "archived",
+      "needs_review": false
+    },
+    {
+      "id": "2026-06-27-unnamed-tentative-event",
+      "title": null,
+      "start_date": "2026-06-27",
+      "end_date": "2026-06-28",
+      "location": null,
+      "category": "ride",
+      "source_status": "tentative",
+      "publication_status": "draft",
+      "needs_review": true,
+      "review_note": "Source lists TENTATIVE and WA only; event name and location require verification."
+    },
+    {
+      "id": "2026-07-10-margaret-mckenny-capitol-forest",
+      "title": "Margaret McKenny-Capitol Forest",
+      "start_date": "2026-07-10",
+      "end_date": "2026-07-12",
+      "location": "Littlerock, WA",
+      "category": "ride",
+      "source_status": "listed",
+      "publication_status": "archived",
+      "needs_review": false
+    },
+    {
+      "id": "2026-07-25-les-hilde-horse-camp",
+      "title": "Les Hilde Horse Camp",
+      "start_date": "2026-07-25",
+      "end_date": "2026-07-26",
+      "location": "Sedro Wooley, WA",
+      "category": "ride",
+      "source_status": "listed",
+      "publication_status": "archived",
+      "needs_review": false
+    },
+    {
+      "id": "2026-08-08-rock-creek",
+      "title": "Rock Creek",
+      "start_date": "2026-08-08",
+      "end_date": "2026-08-09",
+      "location": "Yacolt, WA",
+      "category": "ride",
+      "source_status": "listed",
+      "publication_status": "archived",
+      "needs_review": false
+    },
+    {
+      "id": "2026-08-22-sahara-creek-horse-camp",
+      "title": "Sahara Creek Horse Camp",
+      "start_date": "2026-08-22",
+      "end_date": "2026-08-23",
+      "location": "Elbe, WA",
+      "category": "ride",
+      "source_status": "listed",
+      "publication_status": "archived",
+      "needs_review": false
+    },
+    {
+      "id": "2026-09-12-teanaway-indian-camp",
+      "title": "Teanaway-Indian Camp",
+      "start_date": "2026-09-12",
+      "end_date": "2026-09-13",
+      "location": "Cle Elum, WA",
+      "category": "ride",
+      "source_status": "listed",
+      "publication_status": "archived",
+      "needs_review": false
+    },
+    {
+      "id": "2026-09-26-buck-creek",
+      "title": "Buck Creek",
+      "start_date": "2026-09-26",
+      "end_date": "2026-09-27",
+      "location": "Greenwater, WA",
+      "category": "ride",
+      "source_status": "listed",
+      "publication_status": "archived",
+      "needs_review": false
+    },
+    {
+      "id": "2026-10-10-scatter-creek",
+      "title": "Scatter Creek",
+      "start_date": "2026-10-10",
+      "end_date": "2026-10-10",
+      "location": "Rochester, WA",
+      "category": "ride",
+      "source_status": "listed",
+      "publication_status": "archived",
+      "needs_review": false
+    }
+  ]
+}
