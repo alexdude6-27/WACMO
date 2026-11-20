@@ -1583,3 +1583,350 @@ td:not(.calendar-outside):not(.calendar-today) {
     background: #faf3e6;
     border-color: #d8c7aa;
 }
+
+/* WACMO searchable flyer archive */
+
+body > main:has(.flyer-archive) {
+    background:
+        radial-gradient(
+            ellipse at top,
+            rgba(255, 255, 255, .48),
+            transparent 56%
+        ),
+        #f6e9d0;
+}
+
+.flyer-archive {
+    padding-top: 2rem;
+    padding-bottom: 1.6rem;
+}
+
+.flyer-archive-heading {
+    max-width: 850px;
+    margin-bottom: 1.5rem;
+}
+
+.flyer-archive-heading h1 {
+    margin: .2rem 0 .65rem;
+    color: #294731;
+}
+
+.flyer-archive-heading > p {
+    line-height: 1.55;
+}
+
+.flyer-archive-total {
+    font-weight: 700;
+    color: #47604b;
+}
+
+.flyer-search-form {
+    display: flex;
+    align-items: end;
+    flex-wrap: wrap;
+    gap: 1rem;
+    padding: 1.3rem;
+    background: #fbf5e9;
+    border: 1px solid #d5c2a1;
+    border-radius: .85rem;
+    box-shadow: 0 3px 12px rgba(62, 44, 23, .07);
+}
+
+.flyer-search-field {
+    flex: 1 1 260px;
+    min-width: 0;
+}
+
+.flyer-year-field {
+    flex: 0 1 175px;
+}
+
+.flyer-search-field label,
+.flyer-year-field label {
+    display: block;
+    margin-bottom: .4rem;
+    color: #35553d;
+    font-weight: 700;
+}
+
+.flyer-search-field input,
+.flyer-year-field select {
+    display: block;
+    width: 100%;
+    min-height: 45px;
+    padding: .65rem .75rem;
+    color: #263f2e;
+    background: #fffaf0;
+    border: 1px solid #bbaa8f;
+    border-radius: .45rem;
+    font: inherit;
+}
+
+.flyer-search-form button {
+    min-height: 45px;
+    padding: .65rem 1.1rem;
+    color: #fffaf0;
+    background: #416349;
+    border: 1px solid #35533b;
+    border-radius: .45rem;
+    font: inherit;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.flyer-search-form button:hover {
+    background: #304f38;
+}
+
+.flyer-clear-filter {
+    padding: .7rem .15rem;
+    color: #355b40;
+    text-underline-offset: 3px;
+}
+
+.flyer-year-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: .65rem;
+    margin: 1.3rem 0;
+}
+
+.flyer-year-links a {
+    display: inline-flex;
+    align-items: center;
+    gap: .45rem;
+    min-height: 40px;
+    padding: .5rem .9rem;
+    color: #34543c;
+    background: #f8f0e0;
+    border: 1px solid #d2bea0;
+    border-radius: 999px;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.flyer-year-links a:hover {
+    background: #e9e0cd;
+}
+
+.flyer-year-links a.is-selected {
+    color: #fff9ed;
+    background: #45654b;
+    border-color: #45654b;
+}
+
+.flyer-year-links span {
+    opacity: .8;
+    font-size: .85rem;
+}
+
+.flyer-result-count {
+    color: #53614f;
+    font-size: .93rem;
+    margin-bottom: 1.4rem;
+}
+
+.flyer-year-group {
+    margin: 1.5rem 0 2.3rem;
+}
+
+.flyer-year-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: .5rem;
+    margin-bottom: 1rem;
+    padding-bottom: .65rem;
+    border-bottom: 2px solid #bda780;
+}
+
+.flyer-year-heading h2 {
+    margin: 0;
+    color: #294731;
+}
+
+.flyer-year-heading span {
+    color: #5b6757;
+}
+
+.flyer-card-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1.2rem;
+}
+
+.flyer-card {
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    overflow: hidden;
+    background: #fcf7ec;
+    border: 1px solid #d7c4a6;
+    border-radius: .75rem;
+    box-shadow: 0 4px 13px rgba(65, 45, 20, .08);
+}
+
+.flyer-card-preview {
+    display: block;
+    position: relative;
+    height: 235px;
+    padding: .65rem;
+    background: #e9dfcc;
+    border-bottom: 1px solid #d7c4a6;
+}
+
+.flyer-card-preview img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    box-shadow: none;
+}
+
+.flyer-preview-count {
+    position: absolute;
+    bottom: .65rem;
+    right: .65rem;
+    padding: .3rem .6rem;
+    background: #35583e;
+    color: white;
+    border-radius: 999px;
+    font-size: .78rem;
+    font-weight: 700;
+}
+
+.flyer-card-body {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    gap: .45rem;
+    padding: 1.1rem;
+}
+
+.flyer-card-date {
+    margin: 0;
+    font-size: .85rem;
+    font-weight: 700;
+    color: #547058;
+}
+
+.flyer-card h3 {
+    margin: 0;
+    font-size: 1.2rem;
+    line-height: 1.3;
+}
+
+.flyer-card h3 a {
+    color: #25492e;
+    text-decoration: none;
+}
+
+.flyer-card h3 a:hover {
+    text-decoration: underline;
+}
+
+.flyer-card-location,
+.flyer-card-note {
+    margin: 0;
+    color: #586653;
+    font-size: .9rem;
+}
+
+.flyer-card-note {
+    font-style: italic;
+}
+
+.flyer-card-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: .55rem;
+    margin-top: auto;
+    padding-top: .9rem;
+}
+
+.flyer-card-actions a {
+    display: inline-flex;
+    align-items: center;
+    min-height: 38px;
+    padding: .45rem .65rem;
+    color: #fff9ed;
+    background: #416349;
+    border-radius: .4rem;
+    font-size: .87rem;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.flyer-card-actions a:hover {
+    background: #305038;
+}
+
+.flyer-card-actions a.flyer-details-link {
+    background: #ece4d1;
+    color: #2c5036;
+}
+
+.flyer-card-actions a.flyer-details-link:hover {
+    background: #ded1b8;
+}
+
+.flyer-search-empty {
+    padding: 2rem;
+    background: #fbf5e8;
+    border: 1px solid #d6c2a1;
+    border-radius: .8rem;
+}
+
+.flyer-search-empty h2 {
+    margin-top: 0;
+}
+
+.flyer-archive-disclaimer {
+    margin: 1.5rem 0 0;
+    color: #677061;
+    font-size: .85rem;
+}
+
+.flyer-original-archive {
+    margin-bottom: 2rem;
+    padding: 1rem 1.3rem;
+    background: #f6eddb;
+    border: 1px solid #d4c19f;
+    border-radius: .75rem;
+}
+
+.flyer-original-archive > summary {
+    color: #2e5036;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.flyer-original-archive > p {
+    color: #626a5e;
+}
+
+@media (max-width: 950px) {
+    .flyer-card-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 650px) {
+    .flyer-search-form {
+        display: grid;
+        grid-template-columns: minmax(0, 1fr);
+    }
+
+    .flyer-card-grid {
+        grid-template-columns: minmax(0, 1fr);
+    }
+
+    .flyer-card-preview {
+        height: 270px;
+    }
+
+    .flyer-card-actions a {
+        min-height: 44px;
+    }
+}

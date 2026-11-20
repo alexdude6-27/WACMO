@@ -1,6 +1,217 @@
 {% extends "base.html" %}
 {% block title %}Flyers (Rides & Invites){% endblock %}
 {% block content %}
+
+<section class="flyer-archive container"
+         aria-labelledby="flyer-archive-heading">
+    <header class="flyer-archive-heading">
+        <p class="eyebrow">The WACMO archives</p>
+        <h1 id="flyer-archive-heading">
+            Ride Flyers &amp; Invitations
+        </h1>
+        <p>
+            Discover original WACMO ride flyers, clinics,
+            and invitations from past seasons.
+        </p>
+        <p class="flyer-archive-total">
+            {{ flyer_total_count }} historical events
+            &middot; {{ flyer_total_pdf_count }} original PDFs
+        </p>
+    </header>
+
+    <form class="flyer-search-form"
+          action="{{ url_for('ride_flyers') }}"
+          method="get"
+          role="search">
+        <div class="flyer-search-field">
+            <label for="flyer-search">
+                Search flyers
+            </label>
+            <input id="flyer-search"
+                   type="search"
+                   name="q"
+                   maxlength="120"
+                   value="{{ flyer_query }}"
+                   placeholder="Ride, location, date, or filename">
+        </div>
+
+        <div class="flyer-year-field">
+            <label for="flyer-year">
+                Season
+            </label>
+            <select id="flyer-year" name="year">
+                <option value="all"
+                    {% if selected_year == 'all' %}selected{% endif %}>
+                    All years
+                </option>
+                {% for choice in flyer_years %}
+                <option value="{{ choice.year }}"
+                    {% if selected_year == choice.year %}selected{% endif %}>
+                    {{ choice.year }}
+                    ({{ choice.count }})
+                </option>
+                {% endfor %}
+            </select>
+        </div>
+
+        <button type="submit">Find flyers</button>
+
+        {% if flyer_query or selected_year != 'all' %}
+        <a class="flyer-clear-filter"
+           href="{{ url_for('ride_flyers') }}">
+            Clear filters
+        </a>
+        {% endif %}
+    </form>
+
+    <nav class="flyer-year-links"
+         aria-label="Browse flyers by season">
+        <a href="{{ url_for('ride_flyers', q=flyer_query) }}"
+           {% if selected_year == 'all' %}aria-current="true"{% endif %}
+           class="{% if selected_year == 'all' %}is-selected{% endif %}">
+            All years
+        </a>
+        {% for choice in flyer_years %}
+        <a href="{{ url_for(
+                    'ride_flyers',
+                    year=choice.year,
+                    q=flyer_query
+                ) }}"
+           {% if selected_year == choice.year %}aria-current="true"{% endif %}
+           class="{% if selected_year == choice.year %}is-selected{% endif %}">
+            {{ choice.year }}
+            <span>{{ choice.count }}</span>
+        </a>
+        {% endfor %}
+    </nav>
+
+    <p class="flyer-result-count" id="flyer-results"
+       aria-live="polite">
+        Showing {{ flyer_result_count }}
+        event{{ '' if flyer_result_count == 1 else 's' }}
+        with {{ flyer_result_pdf_count }}
+        PDF{{ '' if flyer_result_pdf_count == 1 else 's' }}.
+    </p>
+
+    {% for group in flyer_groups %}
+    <section class="flyer-year-group"
+             id="flyer-year-{{ group.year }}"
+             aria-labelledby="flyer-year-heading-{{ group.year }}">
+        <div class="flyer-year-heading">
+            <h2 id="flyer-year-heading-{{ group.year }}">
+                {{ group.year }} Season
+            </h2>
+            <span>
+                {{ group["items"] | length }}
+                event{{ '' if group["items"] | length == 1 else 's' }}
+            </span>
+        </div>
+
+        <div class="flyer-card-grid">
+            {% for item in group["items"] %}
+            <article class="flyer-card">
+                <a class="flyer-card-preview"
+                   href="{{ url_for(
+                       'static',
+                       filename=item.documents[0].path
+                   ) }}"
+                   target="_blank"
+                   rel="noopener noreferrer"
+                   aria-label="Open flyer for {{ item.event.title }}">
+                    <img src="{{ url_for(
+                        'static',
+                        filename=item.preview
+                    ) }}"
+                         alt="Original flyer cover for {{ item.event.title }}"
+                         loading="lazy">
+                    {% if item.documents | length > 1 %}
+                    <span class="flyer-preview-count">
+                        {{ item.documents | length }} flyers
+                    </span>
+                    {% endif %}
+                </a>
+
+                <div class="flyer-card-body">
+                    <p class="flyer-card-date">
+                        {{ item.event.date_label }}
+                    </p>
+
+                    <h3>
+                        <a href="{{ url_for(
+                            'event_detail',
+                            event_id=item.event.id
+                        ) }}">
+                            {{ item.event.title }}
+                        </a>
+                    </h3>
+
+                    {% if item.event.location %}
+                    <p class="flyer-card-location">
+                        {{ item.event.location }}
+                    </p>
+                    {% endif %}
+
+                    {% if item.event.get('source_status') == 'flyer_only' %}
+                    <p class="flyer-card-note">
+                        Advertised in an original flyer;
+                        not on the revised annual schedule.
+                    </p>
+                    {% endif %}
+
+                    <div class="flyer-card-actions">
+                        {% for document in item.documents %}
+                        <a href="{{ url_for(
+                            'static',
+                            filename=document.path
+                        ) }}"
+                           target="_blank"
+                           rel="noopener noreferrer">
+                            {% if item.documents | length > 1 %}
+                                {{ document.label | default(document.original_filename) }}
+                            {% else %}
+                                View PDF
+                            {% endif %}
+                        </a>
+                        {% endfor %}
+
+                        <a class="flyer-details-link"
+                           href="{{ url_for(
+                               'event_detail',
+                               event_id=item.event.id
+                           ) }}">
+                            Event details
+                        </a>
+                    </div>
+                </div>
+            </article>
+            {% endfor %}
+        </div>
+    </section>
+    {% else %}
+    <div class="flyer-search-empty">
+        <h2>No matching flyers</h2>
+        <p>
+            Try another ride name or season,
+            or clear the filters to see the full archive.
+        </p>
+        <a href="{{ url_for('ride_flyers') }}">
+            View all flyers
+        </a>
+    </div>
+    {% endfor %}
+
+    <p class="flyer-archive-disclaimer">
+        Historical listings and original advertisements do not
+        independently confirm that an event took place.
+    </p>
+</section>
+
+<details class="flyer-original-archive container">
+    <summary>View the original WACMO 2026 flyer page</summary>
+    <p>
+        The original website content is preserved below
+        for historical reference, including its original links.
+    </p>
 <section class="heritage-article heritage-media heritage-media--ride_flyers container">
     <h1>Flyers (Rides & Invites)</h1>
     <div class="heritage-article-body">
@@ -119,4 +330,6 @@
 
     </div>
 </section>
+
+</details>
 {% endblock %}

@@ -278,7 +278,124 @@ def create_app():
 
     @app.get("/ride-flyers")
     def ride_flyers():
-        return render_template("ride_flyers.html")
+        from .event_flyers import load_event_flyers
+
+        flyer_documents = load_event_flyers()
+        records = []
+
+        for event in load_archived_schedule():
+            documents = flyer_documents.get(event["id"])
+
+            if not documents:
+                continue
+
+            first_path = documents[0]["path"]
+            preview_path = (
+                "flyer_previews/"
+                + first_path[len("flyers/"):-4]
+                + ".jpg"
+            )
+
+            records.append({
+                "event": event,
+                "documents": documents,
+                "year": event["start_date"][:4],
+                "preview": preview_path,
+            })
+
+        records.sort(
+            key=lambda item: (
+                item["event"]["start_date"],
+                item["event"]["id"],
+            ),
+            reverse=True,
+        )
+
+        available_years = sorted(
+            {item["year"] for item in records},
+            reverse=True,
+        )
+
+        selected_year = request.args.get("year", "all")
+
+        if selected_year not in ("all", *available_years):
+            abort(400)
+
+        query = request.args.get("q", "").strip()
+
+        if len(query) > 120:
+            abort(400)
+
+        terms = query.casefold().split()
+        filtered = []
+
+        for item in records:
+            if (
+                selected_year != "all"
+                and item["year"] != selected_year
+            ):
+                continue
+
+            event = item["event"]
+
+            searchable = " ".join((
+                event["title"],
+                event.get("location", ""),
+                event["date_label"],
+                event.get("category", ""),
+                " ".join(
+                    document["original_filename"]
+                    for document in item["documents"]
+                ),
+            )).casefold()
+
+            if all(term in searchable for term in terms):
+                filtered.append(item)
+
+        groups = [
+            {
+                "year": year,
+                "items": [
+                    item for item in filtered
+                    if item["year"] == year
+                ],
+            }
+            for year in available_years
+        ]
+
+        groups = [
+            group for group in groups
+            if group["items"]
+        ]
+
+        year_choices = [
+            {
+                "year": year,
+                "count": sum(
+                    item["year"] == year
+                    for item in records
+                ),
+            }
+            for year in available_years
+        ]
+
+        return render_template(
+            "ride_flyers.html",
+            flyer_groups=groups,
+            flyer_years=year_choices,
+            flyer_query=query,
+            selected_year=selected_year,
+            flyer_total_count=len(records),
+            flyer_total_pdf_count=sum(
+                len(item["documents"])
+                for item in records
+            ),
+            flyer_result_count=len(filtered),
+            flyer_result_pdf_count=sum(
+                len(item["documents"])
+                for item in filtered
+            ),
+        )
 
     @app.get("/galleries")
     def galleries():
