@@ -16,6 +16,13 @@ NAVIGATION = (
     ("Links", "links"),
 )
 
+NAV_GROUPS = (
+    ("About CMO", NAVIGATION[1:3]),
+    ("Events", NAVIGATION[3:5]),
+    ("Explore", NAVIGATION[5:7]),
+    ("Resources", NAVIGATION[7:9]),
+)
+
 
 PAGES = {
     "what_is_cmo": {
@@ -92,7 +99,20 @@ def create_app():
 
     @app.context_processor
     def site_navigation():
-        return {"navigation": NAVIGATION}
+        return {
+            "navigation": NAVIGATION,
+            "nav_groups": [
+                {
+                    "label": label,
+                    "links": links,
+                    "active": any(
+                        request.endpoint == endpoint
+                        for _, endpoint in links
+                    ),
+                }
+                for label, links in NAV_GROUPS
+            ],
+        }
 
     @app.get("/")
     def home():
@@ -151,10 +171,66 @@ def create_app():
                     and event["start_date"] <= day["iso"] <= event["end_date"]
                 ]
 
+        archive_year_text = request.args.get("archive_year")
+        archive_year = None
+        older_years = list(
+            range(today.year - 3, 2010, -1)
+        )
+
+        if archive_year_text is not None:
+            if not (
+                len(archive_year_text) == 4
+                and archive_year_text.isascii()
+                and archive_year_text.isdigit()
+                and int(archive_year_text) in older_years
+            ):
+                abort(400)
+            archive_year = int(archive_year_text)
+
+        recent_years = range(today.year, today.year - 3, -1)
+
+        recent_archives = [
+            {
+                "year": year_value,
+                "events": sorted(
+                    (
+                        event
+                        for event in load_archived_schedule()
+                        if int(event["start_date"][:4]) == year_value
+                    ),
+                    key=lambda event: (
+                        event["start_date"],
+                        event["id"],
+                    ),
+                    reverse=True,
+                ),
+            }
+            for year_value in recent_years
+        ]
+
+        older_events = []
+        if archive_year is not None:
+            older_events = sorted(
+                (
+                    event
+                    for event in load_archived_schedule()
+                    if int(event["start_date"][:4]) == archive_year
+                ),
+                key=lambda event: (
+                    event["start_date"],
+                    event["id"],
+                ),
+                reverse=True,
+            )
+
         return render_template(
             "events.html",
             calendar=calendar_view,
             month_events=month_events,
+            recent_archives=recent_archives,
+            older_years=older_years,
+            archive_year=archive_year,
+            older_events=older_events,
         )
 
     @app.get("/what-is-cmo")

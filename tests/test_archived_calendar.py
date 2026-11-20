@@ -57,7 +57,8 @@ def test_no_2026_events_after_october():
     ).get_data(as_text=True)
 
     assert "No rides published for this month yet" in page
-    assert "Awards Banquet" not in page
+    assert "Awards Banquet" in page
+    assert "2026 Season" in page
 
 
 def test_nacmo_references_and_original_names():

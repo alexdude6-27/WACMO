@@ -157,4 +157,124 @@
     </div>
     {% endif %}
 </section>
+
+<section class="content-section container historic-archive"
+         id="event-history"
+         aria-labelledby="history-heading">
+    <div class="history-heading">
+        <div>
+            <p class="eyebrow">Our riding history</p>
+            <h2 id="history-heading">Past Events &amp; Ride Archives</h2>
+            <p>
+                Browse the current season and previous two years.
+                Older years remain available below.
+            </p>
+        </div>
+    </div>
+
+    {% for season in recent_archives %}
+    <section class="history-season"
+             aria-label="{{ season.year }} season">
+        <div class="history-season-heading">
+            <h3>{{ season.year }} Season</h3>
+            <span>
+                {% if season.events %}
+                    {{ season.events | length }} schedule entries
+                {% else %}
+                    Archive import pending
+                {% endif %}
+            </span>
+        </div>
+
+        {% if season.events %}
+        <ol class="history-event-list">
+            {% for event in season.events %}
+            <li class="history-event">
+                <div>
+                    <span class="history-event-date">
+                        {{ event.date_label }}
+                    </span>
+                    <strong>{{ event.title }}</strong>
+                    {% if event.location %}
+                    <span class="history-event-location">
+                        {{ event.location }}
+                    </span>
+                    {% endif %}
+                </div>
+                {% if event.nacmo_details_url %}
+                <a href="{{ event.nacmo_details_url }}"
+                   target="_blank"
+                   rel="noopener noreferrer">
+                    NACMO details
+                </a>
+                {% endif %}
+            </li>
+            {% endfor %}
+        </ol>
+        {% else %}
+        <p class="history-pending">
+            Historical records for this season have not
+            yet been imported.
+        </p>
+        {% endif %}
+    </section>
+    {% endfor %}
+
+    <div class="history-older">
+        <details {% if archive_year is not none %}open{% endif %}>
+            <summary>Browse Earlier Years</summary>
+            <div class="history-year-links">
+                {% for year in older_years %}
+                <a href="{{ url_for('events', archive_year=year) }}#event-history"
+                   {% if archive_year == year %}aria-current="true"{% endif %}>
+                    {{ year }}
+                </a>
+                {% endfor %}
+            </div>
+        </details>
+
+        {% if archive_year is not none %}
+        <section class="history-season"
+                 aria-label="{{ archive_year }} archived events">
+            <h3>{{ archive_year }} Season</h3>
+            {% if older_events %}
+            <ol class="history-event-list">
+                {% for event in older_events %}
+                <li class="history-event">
+                    <div>
+                        <span class="history-event-date">
+                            {{ event.date_label }}
+                        </span>
+                        <strong>{{ event.title }}</strong>
+                        {% if event.location %}
+                        <span class="history-event-location">
+                            {{ event.location }}
+                        </span>
+                        {% endif %}
+                    </div>
+                    {% if event.nacmo_details_url %}
+                    <a href="{{ event.nacmo_details_url }}"
+                       target="_blank"
+                       rel="noopener noreferrer">
+                        NACMO details
+                    </a>
+                    {% endif %}
+                </li>
+                {% endfor %}
+            </ol>
+            {% else %}
+            <p class="history-pending">
+                No structured events have been imported
+                for {{ archive_year }} yet.
+            </p>
+            {% endif %}
+        </section>
+        {% endif %}
+    </div>
+
+    <p class="history-disclaimer">
+        Historical schedule listings do not by themselves
+        confirm that rides took place.
+    </p>
+</section>
 {% endblock %}

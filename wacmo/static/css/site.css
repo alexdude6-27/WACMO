@@ -1176,3 +1176,229 @@ body > main,
     min-width: 8rem;
     font-weight: 700;
 }
+
+
+/* Grouped WACMO navigation */
+.site-header {
+    position: relative;
+    z-index: 30;
+}
+
+.site-nav {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 0.3rem;
+}
+
+.site-nav .nav-group {
+    position: relative;
+    margin: 0;
+}
+
+.site-nav .nav-group > summary {
+    display: flex;
+    align-items: center;
+    gap: 0.45rem;
+    padding: 0.65rem 0.85rem;
+    border-radius: 0.4rem;
+    cursor: pointer;
+    list-style: none;
+    font: inherit;
+    font-weight: 700;
+    color: inherit;
+}
+
+.site-nav .nav-group > summary::-webkit-details-marker {
+    display: none;
+}
+
+.site-nav .nav-group > summary:hover,
+.site-nav .nav-group > summary:focus-visible,
+.site-nav .nav-group > summary.nav-group-active {
+    background: rgba(255, 255, 255, 0.12);
+}
+
+.site-nav .nav-group > summary span {
+    display: inline-block;
+    transition: transform 0.15s ease;
+}
+
+.site-nav .nav-group[open] > summary span {
+    transform: rotate(180deg);
+}
+
+.site-nav .nav-submenu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 50;
+    min-width: 13rem;
+    padding: 0.35rem;
+    border: 1px solid rgba(255, 255, 255, 0.22);
+    border-radius: 0.5rem;
+    background: #244b35;
+    box-shadow: 0 10px 24px rgba(0, 0, 0, 0.25);
+}
+
+.site-nav .nav-submenu a {
+    display: block;
+    margin: 0;
+    padding: 0.65rem 0.8rem;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 0.3rem;
+}
+
+.site-nav .nav-submenu a:hover,
+.site-nav .nav-submenu a:focus-visible,
+.site-nav .nav-submenu a[aria-current="page"] {
+    background: rgba(255, 255, 255, 0.18);
+}
+
+@media (max-width: 900px) {
+    .site-nav {
+        align-items: stretch;
+        flex-direction: column;
+        flex-wrap: nowrap;
+    }
+
+    .site-nav .nav-group,
+    .site-nav .nav-group > summary {
+        width: 100%;
+    }
+
+    .site-nav .nav-submenu {
+        position: static;
+        min-width: 0;
+        box-shadow: none;
+        border: 0;
+        margin-left: 0.75rem;
+        background: transparent;
+    }
+
+    .site-nav .nav-submenu a {
+        padding-left: 1rem;
+    }
+}
+
+/* Rolling history beneath the calendar */
+.historic-archive {
+    padding-top: 1.5rem;
+    padding-bottom: 3rem;
+}
+
+.history-heading {
+    margin-bottom: 1.5rem;
+}
+
+.history-heading h2 {
+    margin: 0.25rem 0 0.5rem;
+}
+
+.history-season {
+    margin: 1.4rem 0;
+    padding: 1rem 1.2rem;
+    border: 1px solid rgba(120, 120, 120, 0.25);
+    border-radius: 0.6rem;
+}
+
+.history-season-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-bottom: 0.75rem;
+}
+
+.history-season-heading h3 {
+    margin: 0;
+}
+
+.history-season-heading span,
+.history-event-date,
+.history-event-location,
+.history-disclaimer,
+.history-pending {
+    opacity: 0.8;
+}
+
+.history-event-list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.history-event {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 0.7rem 1.5rem;
+    padding: 0.7rem 0;
+    border-top: 1px solid rgba(120, 120, 120, 0.2);
+}
+
+.history-event > div {
+    display: flex;
+    flex-direction: column;
+    gap: 0.15rem;
+}
+
+.history-event-date {
+    font-size: 0.85rem;
+}
+
+.history-event-location {
+    font-size: 0.9rem;
+}
+
+.history-event > a {
+    flex-shrink: 0;
+}
+
+.history-older {
+    margin-top: 1.5rem;
+}
+
+.history-older > details > summary {
+    cursor: pointer;
+    font-weight: 700;
+    padding: 0.8rem;
+    border: 1px solid rgba(120, 120, 120, 0.35);
+    border-radius: 0.5rem;
+}
+
+.history-year-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-top: 0.8rem;
+}
+
+.history-year-links a {
+    padding: 0.45rem 0.8rem;
+    border: 1px solid rgba(120, 120, 120, 0.3);
+    border-radius: 0.4rem;
+}
+
+.history-year-links a[aria-current="true"] {
+    font-weight: 700;
+    outline: 2px solid currentColor;
+}
+
+.history-disclaimer {
+    margin-top: 1rem;
+    font-size: 0.9rem;
+}
+
+@media (max-width: 650px) {
+    .history-season {
+        padding: 0.8rem;
+    }
+
+    .history-event {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+}

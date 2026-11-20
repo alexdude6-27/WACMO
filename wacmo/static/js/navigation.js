@@ -39,4 +39,26 @@ document.addEventListener("DOMContentLoaded", () => {
             button.focus();
         }
     });
+
+    const groups = Array.from(
+        navigation.querySelectorAll(".nav-group")
+    );
+
+    groups.forEach((group) => {
+        group.addEventListener("toggle", () => {
+            if (!group.open) return;
+            groups.forEach((other) => {
+                if (other !== group) other.open = false;
+            });
+        });
+    });
+
+    document.addEventListener("click", (event) => {
+        if (!navigation.contains(event.target)) {
+            groups.forEach((group) => {
+                group.open = false;
+            });
+        }
+    });
+
 });
